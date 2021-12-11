@@ -28,7 +28,7 @@ public class StudyCell {
         return id;
     }
 
-    public List<StudyElement> getStudyElement() {
+    public List<StudyElement> getStudyElements() {
         return studyElements;
     }
 

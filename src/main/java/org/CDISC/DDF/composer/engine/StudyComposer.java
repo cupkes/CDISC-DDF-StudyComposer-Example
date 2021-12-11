@@ -33,7 +33,7 @@ public class StudyComposer {
         studyDesign.setPlannedWorkflows(mockBroker.getPlannedWorkflows(UUID.randomUUID()));
 
 
-        return null;
+        return studyDesign;
 
     }
 
