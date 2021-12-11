@@ -16,22 +16,26 @@ import java.util.UUID;
 public class Transition {
 
     private final UUID id;
+    private final String description;
     private final PointInTime fromPointInTime;
     private final PointInTime toPointInTime;
     private Rule transitionRule;
     private String describedBy;
     private List<Criterion> transitionCriteria;
+    private Integer studyProtocolCriterionTransitionNumber;
 
 
-    public Transition(UUID id, PointInTime fromPointInTime, PointInTime toPointInTime, Rule transitionRule) {
+    public Transition(UUID id, String description, PointInTime fromPointInTime, PointInTime toPointInTime, Rule transitionRule) {
         this.id = id;
+        this.description = description;
         this.fromPointInTime = fromPointInTime;
         this.toPointInTime = toPointInTime;
         this.transitionRule = transitionRule;
     }
 
-    public Transition(UUID id, PointInTime fromPointInTime, PointInTime toPointInTime) {
+    public Transition(UUID id, String description, PointInTime fromPointInTime, PointInTime toPointInTime) {
         this.id = id;
+        this.description = description;
         this.fromPointInTime = fromPointInTime;
         this.toPointInTime = toPointInTime;
     }
@@ -74,4 +78,15 @@ public class Transition {
         this.transitionCriteria = transitionCriteria;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public Integer getStudyProtocolCriterionTransitionNumber() {
+        return studyProtocolCriterionTransitionNumber;
+    }
+
+    public void setStudyProtocolCriterionTransitionNumber(Integer studyProtocolCriterionTransitionNumber) {
+        this.studyProtocolCriterionTransitionNumber = studyProtocolCriterionTransitionNumber;
+    }
 }

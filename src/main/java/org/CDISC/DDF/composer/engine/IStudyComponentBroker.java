@@ -1,6 +1,7 @@
 package org.CDISC.DDF.composer.engine;
 
 
+import org.CDISC.DDF.model.study.Objective;
 import org.CDISC.DDF.model.studyDesign.PlannedWorkflow;
 import org.CDISC.DDF.model.studyDesign.StudyCell;
 import org.CDISC.DDF.model.studyDesign.StudyElement;
@@ -33,11 +34,15 @@ public interface IStudyComponentBroker {
 
     List<Transition> getTransitions(UUID plannedWorkflowId);
 
-    Transition getTranstion(UUID transitionId);
+    Transition getTransition(UUID transitionId);
 
     List<StudyElement> getStudyElements(UUID studyCellId);
 
     StudyElement getStudyElement(UUID studyElementId);
+
+    List<Objective> getStudyObjectives(UUID studyId);
+
+    Objective getStudyObjective(UUID studyObjectiveId);
 
 
 

@@ -13,7 +13,7 @@ public class StudyDesign {
 
     private final UUID id;
     private List<StudyCell> studyCells;
-    private PlannedWorkflow plannedWorkflow;
+    private List<PlannedWorkflow> plannedWorkflows;
 
     public StudyDesign(UUID id, List<StudyCell> studyCells) {
         this.id = id;
@@ -46,13 +46,11 @@ public class StudyDesign {
         // TO_DO
     }
 
-
-    public PlannedWorkflow getPlannedWorkflow() {
-        return plannedWorkflow;
+    public List<PlannedWorkflow> getPlannedWorkflows() {
+        return plannedWorkflows;
     }
 
-    public void setPlannedWorkflow(PlannedWorkflow plannedWorkflow) {
-        this.plannedWorkflow = plannedWorkflow;
+    public void setPlannedWorkflows(List<PlannedWorkflow> plannedWorkflows) {
+        this.plannedWorkflows = plannedWorkflows;
     }
-
 }

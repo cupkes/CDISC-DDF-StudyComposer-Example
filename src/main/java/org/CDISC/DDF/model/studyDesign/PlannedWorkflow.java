@@ -24,8 +24,9 @@ public class PlannedWorkflow {
     private List<Transition> transitions;
 
 
-    public PlannedWorkflow(UUID id, UUID id1, String description, PointInTime startPoint, PointInTime endPoint, List<Transition> transitions){
-        this.id = id1;
+    public PlannedWorkflow(UUID id, String description, PointInTime startPoint, PointInTime endPoint, List<Transition> transitions){
+
+        this.id = id;
         this.description = description;
         this.startPoint = startPoint;
         this.endPoint = endPoint;
