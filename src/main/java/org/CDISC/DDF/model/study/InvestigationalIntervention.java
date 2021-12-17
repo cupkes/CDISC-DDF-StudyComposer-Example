@@ -3,6 +3,7 @@ package org.CDISC.DDF.model.study;
 import org.CDISC.DDF.model.common.Code;
 
 import java.util.List;
+import java.util.UUID;
 
 /**
  * org.CDISC.DDF.model.study.InvestigationalIntervention is the drug, device, therapy, or process under investigation in a clinical study
@@ -13,11 +14,11 @@ import java.util.List;
 
 public class InvestigationalIntervention {
 
-    private final String id;
+    private final UUID id;
     private final String description;
     private List<Code> coding;
 
-    public InvestigationalIntervention(String id, String description) {
+    public InvestigationalIntervention(UUID id, String description) {
         this.id = id;
         this.description = description;
     }
@@ -26,7 +27,7 @@ public class InvestigationalIntervention {
         return description;
     }
 
-    public String getId() {
+    public UUID getId() {
         return id;
     }
 

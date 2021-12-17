@@ -3,6 +3,7 @@ package org.CDISC.DDF.composer.engine;
 
 import org.CDISC.DDF.model.study.Objective;
 import org.CDISC.DDF.model.studyDesign.StudyDesign;
+import org.CDISC.DDF.model.versioning.IStudy;
 
 import java.util.List;
 import java.util.UUID;
@@ -52,6 +53,11 @@ public class StudyComposer {
     }
 
     public List<Objective> getStudyObjectives(UUID studyId){
+
+        return null;
+    }
+
+    public IStudy getStudy(UUID studyId) {
 
         return null;
     }
