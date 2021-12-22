@@ -1,11 +1,11 @@
 package org.CDISC.DDF.composer.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import org.CDISC.DDF.composer.SDR.StudyDesign;
 import org.CDISC.DDF.composer.engine.IStudyComponentBroker;
 import org.CDISC.DDF.composer.engine.MockBroker;
 import org.CDISC.DDF.composer.engine.StudyComposer;
 import org.CDISC.DDF.model.study.Objective;
-import org.CDISC.DDF.model.studyDesign.StudyDesign;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

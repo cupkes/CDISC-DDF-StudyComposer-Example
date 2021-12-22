@@ -3,6 +3,7 @@ package org.CDISC.DDF.model.studyDesign;
 import org.CDISC.DDF.model.common.Criterion;
 import org.CDISC.DDF.model.common.Rule;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -21,7 +22,7 @@ public class Transition {
     private final PointInTime toPointInTime;
     private Rule transitionRule;
     private String describedBy;
-    private List<Criterion> transitionCriteria;
+    private List<Criterion> transitionCriteria = new ArrayList<>();
     private Integer studyProtocolCriterionTransitionNumber;
 
 

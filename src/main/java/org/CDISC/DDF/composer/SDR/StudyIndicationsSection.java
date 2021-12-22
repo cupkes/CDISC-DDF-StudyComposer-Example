@@ -4,15 +4,16 @@ import org.CDISC.DDF.model.common.StudyIndication;
 import org.CDISC.DDF.model.versioning.Section;
 import org.CDISC.DDF.model.versioning.SectionType;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 public class StudyIndicationsSection extends Section {
-    protected StudyIndicationsSection(UUID id, String version, SectionType sectionType) {
+    public StudyIndicationsSection(UUID id, String version, SectionType sectionType) {
         super(id, version, sectionType);
     }
 
-    private List<StudyIndication> studyIndications;
+    private List<StudyIndication> studyIndications = new ArrayList<>();
 
 
     public List<StudyIndication> getStudyIndications() {
@@ -37,7 +38,7 @@ public class StudyIndicationsSection extends Section {
         return null;
     }
 
-    public void setStudyIndication(StudyIndication studyIndication) {
+    public void addStudyIndication(StudyIndication studyIndication) {
 
         studyIndications.add(studyIndication);
 

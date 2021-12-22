@@ -15,7 +15,7 @@ public interface IStudyDesign {
 
     Section getSection(SectionType sectionType, String version);
 
-    void setSection(SectionType sectionType, String version);
+    void addSection(SectionType sectionType, Section section);
 
     List<Section> getSectionHistory(SectionType sectionType);
 

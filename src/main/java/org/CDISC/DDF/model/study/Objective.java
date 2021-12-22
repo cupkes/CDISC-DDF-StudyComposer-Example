@@ -1,5 +1,6 @@
 package org.CDISC.DDF.model.study;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -15,18 +16,21 @@ public class Objective {
 
 
     private final String description;
-    private List<Endpoint> endpoints = null;
+    private List<Endpoint> endpoints = new ArrayList<>();
     private final UUID id;
+    private final ObjectiveLevel level;
 
-    public Objective(String description, UUID id) {
+    public Objective(String description, UUID id, ObjectiveLevel level) {
         this.description = description;
         this.id = id;
+        this.level = level;
     }
 
-    public Objective(String description, List<Endpoint> endpoints, UUID id) {
+    public Objective(String description, List<Endpoint> endpoints, UUID id, ObjectiveLevel level) {
         this.description = description;
         this.endpoints = endpoints;
         this.id = id;
+        this.level = level;
     }
 
     public String getDescription() {
@@ -41,19 +45,23 @@ public class Objective {
         this.endpoints = endpoints;
     }
 
-    public void addEndpoint(OutcomeLevel outcomeLevel, Endpoint endpoint){
+    public void addEndpoint(Endpoint endpoint){
 
-        // TO_DO
+        this.endpoints.add(endpoint);
     }
 
-    public void removeEndpoint(OutcomeLevel outcomeLevel, Endpoint endpoint)
+    public void removeEndpoint(Endpoint endpoint)
     {
-        // TO_DO
+        this.endpoints.remove(endpoint);
 
     }
 
 
     public UUID getId() {
         return id;
+    }
+
+    public ObjectiveLevel getLevel() {
+        return level;
     }
 }

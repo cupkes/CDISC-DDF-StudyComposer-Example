@@ -6,16 +6,18 @@ import org.CDISC.DDF.model.studyDesign.StudyEpoch;
 import org.CDISC.DDF.model.versioning.Section;
 import org.CDISC.DDF.model.versioning.SectionType;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
 public class StudyCellsSection extends Section {
-    protected StudyCellsSection(UUID id, String version, SectionType sectionType) {
+    public StudyCellsSection(UUID id, String version, SectionType sectionType) {
         super(id, version, sectionType);
 
     }
 
-    private List<StudyCell> studyCells;
+    private List<StudyCell> studyCells = new ArrayList<>();
 
     public List<StudyCell> getStudyCells() {
         return studyCells;
@@ -45,7 +47,7 @@ public class StudyCellsSection extends Section {
 
     public List<StudyCell> getStudyCell(StudyArm studyArm) {
 
-        List<StudyCell> studyCellsByArm = null;
+        List<StudyCell> studyCellsByArm =new ArrayList<>();
 
         for (StudyCell studyCell : studyCells
         ) {
@@ -63,8 +65,7 @@ public class StudyCellsSection extends Section {
 
     public List<StudyCell> getStudyCell(StudyEpoch studyEpoch) {
 
-        List<StudyCell> studyCellsByEpoch = null;
-
+        List<StudyCell> studyCellsByEpoch = new ArrayList<>();
 
         for (StudyCell studyCell : studyCells
         ) {

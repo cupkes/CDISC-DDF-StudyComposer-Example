@@ -1,6 +1,7 @@
 package org.CDISC.DDF.composer.engine;
 
 
+import org.CDISC.DDF.composer.SDR.*;
 import org.CDISC.DDF.model.study.Objective;
 import org.CDISC.DDF.model.studyDesign.PlannedWorkflow;
 import org.CDISC.DDF.model.studyDesign.StudyCell;
@@ -28,9 +29,13 @@ public interface IStudyComponentBroker {
 
     StudyCell getStudyCell(UUID studyCellId);
 
+    StudyCellsSection getStudyCellsSection(UUID studyDesignId);
+
     List<PlannedWorkflow> getPlannedWorkflows(UUID studyCellId);
 
     PlannedWorkflow getPlannedWorkflow(UUID plannedWorkflowId);
+
+    PlannedWorkflowsSection getPlannedWorkflowsSection(UUID studyCellId);
 
     List<Transition> getTransitions(UUID plannedWorkflowId);
 
@@ -43,6 +48,19 @@ public interface IStudyComponentBroker {
     List<Objective> getStudyObjectives(UUID studyId);
 
     Objective getStudyObjective(UUID studyObjectiveId);
+
+    ObjectivesSection getStudyObjectivesSection(UUID objectivesSectionId, String version);
+
+    InvestigationalInterventionsSection getInvestigationalInterventionsSection(UUID studyId, String version);
+
+    StudyIndicationsSection getStudyIndicationsSection(UUID studyId, String version);
+
+    StudyPopulationsSection getStudyPopulationsSection(UUID studyDesignId, String version);
+
+
+
+
+
 
 
 

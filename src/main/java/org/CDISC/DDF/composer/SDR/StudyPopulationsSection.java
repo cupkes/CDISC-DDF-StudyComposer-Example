@@ -4,16 +4,17 @@ import org.CDISC.DDF.model.study.Population;
 import org.CDISC.DDF.model.versioning.Section;
 import org.CDISC.DDF.model.versioning.SectionType;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 public class StudyPopulationsSection extends Section {
-    protected StudyPopulationsSection(UUID id, String version, SectionType sectionType) {
+    public StudyPopulationsSection(UUID id, String version, SectionType sectionType) {
         super(id, version, sectionType);
     }
 
 
-    private List<Population> studyPopulations;
+    private List<Population> studyPopulations = new ArrayList<>();
 
     public List<Population> getStudyPopulations() {
         return studyPopulations;

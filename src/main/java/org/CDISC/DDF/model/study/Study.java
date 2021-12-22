@@ -25,7 +25,7 @@ public class Study {
     // every study can have one or more study identifiers
     // i.e. one for the business and one for the FDA.
     private List<StudyIdentifier> studyIdentifiers;
-    // should study indications, populations and investigational interventsions be pushed down
+    // should study indications, populations and investigational interventions be pushed down
     // to the StudyDesign class?  Maybe even study objectives?
     // I think we should learn more about both umbrella and basket studies
     // make sure they don't flip-flop (population on the Study for umbrella and vice versa for basket).
@@ -35,7 +35,7 @@ public class Study {
     // a study can have multiple study designs
     // example, basket or umbrella study
     private List<StudyDesign> studyDesigns;
-    private List<Map<ObjectiveLevel, Objective>> studyObjectives = null;
+    private List<Objective> studyObjectives = null;
     // add boolean for multiDesign if agreed upon
     // TO_DO
 
@@ -91,11 +91,11 @@ public class Study {
     }
 
 
-    public List<Map<ObjectiveLevel, Objective>> getStudyObjectives() {
+    public List<Objective> getStudyObjectives() {
         return studyObjectives;
     }
 
-    public void setStudyObjectives(List<Map<ObjectiveLevel, Objective>> studyObjectives) {
+    public void setStudyObjectives(List<Objective> studyObjectives) {
         this.studyObjectives = studyObjectives;
     }
 

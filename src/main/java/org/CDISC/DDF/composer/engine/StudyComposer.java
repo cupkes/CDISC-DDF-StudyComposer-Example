@@ -1,10 +1,14 @@
 package org.CDISC.DDF.composer.engine;
 
 
+import org.CDISC.DDF.composer.SDR.ObjectivesSection;
+import org.CDISC.DDF.composer.SDR.StudyDesign;
+import org.CDISC.DDF.composer.SDR.StudyDesignsSection;
 import org.CDISC.DDF.model.study.Objective;
-import org.CDISC.DDF.model.studyDesign.StudyDesign;
 import org.CDISC.DDF.model.versioning.IStudy;
+import org.CDISC.DDF.model.versioning.SectionType;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -23,18 +27,20 @@ public class StudyComposer {
 
     public StudyDesign getMockStudyDesign() {
 
-        IStudyComponentBroker mockBroker = new MockBroker();
-        UUID studyDesignId = UUID.randomUUID();
 
-
-        studyDesign = new StudyDesign(studyDesignId,mockBroker.getStudyCells(studyDesignId));
-        // so...in my StudyDesign class I have a collection of PlannedWorkflow objects
-        // also, each StudyCell object can have multiple workflows
-        // is this correct?
-        studyDesign.setPlannedWorkflows(mockBroker.getPlannedWorkflows(UUID.randomUUID()));
-
-
+        studyDesign = new StudyDesign(UUID.randomUUID(),"1.0");
+        // TO_DO add sections
         return studyDesign;
+
+    }
+
+    public StudyDesignsSection getMockStudyDesignSection(UUID studyId, String version) {
+
+        List<StudyDesign> studyDesigns = new ArrayList<>();
+        studyDesigns.add(this.getMockStudyDesign());
+        StudyDesignsSection sdSection = new StudyDesignsSection(UUID.randomUUID(), version, SectionType.STUDY_DESIGNS);
+        sdSection.setStudyDesigns(studyDesigns);
+        return sdSection;
 
     }
 
@@ -51,6 +57,15 @@ public class StudyComposer {
         return mockBroker.getStudyObjectives(studyId);
 
     }
+
+    public ObjectivesSection getMockObjectivesSection(UUID studyId, String version) {
+
+        IStudyComponentBroker mockBroker = new MockBroker();
+        return mockBroker.getStudyObjectivesSection(studyId,version);
+
+    }
+
+
 
     public List<Objective> getStudyObjectives(UUID studyId){
 

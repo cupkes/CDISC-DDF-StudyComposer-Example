@@ -9,18 +9,13 @@ package org.CDISC.DDF.composer.engine;
 // experience with jackson but have seen numerous references to the Google implementation.
 
 
+import org.CDISC.DDF.composer.SDR.*;
 import org.CDISC.DDF.composer.util.StaticStudyDataProvider;
-import org.CDISC.DDF.model.common.Code;
-import org.CDISC.DDF.model.common.Criterion;
-import org.CDISC.DDF.model.common.CriterionType;
-import org.CDISC.DDF.model.common.Rule;
-import org.CDISC.DDF.model.study.Endpoint;
-import org.CDISC.DDF.model.study.EndpointPurpose;
-import org.CDISC.DDF.model.study.Objective;
-import org.CDISC.DDF.model.study.OutcomeLevel;
+import org.CDISC.DDF.model.common.*;
+import org.CDISC.DDF.model.study.*;
 import org.CDISC.DDF.model.studyDesign.*;
+import org.CDISC.DDF.model.versioning.SectionType;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -72,6 +67,11 @@ public class MockBroker  implements IStudyComponentBroker{
     }
 
     @Override
+    public StudyCellsSection getStudyCellsSection(UUID studyDesignId) {
+        return null;
+    }
+
+    @Override
     public List<PlannedWorkflow> getPlannedWorkflows(UUID studyCellId) {
 
         List<PlannedWorkflow> plannedWorkFlows = new ArrayList<>();
@@ -106,6 +106,11 @@ public class MockBroker  implements IStudyComponentBroker{
         return new PlannedWorkflow(plannedWorkflowId,StaticStudyDataProvider.PLANNED_WORKFLOW_DESC,
                 fromPointInTime,toPointInTime,transitions);
 
+    }
+
+    @Override
+    public PlannedWorkflowsSection getPlannedWorkflowsSection(UUID studyCellId) {
+        return null;
     }
 
     @Override
@@ -214,9 +219,73 @@ public class MockBroker  implements IStudyComponentBroker{
         Endpoint endpoint = new Endpoint(StaticStudyDataProvider.ENDPOINT_DESC,
                 EndpointPurpose.EFFICACY, UUID.randomUUID(), OutcomeLevel.PRIMARY);
         endpoints.add(endpoint);
-        return new Objective(StaticStudyDataProvider.OBJECTIVE_DESC,endpoints,UUID.randomUUID());
+        return new Objective(StaticStudyDataProvider.OBJECTIVE_DESC,endpoints,UUID.randomUUID(), ObjectiveLevel.PRIMARY);
 
 }
+
+    @Override
+    public ObjectivesSection getStudyObjectivesSection(UUID studyId, String version) {
+
+        ObjectivesSection oSection = new ObjectivesSection(UUID.randomUUID(), version);
+
+        oSection.setObjectives(this.getStudyObjectives(UUID.randomUUID()));
+
+        return oSection;
+
+
+
+    }
+
+    @Override
+    public InvestigationalInterventionsSection getInvestigationalInterventionsSection(UUID studyId, String version) {
+
+        InvestigationalIntervention intervention = new InvestigationalIntervention(UUID.randomUUID(),
+                "Ibuprofen 200mg");
+
+        Code code = new Code("26929004",
+                "SNOMED-CT",
+                "4.0.6.4",
+                "Alzheimer's disease (disorder)");
+        intervention.addCode(code);
+        InvestigationalInterventionsSection iiSection = new InvestigationalInterventionsSection(UUID.randomUUID(),
+                version,SectionType.INVESTIGATIONAL_INTERVENTIONS);
+
+        iiSection.addInvestigationalIntervention(intervention);
+
+        return iiSection;
+    }
+
+    @Override
+    public StudyIndicationsSection getStudyIndicationsSection(UUID studyId, String version) {
+
+        StudyIndication indication = new StudyIndication(UUID.randomUUID(),
+                "Alzheimer's disease");
+        Code code = new Code("26929004",
+                "SNOMED-CT",
+                "4.0.6.4",
+                "Alzheimer's disease (disorder)");
+        indication.addCode(code);
+        StudyIndicationsSection siSection = new StudyIndicationsSection(UUID.randomUUID(),
+                version,
+                SectionType.STUDY_INDICATIONS);
+        siSection.addStudyIndication(indication);
+        return siSection;
+
+    }
+
+    @Override
+    public StudyPopulationsSection getStudyPopulationsSection(UUID studyDesignId, String version) {
+
+        Population population = new Population(UUID.randomUUID(),
+                "healthy volunteers of age between 18 and 65");
+        StudyPopulationsSection spSection = new StudyPopulationsSection(UUID.randomUUID(),
+                version,
+                SectionType.STUDY_POPULATIONS);
+
+        spSection.addStudyPopulation(population);
+
+        return spSection;
+    }
 
 
     // I didn't make the StaticStudyDataProvider a private class for MockBroker in case that

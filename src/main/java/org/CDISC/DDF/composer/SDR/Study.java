@@ -7,9 +7,7 @@ import org.CDISC.DDF.model.versioning.IStudy;
 import org.CDISC.DDF.model.versioning.Section;
 import org.CDISC.DDF.model.versioning.SectionType;
 
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 public class Study implements IStudy {
 
@@ -19,7 +17,11 @@ public class Study implements IStudy {
     private Phase studyPhase;
     private String version;
     private List<StudyIdentifier> studyIdentifiers;
-    private Map<SectionType,List<Section>> studySections;
+    private Map<SectionType,List<Section>> studySections = new HashMap<>();
+    private List<Section> interventionHistory = new ArrayList<>();
+    private List<Section> indicationHistory = new ArrayList<>();
+    private List<Section> objectiveHistory = new ArrayList<>();
+    private List<Section> studyDesignHistory = new ArrayList<>();
 
 
     public Study(UUID id, String studyTitle, StudyType studyType, Phase studyPhase, String version, List<StudyIdentifier> studyIdentifiers) {
@@ -56,11 +58,42 @@ public class Study implements IStudy {
 
     @Override
     public Section getSection(SectionType sectionType, String version) {
+
+        List<Section> sections = this.studySections.get(sectionType);
+        for (Section section: sections
+             ) {
+            if (section.getVersion().equals(version)) {
+                return section;
+            }
+
+        }
         return null;
+
     }
 
     @Override
-    public void setSection(SectionType sectionType, Section section) {
+    public void addSection(SectionType sectionType, Section section) {
+
+        switch (sectionType) {
+            case STUDY_DESIGNS -> {
+                this.studyDesignHistory.add(section);
+                this.studySections.put(SectionType.STUDY_DESIGNS, studyDesignHistory);
+            }
+            case STUDY_INDICATIONS -> {
+                this.indicationHistory.add(section);
+                this.studySections.put(SectionType.STUDY_INDICATIONS, indicationHistory);
+            }
+            case OBJECTIVES -> {
+                this.objectiveHistory.add(section);
+                this.studySections.put(SectionType.OBJECTIVES, objectiveHistory);
+            }
+            case INVESTIGATIONAL_INTERVENTIONS -> {
+                this.interventionHistory.add(section);
+                this.studySections.put(SectionType.INVESTIGATIONAL_INTERVENTIONS, interventionHistory);
+            }
+            default -> {
+            }
+        }
 
 
 
@@ -68,6 +101,6 @@ public class Study implements IStudy {
 
     @Override
     public List<Section> getSectionHistory(SectionType sectionType) {
-        return null;
+        return this.studySections.get(sectionType);
     }
 }

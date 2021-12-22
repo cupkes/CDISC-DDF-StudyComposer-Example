@@ -2,8 +2,9 @@ package org.CDISC.DDF.composer.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.*;
+import org.CDISC.DDF.composer.SDR.StudyDesign;
 import org.CDISC.DDF.model.study.Objective;
-import org.CDISC.DDF.model.studyDesign.StudyDesign;
+
 
 import java.util.List;
 

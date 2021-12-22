@@ -5,35 +5,53 @@ import org.CDISC.DDF.model.study.ObjectiveLevel;
 import org.CDISC.DDF.model.versioning.Section;
 import org.CDISC.DDF.model.versioning.SectionType;
 
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class ObjectivesSection extends Section {
 
 
+    private List<Objective> objectives = new ArrayList<>();
+
     public ObjectivesSection(UUID id, String version) {
-        super(id, version, SectionType.OJECTIVES);
+        super(id, version, SectionType.OBJECTIVES);
     }
 
-    public Map<ObjectiveLevel, Objective> getObjectiveMap() {
-        return objectiveMap;
+    public List<Objective> getObjectives() {
+        return objectives;
     }
 
-    public void setObjectiveMap(Map<ObjectiveLevel, Objective> objectiveMap) {
-        this.objectiveMap = objectiveMap;
+    public void setObjectives(List<Objective> objectives) {
+        this.objectives = objectives;
     }
 
-    private Map<ObjectiveLevel, Objective> objectiveMap;
+    public List<Objective> getObjectivesByLevel(ObjectiveLevel objectiveLevel){
 
-    public Objective getObjective(ObjectiveLevel objectiveLevel){
+        List<Objective> objectivesByLevel = new ArrayList<>();
 
-        return this.objectiveMap.get(objectiveLevel);
+        for (Objective objective : this.objectives
+             ) {
+            if (objective.getLevel() == objectiveLevel) {
+
+                objectivesByLevel.add(objective);
+
+            }
+
+        }
+        return objectivesByLevel;
 
     }
 
-    public void addObjective(ObjectiveLevel objectiveLevel, Objective objective) {
 
-        this.objectiveMap.put(objectiveLevel,objective);
+    public void addObjective(Objective objective) {
+
+        this.objectives.add(objective);
+    }
+
+    public void removeObjective(Objective objective) {
+
+        this.objectives.remove(objective);
     }
 
 

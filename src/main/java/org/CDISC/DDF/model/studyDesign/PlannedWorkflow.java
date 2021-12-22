@@ -1,5 +1,6 @@
 package org.CDISC.DDF.model.studyDesign;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -62,10 +63,13 @@ public class PlannedWorkflow {
     }
 
     public void addTransition(Transition transition){
-        // TO_DO implement;
+
+        this.transitions.add(transition);
     }
 
     public void removeTransition(Transition transition){
-        // TO_DO implement;
+
+        this.transitions.remove(transition);
+
     }
 }

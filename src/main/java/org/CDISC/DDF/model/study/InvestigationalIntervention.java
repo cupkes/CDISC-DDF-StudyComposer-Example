@@ -2,6 +2,7 @@ package org.CDISC.DDF.model.study;
 
 import org.CDISC.DDF.model.common.Code;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -16,7 +17,7 @@ public class InvestigationalIntervention {
 
     private final UUID id;
     private final String description;
-    private List<Code> coding;
+    private List<Code> coding = new ArrayList<>();
 
     public InvestigationalIntervention(UUID id, String description) {
         this.id = id;
@@ -41,11 +42,11 @@ public class InvestigationalIntervention {
 
     public void addCode(Code code) {
 
-        // TO_DO
+        this.coding.add(code);
     }
 
     public void removeCode(Code code) {
 
-        // TO_DO
+        this.coding.remove(code);
     }
 }
