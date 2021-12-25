@@ -2,10 +2,12 @@ package org.CDISC.DDF.composer.engine;
 
 
 import org.CDISC.DDF.composer.SDR.ObjectivesSection;
+import org.CDISC.DDF.composer.SDR.Study;
 import org.CDISC.DDF.composer.SDR.StudyDesign;
 import org.CDISC.DDF.composer.SDR.StudyDesignsSection;
 import org.CDISC.DDF.model.study.Objective;
 import org.CDISC.DDF.model.versioning.IStudy;
+import org.CDISC.DDF.model.versioning.IStudyDesign;
 import org.CDISC.DDF.model.versioning.SectionType;
 
 import java.util.ArrayList;
@@ -23,26 +25,37 @@ public class StudyComposer {
 
     // TO_DO implement a study design composition
 
-    StudyDesign studyDesign;
+    IStudyDesign studyDesign;
 
-    public StudyDesign getMockStudyDesign() {
+//    public StudyDesign getMockStudyDesign() {
+//
+//
+//        studyDesign = new StudyDesign(UUID.randomUUID(),"1.0");
+//        // TO_DO add sections
+//        return studyDesign;
+//
+//    }
 
+    public IStudyDesign getMockIStudyDesign() {
 
-        studyDesign = new StudyDesign(UUID.randomUUID(),"1.0");
-        // TO_DO add sections
+        this.studyDesign =  new StudyDesign(UUID.randomUUID(),"1.0");
+        IStudyComponentBroker mockBroker = new MockBroker();
+        studyDesign.addSection(SectionType.STUDY_CELLS, mockBroker.getStudyCellsSection(UUID.randomUUID(),"1.0"));
         return studyDesign;
 
-    }
 
-    public StudyDesignsSection getMockStudyDesignSection(UUID studyId, String version) {
-
-        List<StudyDesign> studyDesigns = new ArrayList<>();
-        studyDesigns.add(this.getMockStudyDesign());
-        StudyDesignsSection sdSection = new StudyDesignsSection(UUID.randomUUID(), version, SectionType.STUDY_DESIGNS);
-        sdSection.setStudyDesigns(studyDesigns);
-        return sdSection;
 
     }
+//
+//    public StudyDesignsSection getMockStudyDesignSection(UUID studyId, String version) {
+//
+//        List<StudyDesign> studyDesigns = new ArrayList<>();
+//        studyDesigns.add(this.getMockStudyDesign());
+//        StudyDesignsSection sdSection = new StudyDesignsSection(UUID.randomUUID(), version, SectionType.STUDY_DESIGNS);
+//        sdSection.setStudyDesigns(studyDesigns);
+//        return sdSection;
+//
+//    }
 
     public StudyDesign getStudyDesign(UUID studyDesignId) {
 

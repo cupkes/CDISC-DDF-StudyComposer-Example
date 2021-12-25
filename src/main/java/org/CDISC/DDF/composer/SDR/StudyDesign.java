@@ -40,7 +40,17 @@ public class StudyDesign implements IStudyDesign {
 
     @Override
     public List<Section> getCurrentSections() {
-        return null;
+
+        List<Section> currentSections = new ArrayList<>();
+
+        for (Map.Entry<SectionType,List<Section>> mapElement : this.designSections.entrySet()
+             ) {
+            List<Section> mapList = mapElement.getValue();
+            currentSections.add(mapList.get(mapList.size() - 1));
+
+        }
+
+        return currentSections;
     }
 
     @Override

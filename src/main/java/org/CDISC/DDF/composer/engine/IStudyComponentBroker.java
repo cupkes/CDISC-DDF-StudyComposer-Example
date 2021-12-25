@@ -29,7 +29,7 @@ public interface IStudyComponentBroker {
 
     StudyCell getStudyCell(UUID studyCellId);
 
-    StudyCellsSection getStudyCellsSection(UUID studyDesignId);
+    StudyCellsSection getStudyCellsSection(UUID studyDesignId, String version);
 
     List<PlannedWorkflow> getPlannedWorkflows(UUID studyCellId);
 

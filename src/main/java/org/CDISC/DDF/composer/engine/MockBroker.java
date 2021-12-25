@@ -67,8 +67,13 @@ public class MockBroker  implements IStudyComponentBroker{
     }
 
     @Override
-    public StudyCellsSection getStudyCellsSection(UUID studyDesignId) {
-        return null;
+    public StudyCellsSection getStudyCellsSection(UUID studyDesignId, String version) {
+
+
+        StudyCellsSection scSection = new StudyCellsSection(UUID.randomUUID(), version, SectionType.STUDY_CELLS);
+        scSection.addStudyCell(this.getStudyCell(UUID.randomUUID()));
+
+        return scSection;
     }
 
     @Override
