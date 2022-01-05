@@ -12,8 +12,12 @@ import java.util.List;
 import java.util.UUID;
 
 public class StudyCellsSection extends Section {
-    public StudyCellsSection(UUID id, String version, SectionType sectionType) {
-        super(id, version, sectionType);
+    public StudyCellsSection(UUID id) {
+        super(id,SectionType.STUDY_CELLS);
+
+    }
+    public StudyCellsSection(UUID id, String tag) {
+        super(id,SectionType.STUDY_CELLS, tag);
 
     }
 

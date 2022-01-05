@@ -14,8 +14,12 @@ public class ObjectivesSection extends Section {
 
     private List<Objective> objectives = new ArrayList<>();
 
-    public ObjectivesSection(UUID id, String version) {
-        super(id, version, SectionType.OBJECTIVES);
+    public ObjectivesSection(UUID id, String tag) {
+        super(id, SectionType.OBJECTIVES, tag);
+    }
+
+    public ObjectivesSection(UUID id) {
+        super(id, SectionType.OBJECTIVES);
     }
 
     public List<Objective> getObjectives() {

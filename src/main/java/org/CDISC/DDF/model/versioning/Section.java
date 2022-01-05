@@ -11,22 +11,27 @@ import java.util.UUID;
 public abstract class Section {
 
     private UUID id;
-    private String version;
     private SectionType sectionType;
+    private String tag;
 
 
-    protected Section(UUID id, String version, SectionType sectionType) {
+    protected Section(UUID id, SectionType sectionType) {
         this.id = id;
-        this.version = version;
         this.sectionType = sectionType;
+    }
+
+    protected Section(UUID id, SectionType sectionType, String tag) {
+        this.id = id;
+        this.sectionType = sectionType;
+        this.tag = tag;
     }
 
     public UUID getId() {
         return id;
     }
 
-    public String getVersion() {
-        return version;
+    public String getTag() {
+        return tag;
     }
 
     public SectionType getSectionType() {

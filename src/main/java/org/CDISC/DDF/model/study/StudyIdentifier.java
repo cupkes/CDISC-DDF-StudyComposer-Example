@@ -1,5 +1,7 @@
 package org.CDISC.DDF.model.study;
 
+import org.CDISC.DDF.model.common.Code;
+
 import java.util.UUID;
 
 /**
@@ -12,13 +14,21 @@ import java.util.UUID;
 public class StudyIdentifier {
 
     private final UUID id;
+
+
+
+    private final String orgCode;
+    private final String name;
     private final IdentifierType idType;
-    private String organizationOID;
 
 
-    public StudyIdentifier(UUID id, IdentifierType idType) {
+
+    public StudyIdentifier(UUID id,String orgCode, String name, IdentifierType idType) {
         this.id = id;
+        this.orgCode = orgCode;
+        this.name = name;
         this.idType = idType;
+
     }
 
 
@@ -30,13 +40,12 @@ public class StudyIdentifier {
         return idType;
     }
 
-
-    public String getOrganizationOID() {
-        return organizationOID;
+    public String getOrgCode() {
+        return orgCode;
     }
 
-    public void setOrganizationOID(String oid) {
-        this.organizationOID = oid;
+    public String getName() {
+        return name;
     }
 
 

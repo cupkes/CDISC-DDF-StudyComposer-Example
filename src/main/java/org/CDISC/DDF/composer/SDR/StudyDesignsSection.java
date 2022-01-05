@@ -9,8 +9,12 @@ import java.util.List;
 import java.util.UUID;
 
 public class StudyDesignsSection extends Section {
-    public StudyDesignsSection(UUID id, String version, SectionType sectionType) {
-        super(id, version, sectionType);
+    public StudyDesignsSection(UUID id) {
+        super(id,SectionType.STUDY_DESIGNS);
+    }
+
+    public StudyDesignsSection(UUID id, String tag) {
+        super(id,SectionType.STUDY_DESIGNS, tag);
     }
 
 

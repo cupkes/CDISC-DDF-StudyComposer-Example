@@ -35,6 +35,8 @@ public class StaticStudyDataProvider {
     public static Integer EPOCH_SEQUENCE = 2;
     public static String ENDPOINT_DESC  = "Cumulative incidence of virus detection in sputum samples among participants up to...";
     public static String OBJECTIVE_DESC  = "Example trial objective";
+    public static String IDENTIFIER_CODE = "2.16.840.1.113883.3.1077";
+    public static String IDENTIFIER_NAME = "ClinicalTrials.gov";
 
 
 

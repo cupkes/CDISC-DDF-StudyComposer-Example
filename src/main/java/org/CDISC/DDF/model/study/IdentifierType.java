@@ -6,25 +6,9 @@ package org.CDISC.DDF.model.study;
  * @author Chris Upkes
  */
 
-public class IdentifierType {
+public enum IdentifierType {
 
-    private final String code;
-    private final String name;
-
-
-    public IdentifierType(String code, String name) {
-        this.code = code;
-        this.name = name;
-    }
-
-
-    public String getCode() {
-        return code;
-    }
-
-    public String getName() {
-        return name;
-    }
+REGISTRY_STUDY
 
 
 }

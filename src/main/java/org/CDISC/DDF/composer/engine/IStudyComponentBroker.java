@@ -3,6 +3,7 @@ package org.CDISC.DDF.composer.engine;
 
 import org.CDISC.DDF.composer.SDR.*;
 import org.CDISC.DDF.model.study.Objective;
+import org.CDISC.DDF.model.study.StudyIdentifier;
 import org.CDISC.DDF.model.studyDesign.PlannedWorkflow;
 import org.CDISC.DDF.model.studyDesign.StudyCell;
 import org.CDISC.DDF.model.studyDesign.StudyElement;
@@ -29,13 +30,17 @@ public interface IStudyComponentBroker {
 
     StudyCell getStudyCell(UUID studyCellId);
 
-    StudyCellsSection getStudyCellsSection(UUID studyDesignId, String version);
+    StudyCellsSection getStudyCellsSection(UUID studyDesignId, String tag);
+
+    StudyCellsSection getStudyCellsSection(UUID studyDesignId);
 
     List<PlannedWorkflow> getPlannedWorkflows(UUID studyCellId);
 
     PlannedWorkflow getPlannedWorkflow(UUID plannedWorkflowId);
 
-    PlannedWorkflowsSection getPlannedWorkflowsSection(UUID studyCellId);
+    PlannedWorkflowsSection getPlannedWorkflowsSection(UUID studyDesignId);
+
+    PlannedWorkflowsSection getPlannedWorkflowsSection(UUID studyDesignId, String tag);
 
     List<Transition> getTransitions(UUID plannedWorkflowId);
 
@@ -49,13 +54,39 @@ public interface IStudyComponentBroker {
 
     Objective getStudyObjective(UUID studyObjectiveId);
 
-    ObjectivesSection getStudyObjectivesSection(UUID objectivesSectionId, String version);
+    ObjectivesSection getStudyObjectivesSection(UUID objectivesSectionId, String tag);
 
-    InvestigationalInterventionsSection getInvestigationalInterventionsSection(UUID studyId, String version);
+    ObjectivesSection getStudyObjectivesSection(UUID objectivesSectionId);
 
-    StudyIndicationsSection getStudyIndicationsSection(UUID studyId, String version);
+    InvestigationalInterventionsSection getInvestigationalInterventionsSection(UUID studyId, String tag);
 
-    StudyPopulationsSection getStudyPopulationsSection(UUID studyDesignId, String version);
+    InvestigationalInterventionsSection getInvestigationalInterventionsSection(UUID studyId);
+
+    StudyIndicationsSection getStudyIndicationsSection(UUID studyId, String tag);
+
+    StudyIndicationsSection getStudyIndicationsSection(UUID studyId);
+
+    StudyPopulationsSection getStudyPopulationsSection(UUID studyDesignId, String tag);
+
+    StudyPopulationsSection getStudyPopulationsSection(UUID studyDesignId);
+
+    List<StudyDesign> getStudyDesigns(UUID studyId);
+
+    StudyDesign getStudyDesign(UUID studyId, String version);
+
+    StudyDesignsSection getStudyDesignsSection(UUID studyId, String tag);
+
+    StudyDesignsSection getStudyDesignsSection(UUID studyId);
+
+    List<StudyIdentifier> getStudyIdentifiers(UUID studyId);
+
+    StudyIdentifier getStudyIdentifier(UUID studyId);
+
+
+
+
+
+
 
 
 

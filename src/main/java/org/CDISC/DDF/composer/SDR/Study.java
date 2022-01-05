@@ -11,7 +11,7 @@ import java.util.*;
 
 public class Study implements IStudy {
 
-    private UUID id;
+    private final UUID id;
     private String studyTitle;
     private StudyType studyType;
     private Phase studyPhase;
@@ -52,23 +52,58 @@ public class Study implements IStudy {
     }
 
     @Override
-    public List<Section> getCurrentSections() {
-        return null;
+    public String getStudyTitle() {
+        return this.studyTitle;
     }
 
     @Override
-    public Section getSection(SectionType sectionType, String version) {
+    public StudyType getStudyType() {
+        return this.studyType;
+    }
+
+    @Override
+    public Phase getStudyPhase() {
+        return this.studyPhase;
+    }
+
+    @Override
+    public List<StudyIdentifier> getStudyIdentifiers() {
+        return this.studyIdentifiers;
+    }
+
+    @Override
+    public List<Section> getCurrentSections() {
+
+        List<Section> currentSections = new ArrayList<>();
+
+        for (Map.Entry<SectionType,List<Section>> mapElement : this.studySections.entrySet()
+        ) {
+            List<Section> mapList = mapElement.getValue();
+            currentSections.add(mapList.get(mapList.size() - 1));
+
+        }
+
+        return currentSections;
+    }
+
+    @Override
+    public Section getSection(SectionType sectionType, String tag) {
 
         List<Section> sections = this.studySections.get(sectionType);
         for (Section section: sections
              ) {
-            if (section.getVersion().equals(version)) {
+            if (section.getTag().equals(tag)) {
                 return section;
             }
 
         }
         return null;
 
+    }
+
+    @Override
+    public Section getSection(SectionType sectionType) {
+        return null;
     }
 
     @Override

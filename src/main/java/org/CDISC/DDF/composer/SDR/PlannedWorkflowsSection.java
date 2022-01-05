@@ -9,8 +9,12 @@ import java.util.List;
 import java.util.UUID;
 
 public class PlannedWorkflowsSection extends Section {
-    public PlannedWorkflowsSection(UUID id, String version, SectionType sectionType) {
-        super(id, version, sectionType);
+    public PlannedWorkflowsSection(UUID id) {
+        super(id, SectionType.PLANNED_WORKFLOWS);
+    }
+
+    public PlannedWorkflowsSection(UUID id, String tag) {
+        super(id, SectionType.PLANNED_WORKFLOWS, tag);
     }
 
     private List<PlannedWorkflow> plannedWorkflows = new ArrayList<>();

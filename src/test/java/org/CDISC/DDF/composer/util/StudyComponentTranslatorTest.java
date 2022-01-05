@@ -6,6 +6,7 @@ import org.CDISC.DDF.composer.engine.IStudyComponentBroker;
 import org.CDISC.DDF.composer.engine.MockBroker;
 import org.CDISC.DDF.composer.engine.StudyComposer;
 import org.CDISC.DDF.model.study.Objective;
+import org.CDISC.DDF.model.versioning.IStudy;
 import org.CDISC.DDF.model.versioning.IStudyDesign;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -49,6 +50,16 @@ class StudyComponentTranslatorTest {
         String studyDesignJSON = this.studyComponentTranslator.translateIStudyDesignToJSON(studyDesign);
         assertNotNull(studyDesignJSON);
         System.out.println(studyDesignJSON);
+
+    }
+
+    @Test
+    void translateIStudyToJSON() throws JsonProcessingException{
+
+        IStudy study = this.studyComposer.getMockIStudy();
+        String studyJSON = this.studyComponentTranslator.translateIStudyToJSON(study);
+        assertNotNull(studyJSON);
+        System.out.println(studyJSON);
 
     }
 

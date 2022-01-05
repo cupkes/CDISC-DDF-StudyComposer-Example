@@ -54,12 +54,21 @@ public class StudyDesign implements IStudyDesign {
     }
 
     @Override
-    public Section getSection(SectionType sectionType, String version) {
+    public Section getSection(SectionType sectionType) {
+        List<Section> returnSections =  this.designSections.get(sectionType);
+        if (returnSections != null) {
+        return returnSections.get(returnSections.size() - 1);}
+        return null;
+    }
+
+
+    @Override
+    public Section getSection(SectionType sectionType, String tag) {
 
         List<Section> sections = this.designSections.get(sectionType);
         for (Section section: sections
         ) {
-            if (section.getVersion().equals(version)) {
+            if (section.getTag().equals(tag)) {
                 return section;
             }
 

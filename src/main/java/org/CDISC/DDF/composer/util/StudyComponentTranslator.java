@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.*;
 import org.CDISC.DDF.composer.SDR.StudyDesign;
 import org.CDISC.DDF.model.study.Objective;
+import org.CDISC.DDF.model.versioning.IStudy;
 import org.CDISC.DDF.model.versioning.IStudyDesign;
 
 
@@ -33,6 +34,14 @@ public class StudyComponentTranslator {
 
         ObjectMapper mapper = new ObjectMapper();
         return mapper.writeValueAsString(studyDesign);
+
+
+    }
+
+    public String translateIStudyToJSON(IStudy study) throws JsonProcessingException {
+
+        ObjectMapper mapper = new ObjectMapper();
+        return mapper.writeValueAsString(study);
 
 
     }
