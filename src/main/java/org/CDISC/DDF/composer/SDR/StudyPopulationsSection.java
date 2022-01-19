@@ -13,9 +13,9 @@ public class StudyPopulationsSection extends Section {
         super(id, SectionType.STUDY_POPULATIONS);
     }
 
-    public StudyPopulationsSection(UUID id, String tag) {
-        super(id, SectionType.STUDY_POPULATIONS, tag);
-    }
+//    public StudyPopulationsSection(UUID id, String tag) {
+//        super(id, SectionType.STUDY_POPULATIONS, tag);
+//    }
 
 
     private List<Population> studyPopulations = new ArrayList<>();

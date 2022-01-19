@@ -12,7 +12,9 @@ public abstract class Section {
 
     private UUID id;
     private SectionType sectionType;
-    private String tag;
+
+//    private String tag; - we are removing tagging for everything but the study
+
 
 
     protected Section(UUID id, SectionType sectionType) {
@@ -20,19 +22,19 @@ public abstract class Section {
         this.sectionType = sectionType;
     }
 
-    protected Section(UUID id, SectionType sectionType, String tag) {
-        this.id = id;
-        this.sectionType = sectionType;
-        this.tag = tag;
-    }
+//    protected Section(UUID id, SectionType sectionType, String tag) {
+//        this.id = id;
+//        this.sectionType = sectionType;
+//        this.tag = tag;
+//    }
 
     public UUID getId() {
         return id;
     }
 
-    public String getTag() {
-        return tag;
-    }
+//    public String getTag() {
+//        return tag;
+//    }
 
     public SectionType getSectionType() {
         return sectionType;

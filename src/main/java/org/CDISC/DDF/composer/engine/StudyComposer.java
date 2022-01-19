@@ -41,12 +41,11 @@ public class StudyComposer {
                 "1.0",
                 mockBroker.getStudyIdentifiers(UUID.randomUUID())
                 );
-        this.study.addSection(SectionType.STUDY_DESIGNS, mockBroker.getStudyDesignsSection(studyId,"1.0a"));
+        this.study.addSection(SectionType.STUDY_DESIGNS, mockBroker.getStudyDesignsSection(studyId));
         this.study.addSection(SectionType.INVESTIGATIONAL_INTERVENTIONS,
-                mockBroker.getInvestigationalInterventionsSection(studyId,"Draft"));
-        this.study.addSection(SectionType.STUDY_INDICATIONS, mockBroker.getStudyIndicationsSection(studyId,
-                "Draft"));
-        this.study.addSection(SectionType.OBJECTIVES, mockBroker.getStudyObjectivesSection(studyId,"Publish"));
+                mockBroker.getInvestigationalInterventionsSection(studyId));
+        this.study.addSection(SectionType.STUDY_INDICATIONS, mockBroker.getStudyIndicationsSection(studyId));
+        this.study.addSection(SectionType.OBJECTIVES, mockBroker.getStudyObjectivesSection(studyId));
         return study;
     }
 
@@ -63,11 +62,11 @@ public class StudyComposer {
 
     public IStudyDesign getMockIStudyDesign() {
 
-        this.studyDesign =  new StudyDesign(UUID.randomUUID(),"1.0");
+        this.studyDesign =  new StudyDesign(UUID.randomUUID());
         IStudyComponentBroker mockBroker = new MockBroker();
-        studyDesign.addSection(SectionType.STUDY_CELLS, mockBroker.getStudyCellsSection(UUID.randomUUID(),"1.0"));
-        studyDesign.addSection(SectionType.PLANNED_WORKFLOWS, mockBroker.getPlannedWorkflowsSection(UUID.randomUUID(),"In Dev"));
-        studyDesign.addSection(SectionType.STUDY_POPULATIONS, mockBroker.getStudyPopulationsSection(UUID.randomUUID(),"Final"));
+        studyDesign.addSection(SectionType.STUDY_CELLS, mockBroker.getStudyCellsSection(UUID.randomUUID()));
+        studyDesign.addSection(SectionType.PLANNED_WORKFLOWS, mockBroker.getPlannedWorkflowsSection(UUID.randomUUID()));
+        studyDesign.addSection(SectionType.STUDY_POPULATIONS, mockBroker.getStudyPopulationsSection(UUID.randomUUID()));
         return studyDesign;
 
 
@@ -98,10 +97,10 @@ public class StudyComposer {
 
     }
 
-    public ObjectivesSection getMockObjectivesSection(UUID studyId, String version) {
+    public ObjectivesSection getMockObjectivesSection(UUID studyId) {
 
         IStudyComponentBroker mockBroker = new MockBroker();
-        return mockBroker.getStudyObjectivesSection(studyId,version);
+        return mockBroker.getStudyObjectivesSection(studyId);
 
     }
 

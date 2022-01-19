@@ -16,7 +16,10 @@ public class StudyIdentifier {
     private final UUID id;
 
 
+    // some SME's are using sponsor code with ref to orgCode.  Which one is right?
+    // TO_DO:  Determine semantics for orgCode;
 
+    // What exactly is a StudyIdentifier?    Is it a reference identifier with sponsor Ids or codes?
     private final String orgCode;
     private final String name;
     private final IdentifierType idType;

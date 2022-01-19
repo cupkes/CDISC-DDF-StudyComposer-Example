@@ -67,15 +67,15 @@ public class MockBroker  implements IStudyComponentBroker{
 
     }
 
-    @Override
-    public StudyCellsSection getStudyCellsSection(UUID studyDesignId, String tag) {
-
-
-        StudyCellsSection scSection = new StudyCellsSection(UUID.randomUUID(), tag);
-        scSection.addStudyCell(this.getStudyCell(UUID.randomUUID()));
-
-        return scSection;
-    }
+//    @Override
+//    public StudyCellsSection getStudyCellsSection(UUID studyDesignId, String tag) {
+//
+//
+//        StudyCellsSection scSection = new StudyCellsSection(UUID.randomUUID(), tag);
+//        scSection.addStudyCell(this.getStudyCell(UUID.randomUUID()));
+//
+//        return scSection;
+//    }
 
     @Override
     public StudyCellsSection getStudyCellsSection(UUID studyDesignId) {
@@ -97,9 +97,8 @@ public class MockBroker  implements IStudyComponentBroker{
     @Override
     public PlannedWorkflow getPlannedWorkflow(UUID plannedWorkflowId) {
 
-        // first get a list of transitions
+        // first get a matrix of workflowitems
 
-        List<Transition> transitions = this.getTransitions(plannedWorkflowId);
 
         // second, build points in time
 
@@ -118,7 +117,7 @@ public class MockBroker  implements IStudyComponentBroker{
         // build and return the workflow
 
         return new PlannedWorkflow(plannedWorkflowId,StaticStudyDataProvider.PLANNED_WORKFLOW_DESC,
-                fromPointInTime,toPointInTime,transitions);
+                fromPointInTime,toPointInTime);
 
     }
 
@@ -132,25 +131,12 @@ public class MockBroker  implements IStudyComponentBroker{
     }
 
     @Override
-    public PlannedWorkflowsSection getPlannedWorkflowsSection(UUID studyDesignId, String tag) {
-        PlannedWorkflowsSection plannedWorkflowsSection = new PlannedWorkflowsSection(UUID.randomUUID(), tag);
-        plannedWorkflowsSection.setPlannedWorkflows(this.getPlannedWorkflows(studyDesignId));
-
-        return plannedWorkflowsSection;
+    public List<List<WorkflowItem>> getWorkflowItemMatrix(UUID plannedWorkflowId) {
+        return null;
     }
 
     @Override
-    public List<Transition> getTransitions(UUID plannedWorkflowId) {
-
-        List<Transition> transitions = new ArrayList<>();
-        transitions.add(this.getTransition(UUID.randomUUID()));
-        return transitions;
-
-    }
-
-    @Override
-    public Transition getTransition(UUID transitionId) {
-
+    public WorkflowItem getTransitionWorkflowItem(UUID workFlowItemId, UUID previousItemId) {
         // first, build a list of criteria
         List<Criterion> criteria = new ArrayList<>();
         Criterion criterion = new Criterion(UUID.randomUUID(),
@@ -187,7 +173,34 @@ public class MockBroker  implements IStudyComponentBroker{
         transition.setTransitionCriteria(criteria);
         return transition;
 
+    }
 
+//    @Override
+//    public PlannedWorkflowsSection getPlannedWorkflowsSection(UUID studyDesignId, String tag) {
+//        PlannedWorkflowsSection plannedWorkflowsSection = new PlannedWorkflowsSection(UUID.randomUUID(), tag);
+//        plannedWorkflowsSection.setPlannedWorkflows(this.getPlannedWorkflows(studyDesignId));
+//
+//        return plannedWorkflowsSection;
+//    }
+
+    @Override
+    public List<WorkflowItem> getWorkflowItems(UUID plannedWorkflowId) {
+
+        List<WorkflowItem> workflowItems = new ArrayList<>();
+        workflowItems.add( this.getTransitionWorkflowItem(UUID.randomUUID(), null));
+        // TODO: add an event and then another transition
+        return workflowItems;
+
+
+
+    }
+
+    @Override
+    public List<WorkflowItem> getBranchedWorkflowItems(UUID plannedWorkflowId) {
+        List<WorkflowItem> workflowItems = new ArrayList<>();
+        workflowItems.add( this.getTransitionWorkflowItem(UUID.randomUUID(), null));
+        // TODO: add an event and then another transition
+        return workflowItems;
     }
 
     @Override
@@ -249,18 +262,18 @@ public class MockBroker  implements IStudyComponentBroker{
 
 }
 
-    @Override
-    public ObjectivesSection getStudyObjectivesSection(UUID studyId, String tag) {
-
-        ObjectivesSection oSection = new ObjectivesSection(UUID.randomUUID(), tag);
-
-        oSection.setObjectives(this.getStudyObjectives(UUID.randomUUID()));
-
-        return oSection;
-
-
-
-    }
+//    @Override
+//    public ObjectivesSection getStudyObjectivesSection(UUID studyId, String tag) {
+//
+//        ObjectivesSection oSection = new ObjectivesSection(UUID.randomUUID(), tag);
+//
+//        oSection.setObjectives(this.getStudyObjectives(UUID.randomUUID()));
+//
+//        return oSection;
+//
+//
+//
+//    }
 
     @Override
     public ObjectivesSection getStudyObjectivesSection(UUID objectivesSectionId) {
@@ -271,35 +284,36 @@ public class MockBroker  implements IStudyComponentBroker{
         return oSection;
     }
 
-    @Override
-    public InvestigationalInterventionsSection getInvestigationalInterventionsSection(UUID studyId, String tag) {
-
-        InvestigationalIntervention intervention = new InvestigationalIntervention(UUID.randomUUID(),
-                "Ibuprofen 200mg");
-
-        Code code = new Code("26929004",
-                "SNOMED-CT",
-                "4.0.6.4",
-                "Alzheimer's disease (disorder)");
-        intervention.addCode(code);
-        InvestigationalInterventionsSection iiSection = new InvestigationalInterventionsSection(UUID.randomUUID(),
-               tag);
-
-        iiSection.addInvestigationalIntervention(intervention);
-
-        return iiSection;
-    }
+//    @Override
+//    public InvestigationalInterventionsSection getInvestigationalInterventionsSection(UUID studyId, String tag) {
+//
+//        InvestigationalIntervention intervention = new InvestigationalIntervention(UUID.randomUUID(),
+//                "Ibuprofen 200mg");
+//
+//        Code code = new Code("26929004",
+//                "SNOMED-CT",
+//                "4.0.6.4",
+//                "Alzheimer's disease (disorder)");
+//        intervention.addCode(code);
+//        InvestigationalInterventionsSection iiSection = new InvestigationalInterventionsSection(UUID.randomUUID(),
+//               tag);
+//
+//        iiSection.addInvestigationalIntervention(intervention);
+//
+//        return iiSection;
+//    }
 
     @Override
     public InvestigationalInterventionsSection getInvestigationalInterventionsSection(UUID studyId) {
         InvestigationalIntervention intervention = new InvestigationalIntervention(UUID.randomUUID(),
-                "Ibuprofen 200mg");
+                "Ibuprofen 200mg", InterventionModel.SEQUENTIAL);
 
         Code code = new Code("26929004",
                 "SNOMED-CT",
                 "4.0.6.4",
                 "Alzheimer's disease (disorder)");
         intervention.addCode(code);
+        intervention.setStatus("A Status");
         InvestigationalInterventionsSection iiSection = new InvestigationalInterventionsSection(UUID.randomUUID());
 
         iiSection.addInvestigationalIntervention(intervention);
@@ -307,21 +321,21 @@ public class MockBroker  implements IStudyComponentBroker{
         return iiSection;
     }
 
-    @Override
-    public StudyIndicationsSection getStudyIndicationsSection(UUID studyId, String tag) {
-
-        StudyIndication indication = new StudyIndication(UUID.randomUUID(),
-                "Alzheimer's disease");
-        Code code = new Code("26929004",
-                "SNOMED-CT",
-                "4.0.6.4",
-                "Alzheimer's disease (disorder)");
-        indication.addCode(code);
-        StudyIndicationsSection siSection = new StudyIndicationsSection(UUID.randomUUID(), tag);
-        siSection.addStudyIndication(indication);
-        return siSection;
-
-    }
+//    @Override
+//    public StudyIndicationsSection getStudyIndicationsSection(UUID studyId, String tag) {
+//
+//        StudyIndication indication = new StudyIndication(UUID.randomUUID(),
+//                "Alzheimer's disease");
+//        Code code = new Code("26929004",
+//                "SNOMED-CT",
+//                "4.0.6.4",
+//                "Alzheimer's disease (disorder)");
+//        indication.addCode(code);
+//        StudyIndicationsSection siSection = new StudyIndicationsSection(UUID.randomUUID(), tag);
+//        siSection.addStudyIndication(indication);
+//        return siSection;
+//
+//    }
 
     @Override
     public StudyIndicationsSection getStudyIndicationsSection(UUID studyId) {
@@ -337,17 +351,17 @@ public class MockBroker  implements IStudyComponentBroker{
         return siSection;
     }
 
-    @Override
-    public StudyPopulationsSection getStudyPopulationsSection(UUID studyDesignId, String tag) {
-
-        Population population = new Population(UUID.randomUUID(),
-                "healthy volunteers of age between 18 and 65");
-        StudyPopulationsSection spSection = new StudyPopulationsSection(UUID.randomUUID(), tag);
-
-        spSection.addStudyPopulation(population);
-
-        return spSection;
-    }
+//    @Override
+//    public StudyPopulationsSection getStudyPopulationsSection(UUID studyDesignId, String tag) {
+//
+//        Population population = new Population(UUID.randomUUID(),
+//                "healthy volunteers of age between 18 and 65");
+//        StudyPopulationsSection spSection = new StudyPopulationsSection(UUID.randomUUID(), tag);
+//
+//        spSection.addStudyPopulation(population);
+//
+//        return spSection;
+//    }
 
     @Override
     public StudyPopulationsSection getStudyPopulationsSection(UUID studyDesignId) {
@@ -364,26 +378,26 @@ public class MockBroker  implements IStudyComponentBroker{
     public List<StudyDesign> getStudyDesigns(UUID studyId) {
 
         List<StudyDesign> studyDesigns = new ArrayList<>();
-        studyDesigns.add(this.getStudyDesign(studyId,"1.1" ));
+        studyDesigns.add(this.getStudyDesign(studyId));
         return studyDesigns;
 
     }
 
     @Override
-    public StudyDesign getStudyDesign(UUID studyId, String version) {
-        StudyDesign studyDesign =  new StudyDesign(UUID.randomUUID(),version);
-        studyDesign.addSection(SectionType.STUDY_CELLS, this.getStudyCellsSection(UUID.randomUUID(),"1.0"));
-        studyDesign.addSection(SectionType.PLANNED_WORKFLOWS, this.getPlannedWorkflowsSection(UUID.randomUUID(),"In Dev"));
-        studyDesign.addSection(SectionType.STUDY_POPULATIONS, this.getStudyPopulationsSection(UUID.randomUUID(),"Final"));
+    public StudyDesign getStudyDesign(UUID studyId) {
+        StudyDesign studyDesign =  new StudyDesign(UUID.randomUUID());
+        studyDesign.addSection(SectionType.STUDY_CELLS, this.getStudyCellsSection(UUID.randomUUID()));
+        studyDesign.addSection(SectionType.PLANNED_WORKFLOWS, this.getPlannedWorkflowsSection(UUID.randomUUID()));
+        studyDesign.addSection(SectionType.STUDY_POPULATIONS, this.getStudyPopulationsSection(UUID.randomUUID()));
         return studyDesign;
     }
-
-    @Override
-    public StudyDesignsSection getStudyDesignsSection(UUID studyId, String tag) {
-        StudyDesignsSection studyDesignsSection = new StudyDesignsSection(UUID.randomUUID(), tag);
-        studyDesignsSection.setStudyDesigns(this.getStudyDesigns(studyId));
-        return studyDesignsSection;
-    }
+//
+//    @Override
+//    public StudyDesignsSection getStudyDesignsSection(UUID studyId, String tag) {
+//        StudyDesignsSection studyDesignsSection = new StudyDesignsSection(UUID.randomUUID(), tag);
+//        studyDesignsSection.setStudyDesigns(this.getStudyDesigns(studyId));
+//        return studyDesignsSection;
+//    }
 
     @Override
     public StudyDesignsSection getStudyDesignsSection(UUID studyId) {

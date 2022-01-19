@@ -7,15 +7,15 @@ public interface IStudyDesign {
 
     UUID getStudyDesignId();
 
-    String getStudyDesignVersion();
-
-    void setStudyDesignVersion(String version);
+//    String getStudyDesignVersion(); -- removing versioning for all but study
+//
+//    void setStudyDesignVersion(String version);
 
     List<Section> getCurrentSections();
 
     Section getSection(SectionType section);
 
-    Section getSection(SectionType sectionType, String tag);
+//    Section getSection(SectionType sectionType, String tag);
 
     void addSection(SectionType sectionType, Section section);
 

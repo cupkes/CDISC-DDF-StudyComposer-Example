@@ -14,12 +14,12 @@ import java.util.UUID;
  */
 
 
-public class Transition {
+public class Transition extends WorkflowItem{
 
-    private final UUID id;
-    private final String description;
-    private final PointInTime fromPointInTime;
-    private final PointInTime toPointInTime;
+//    private final UUID id; -- now in super constructor
+//    private final String description;
+//    private final PointInTime fromPointInTime;
+//    private final PointInTime toPointInTime;
     private Rule transitionRule;
     private String describedBy;
     private List<Criterion> transitionCriteria = new ArrayList<>();
@@ -27,33 +27,27 @@ public class Transition {
 
 
     public Transition(UUID id, String description, PointInTime fromPointInTime, PointInTime toPointInTime, Rule transitionRule) {
-        this.id = id;
-        this.description = description;
-        this.fromPointInTime = fromPointInTime;
-        this.toPointInTime = toPointInTime;
+        super(id, description,fromPointInTime,toPointInTime);
         this.transitionRule = transitionRule;
     }
 
     public Transition(UUID id, String description, PointInTime fromPointInTime, PointInTime toPointInTime) {
-        this.id = id;
-        this.description = description;
-        this.fromPointInTime = fromPointInTime;
-        this.toPointInTime = toPointInTime;
+        super(id, description,fromPointInTime,toPointInTime);
     }
 
 
 
-    public UUID getId() {
-        return id;
-    }
-
-    public PointInTime getFromPointInTime() {
-        return fromPointInTime;
-    }
-
-    public PointInTime getToPointInTime() {
-        return toPointInTime;
-    }
+//    public UUID getId() {
+//        return id;
+//    }
+//
+//    public PointInTime getFromPointInTime() {
+//        return fromPointInTime;
+//    }
+//
+//    public PointInTime getToPointInTime() {
+//        return toPointInTime;
+//    }
 
     public Rule getTransitionRule() {
         return transitionRule;
@@ -79,9 +73,9 @@ public class Transition {
         this.transitionCriteria = transitionCriteria;
     }
 
-    public String getDescription() {
-        return description;
-    }
+//    public String getDescription() {
+//        return description;
+//    }
 
     public Integer getStudyProtocolCriterionTransitionNumber() {
         return studyProtocolCriterionTransitionNumber;

@@ -22,16 +22,15 @@ public class PlannedWorkflow {
     private String description;
     private final PointInTime startPoint;
     private final PointInTime endPoint;
-    private List<Transition> transitions;
+    private List<List<WorkflowItem>> itemMatrix = new ArrayList<>();
 
 
-    public PlannedWorkflow(UUID id, String description, PointInTime startPoint, PointInTime endPoint, List<Transition> transitions){
+    public PlannedWorkflow(UUID id, String description, PointInTime startPoint, PointInTime endPoint){
 
         this.id = id;
         this.description = description;
         this.startPoint = startPoint;
         this.endPoint = endPoint;
-        this.transitions = transitions;
     }
 
     public UUID getId() {
@@ -54,22 +53,28 @@ public class PlannedWorkflow {
         return endPoint;
     }
 
-    public List<Transition> getTransitions() {
-        return transitions;
+
+    public List<List<WorkflowItem>> getItemMatrix() {
+        return itemMatrix;
     }
 
-    public void setTransitions(List<Transition> transitions) {
-        this.transitions = transitions;
+    public void setItemMatrix(List<List<WorkflowItem>> itemMatrix) {
+        this.itemMatrix = itemMatrix;
     }
 
-    public void addTransition(Transition transition){
-
-        this.transitions.add(transition);
+    public void addItemList(List<WorkflowItem> workflowItems) {
+        //TODO:  implement
     }
 
-    public void removeTransition(Transition transition){
+    public void removeItemList(List<WorkflowItem> workflowItems) {
+        //TODO: implement
+    }
 
-        this.transitions.remove(transition);
+    public void addItem(WorkflowItem workflowItem) {
+        //TODO: implement
+    }
 
+    public void removeItem(WorkflowItem workflowItem) {
+        //TODO: implement
     }
 }

@@ -16,6 +16,7 @@ public class Study implements IStudy {
     private StudyType studyType;
     private Phase studyPhase;
     private String version;
+    private String tag;
     private List<StudyIdentifier> studyIdentifiers;
     private Map<SectionType,List<Section>> studySections = new HashMap<>();
     private List<Section> interventionHistory = new ArrayList<>();
@@ -49,6 +50,16 @@ public class Study implements IStudy {
 
         this.version = version;
 
+    }
+
+    @Override
+    public String getStudyTag() {
+        return this.tag;
+    }
+
+    @Override
+    public void setStudyTag(String tag) {
+        this.tag = tag;
     }
 
     @Override
@@ -86,20 +97,20 @@ public class Study implements IStudy {
         return currentSections;
     }
 
-    @Override
-    public Section getSection(SectionType sectionType, String tag) {
-
-        List<Section> sections = this.studySections.get(sectionType);
-        for (Section section: sections
-             ) {
-            if (section.getTag().equals(tag)) {
-                return section;
-            }
-
-        }
-        return null;
-
-    }
+//    @Override
+//    public Section getSection(SectionType sectionType, String tag) {
+//
+//        List<Section> sections = this.studySections.get(sectionType);
+//        for (Section section: sections
+//             ) {
+//            if (section.getTag().equals(tag)) {
+//                return section;
+//            }
+//
+//        }
+//        return null;
+//
+//    }
 
     @Override
     public Section getSection(SectionType sectionType) {

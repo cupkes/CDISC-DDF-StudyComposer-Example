@@ -16,10 +16,10 @@ public class StudyCellsSection extends Section {
         super(id,SectionType.STUDY_CELLS);
 
     }
-    public StudyCellsSection(UUID id, String tag) {
-        super(id,SectionType.STUDY_CELLS, tag);
-
-    }
+//    public StudyCellsSection(UUID id, String tag) {
+//        super(id,SectionType.STUDY_CELLS, tag);
+//
+//    }
 
     private List<StudyCell> studyCells = new ArrayList<>();
 

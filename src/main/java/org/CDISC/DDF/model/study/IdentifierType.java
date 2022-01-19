@@ -6,9 +6,12 @@ package org.CDISC.DDF.model.study;
  * @author Chris Upkes
  */
 
+
+// What should this enumeration really contain?
+
 public enum IdentifierType {
 
-REGISTRY_STUDY
+REGISTRY_STUDY, NON_REGISTERED_STUDY
 
 
 }

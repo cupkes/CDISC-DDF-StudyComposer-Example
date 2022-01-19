@@ -2,12 +2,10 @@ package org.CDISC.DDF.composer.engine;
 
 
 import org.CDISC.DDF.composer.SDR.*;
+import org.CDISC.DDF.composer.SDR.StudyDesign;
 import org.CDISC.DDF.model.study.Objective;
 import org.CDISC.DDF.model.study.StudyIdentifier;
-import org.CDISC.DDF.model.studyDesign.PlannedWorkflow;
-import org.CDISC.DDF.model.studyDesign.StudyCell;
-import org.CDISC.DDF.model.studyDesign.StudyElement;
-import org.CDISC.DDF.model.studyDesign.Transition;
+import org.CDISC.DDF.model.studyDesign.*;
 
 import java.util.List;
 import java.util.UUID;
@@ -30,7 +28,7 @@ public interface IStudyComponentBroker {
 
     StudyCell getStudyCell(UUID studyCellId);
 
-    StudyCellsSection getStudyCellsSection(UUID studyDesignId, String tag);
+//    StudyCellsSection getStudyCellsSection(UUID studyDesignId, String tag);
 
     StudyCellsSection getStudyCellsSection(UUID studyDesignId);
 
@@ -40,11 +38,15 @@ public interface IStudyComponentBroker {
 
     PlannedWorkflowsSection getPlannedWorkflowsSection(UUID studyDesignId);
 
-    PlannedWorkflowsSection getPlannedWorkflowsSection(UUID studyDesignId, String tag);
+//    PlannedWorkflowsSection getPlannedWorkflowsSection(UUID studyDesignId, String tag);
 
-    List<Transition> getTransitions(UUID plannedWorkflowId);
+    List<List<WorkflowItem>> getWorkflowItemMatrix(UUID plannedWorkflowId);
 
-    Transition getTransition(UUID transitionId);
+    WorkflowItem getTransitionWorkflowItem(UUID workFlowItemId, UUID previousItemId);
+
+    List<WorkflowItem> getWorkflowItems(UUID plannedWorkflowId);
+
+    List<WorkflowItem> getBranchedWorkflowItems(UUID plannedWorkflowId);
 
     List<StudyElement> getStudyElements(UUID studyCellId);
 
@@ -54,27 +56,27 @@ public interface IStudyComponentBroker {
 
     Objective getStudyObjective(UUID studyObjectiveId);
 
-    ObjectivesSection getStudyObjectivesSection(UUID objectivesSectionId, String tag);
+//    ObjectivesSection getStudyObjectivesSection(UUID objectivesSectionId, String tag);
 
     ObjectivesSection getStudyObjectivesSection(UUID objectivesSectionId);
 
-    InvestigationalInterventionsSection getInvestigationalInterventionsSection(UUID studyId, String tag);
+//    InvestigationalInterventionsSection getInvestigationalInterventionsSection(UUID studyId, String tag);
 
     InvestigationalInterventionsSection getInvestigationalInterventionsSection(UUID studyId);
 
-    StudyIndicationsSection getStudyIndicationsSection(UUID studyId, String tag);
+//    StudyIndicationsSection getStudyIndicationsSection(UUID studyId, String tag);
 
     StudyIndicationsSection getStudyIndicationsSection(UUID studyId);
 
-    StudyPopulationsSection getStudyPopulationsSection(UUID studyDesignId, String tag);
+//    StudyPopulationsSection getStudyPopulationsSection(UUID studyDesignId, String tag);
 
     StudyPopulationsSection getStudyPopulationsSection(UUID studyDesignId);
 
     List<StudyDesign> getStudyDesigns(UUID studyId);
 
-    StudyDesign getStudyDesign(UUID studyId, String version);
+    StudyDesign getStudyDesign(UUID studyId);
 
-    StudyDesignsSection getStudyDesignsSection(UUID studyId, String tag);
+//    StudyDesignsSection getStudyDesignsSection(UUID studyId, String tag);
 
     StudyDesignsSection getStudyDesignsSection(UUID studyId);
 

@@ -13,9 +13,9 @@ public class InvestigationalInterventionsSection extends Section {
 
     private List<InvestigationalIntervention> investigationalInterventions = new ArrayList<>();
 
-    public InvestigationalInterventionsSection(UUID id, String tag) {
-        super(id, SectionType.INVESTIGATIONAL_INTERVENTIONS, tag);
-    }
+//    public InvestigationalInterventionsSection(UUID id, String tag) {
+//        super(id, SectionType.INVESTIGATIONAL_INTERVENTIONS, tag);
+//    }
 
     public InvestigationalInterventionsSection(UUID id) {
         super(id, SectionType.INVESTIGATIONAL_INTERVENTIONS);

@@ -72,9 +72,8 @@ class MockBrokerTest {
     @org.junit.jupiter.api.Test
     void getTransitions() {
 
-        List<Transition> transitions = mockBroker.getTransitions(UUID.randomUUID());
-        assertNotNull(transitions);
-        Transition transition = transitions.get(0);
+        List<WorkflowItem> transitions = mockBroker.getWorkflowItems(UUID.randomUUID());
+        Transition transition = (Transition) transitions.get(0);
         assertNotNull(transition);
         assertEquals(transition.getDescription(),StaticStudyDataProvider.TRANSITION_DESC);
         Criterion criterion = transition.getTransitionCriteria().get(0);
@@ -86,7 +85,7 @@ class MockBrokerTest {
     @org.junit.jupiter.api.Test
     void getTransition() {
 
-        Transition transition = mockBroker.getTransition(UUID.randomUUID());
+        Transition transition = (Transition) mockBroker.getTransitionWorkflowItem(UUID.randomUUID(), null);
         assertNotNull(transition);
         assertEquals(transition.getDescription(),StaticStudyDataProvider.TRANSITION_DESC);
         Criterion criterion = transition.getTransitionCriteria().get(0);

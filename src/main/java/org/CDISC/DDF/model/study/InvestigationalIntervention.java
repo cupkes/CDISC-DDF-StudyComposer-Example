@@ -18,10 +18,15 @@ public class InvestigationalIntervention {
     private final UUID id;
     private final String description;
     private List<Code> coding = new ArrayList<>();
+    private final InterventionModel interventionModel;
 
-    public InvestigationalIntervention(UUID id, String description) {
+
+    private String status;
+
+    public InvestigationalIntervention(UUID id, String description, InterventionModel interventionModel) {
         this.id = id;
         this.description = description;
+        this.interventionModel = interventionModel;
     }
 
     public String getDescription() {
@@ -49,4 +54,17 @@ public class InvestigationalIntervention {
 
         this.coding.remove(code);
     }
+
+    public InterventionModel getInterventionModel() {
+        return interventionModel;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
 }

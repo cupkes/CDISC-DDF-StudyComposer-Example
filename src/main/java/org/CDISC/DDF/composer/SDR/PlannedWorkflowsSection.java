@@ -13,9 +13,9 @@ public class PlannedWorkflowsSection extends Section {
         super(id, SectionType.PLANNED_WORKFLOWS);
     }
 
-    public PlannedWorkflowsSection(UUID id, String tag) {
-        super(id, SectionType.PLANNED_WORKFLOWS, tag);
-    }
+//    public PlannedWorkflowsSection(UUID id, String tag) {
+//        super(id, SectionType.PLANNED_WORKFLOWS, tag);
+//    }
 
     private List<PlannedWorkflow> plannedWorkflows = new ArrayList<>();
 

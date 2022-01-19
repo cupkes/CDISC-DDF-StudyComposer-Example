@@ -16,9 +16,9 @@ public class StudyDesign implements IStudyDesign {
     private List<Section> populationHistory = new ArrayList<>();
 
 
-    public StudyDesign(UUID id, String version) {
+    public StudyDesign(UUID id) {
         this.id = id;
-        this.version = version;
+        //this.version = version;
     }
 
     @Override
@@ -26,17 +26,17 @@ public class StudyDesign implements IStudyDesign {
         return this.id;
     }
 
-    @Override
-    public String getStudyDesignVersion() {
-        return this.version;
-    }
-
-    @Override
-    public void setStudyDesignVersion(String version) {
-
-        this.version = version;
-
-    }
+//    @Override
+//    public String getStudyDesignVersion() {
+//        return this.version;
+//    }
+//
+//    @Override
+//    public void setStudyDesignVersion(String version) {
+//
+//        this.version = version;
+//
+//    }
 
     @Override
     public List<Section> getCurrentSections() {
@@ -62,19 +62,19 @@ public class StudyDesign implements IStudyDesign {
     }
 
 
-    @Override
-    public Section getSection(SectionType sectionType, String tag) {
-
-        List<Section> sections = this.designSections.get(sectionType);
-        for (Section section: sections
-        ) {
-            if (section.getTag().equals(tag)) {
-                return section;
-            }
-
-        }
-        return null;
-    }
+//    @Override
+//    public Section getSection(SectionType sectionType, String tag) {
+//
+//        List<Section> sections = this.designSections.get(sectionType);
+//        for (Section section: sections
+//        ) {
+//            if (section.getTag().equals(tag)) {
+//                return section;
+//            }
+//
+//        }
+//        return null;
+//    }
 
     @Override
     public void addSection(SectionType sectionType, Section section) {

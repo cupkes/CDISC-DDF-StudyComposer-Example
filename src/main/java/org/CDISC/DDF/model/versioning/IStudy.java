@@ -15,6 +15,10 @@ public interface IStudy {
 
     void setStudyVersion(String version);
 
+    String getStudyTag();
+
+    void setStudyTag(String tag);
+
     String getStudyTitle();
 
     StudyType getStudyType();
@@ -25,7 +29,7 @@ public interface IStudy {
 
     List<Section> getCurrentSections();
 
-    Section getSection(SectionType sectionType, String tag);
+//    Section getSection(SectionType sectionType, String tag);
 
     Section getSection(SectionType sectionType);
 

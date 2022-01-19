@@ -13,9 +13,9 @@ public class StudyDesignsSection extends Section {
         super(id,SectionType.STUDY_DESIGNS);
     }
 
-    public StudyDesignsSection(UUID id, String tag) {
-        super(id,SectionType.STUDY_DESIGNS, tag);
-    }
+//    public StudyDesignsSection(UUID id, String tag) {
+//        super(id,SectionType.STUDY_DESIGNS, tag);
+//    }
 
 
 
