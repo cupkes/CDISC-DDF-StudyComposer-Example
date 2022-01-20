@@ -9,7 +9,7 @@ import java.util.*;
 public class StudyDesign implements IStudyDesign {
 
     private final UUID id;
-    private String version;
+   // private String version;
     private Map<SectionType,List<Section>> designSections = new HashMap<>();
     private List<Section> studyCellHistory = new ArrayList<>();
     private List<Section> workflowHistory = new ArrayList<>();

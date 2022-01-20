@@ -13,9 +13,6 @@ public class Estimand {
     private final String summaryMeasure;
     private List<IntercurrentEvent> eventsOfInterest;
 
-
-
-
     public Estimand(UUID id, Population popluation, String summaryMeasure) {
         this.id = id;
         this.popluation = popluation;
@@ -41,6 +38,8 @@ public class Estimand {
     public void setEventsOfInterest(List<IntercurrentEvent> eventsOfInterest) {
         this.eventsOfInterest = eventsOfInterest;
     }
+
+
 
 
 }

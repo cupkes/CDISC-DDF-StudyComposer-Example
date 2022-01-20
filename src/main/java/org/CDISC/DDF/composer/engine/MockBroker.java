@@ -191,8 +191,6 @@ public class MockBroker  implements IStudyComponentBroker{
         // TODO: add an event and then another transition
         return workflowItems;
 
-
-
     }
 
     @Override
