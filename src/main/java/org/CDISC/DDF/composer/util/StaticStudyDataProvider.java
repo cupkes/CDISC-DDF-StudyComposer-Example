@@ -37,6 +37,7 @@ public class StaticStudyDataProvider {
     public static String OBJECTIVE_DESC  = "Example trial objective";
     public static String IDENTIFIER_CODE = "2.16.840.1.113883.3.1077";
     public static String IDENTIFIER_NAME = "ClinicalTrials.gov";
+    public static String STUDY_STATUS = "this is a study status value";
 
 
 

@@ -1,11 +1,19 @@
 package org.CDISC.DDF.model.versioning;
 
+import org.CDISC.DDF.model.study.InterventionModel;
 import org.CDISC.DDF.model.study.Phase;
 import org.CDISC.DDF.model.study.StudyIdentifier;
 import org.CDISC.DDF.model.study.StudyType;
 
 import java.util.List;
 import java.util.UUID;
+
+/**
+ * org.CDISC.DDF.model.versioning.IStudy is an interface defining the essential
+ * methods required for study data.
+ *
+ * @author Chris Upkes
+ */
 
 public interface IStudy {
 
@@ -24,6 +32,10 @@ public interface IStudy {
     StudyType getStudyType();
 
     Phase getStudyPhase();
+
+    String getStudyStatus();
+
+    void setStudyStatus(String studyStatus);
 
     List<StudyIdentifier> getStudyIdentifiers();
 

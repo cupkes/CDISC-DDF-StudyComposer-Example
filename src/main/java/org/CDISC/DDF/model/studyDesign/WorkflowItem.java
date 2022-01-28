@@ -1,8 +1,18 @@
 package org.CDISC.DDF.model.studyDesign;
 
+
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
+/**
+ * org.CDISC.DDF.model.studyDesign.WorkflowItem is an abstract class used to provide
+ * the PlannedWorkflow object a linked-list that contains both Transitions and
+ * TransitionEvents.
+ *
+ * @author Chris Upkes
+ */
 
 public abstract class WorkflowItem {
 

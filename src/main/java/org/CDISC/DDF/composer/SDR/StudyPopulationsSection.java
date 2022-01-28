@@ -8,6 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * org.CDISC.DDF.composer.SDR.StudyPopulationsSection is in implementation of the
+ * Section abstract class.  This section pertains to the collection of populations associated
+ * with study designs (sub-studies).  This needs to be at the sub-study level to support
+ * basket or umbrella studies.
+ *
+ * @author Chris Upkes
+ */
+
 public class StudyPopulationsSection extends Section {
     public StudyPopulationsSection(UUID id) {
         super(id, SectionType.STUDY_POPULATIONS);

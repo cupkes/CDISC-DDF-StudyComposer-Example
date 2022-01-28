@@ -1,13 +1,15 @@
 package org.CDISC.DDF.model.studyDesign;
 
-/*
+
+
+import java.util.Date;
+import java.util.UUID;
+
+/**
  * org.CDISC.DDF.model.studyDesign.PointInTime is a logical representation of a point in time.
  *
  * @author Chris Upkes
  */
-
-import java.util.Date;
-import java.util.UUID;
 
 // in the api this object is attached to a study.  I don't agree.  This should be attached to
 // a transition in a workflow according to the mind-map.

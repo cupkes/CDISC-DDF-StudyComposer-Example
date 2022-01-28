@@ -3,6 +3,7 @@ package org.CDISC.DDF.model.study;
 import org.CDISC.DDF.model.common.Amendment;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -26,6 +27,9 @@ public class StudyProtocol {
     private String publicTitle;
     private String version;
     private String scientificTitle;
+    private String protocolVersion;
+    private Date approvalDate;
+    private String protocolStatus;
 
     private List<Amendment> amendments = new ArrayList<>();
     private List<String> sections = new ArrayList<>();

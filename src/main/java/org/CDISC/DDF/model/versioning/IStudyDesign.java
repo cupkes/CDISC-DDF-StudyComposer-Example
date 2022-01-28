@@ -1,7 +1,16 @@
 package org.CDISC.DDF.model.versioning;
 
+
+
 import java.util.List;
 import java.util.UUID;
+
+/**
+ * org.CDISC.DDF.model.versioning.IStudyDesign is an interface defining the essential
+ * methods required for study data that supports basket and umbrella studies.
+ *
+ * @author Chris Upkes
+ */
 
 public interface IStudyDesign {
 

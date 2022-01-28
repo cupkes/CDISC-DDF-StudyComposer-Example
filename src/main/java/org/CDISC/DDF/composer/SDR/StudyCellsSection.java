@@ -11,6 +11,14 @@ import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * org.CDISC.DDF.composer.SDR.StudyCellsSection is in implementation of the
+ * Section abstract class.  This section pertains to the collection of study cells associated
+ * with studies.
+ *
+ * @author Chris Upkes
+ */
+
 public class StudyCellsSection extends Section {
     public StudyCellsSection(UUID id) {
         super(id,SectionType.STUDY_CELLS);

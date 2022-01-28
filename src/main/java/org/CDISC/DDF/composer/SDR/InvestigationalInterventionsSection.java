@@ -3,11 +3,18 @@ package org.CDISC.DDF.composer.SDR;
 import org.CDISC.DDF.model.study.InvestigationalIntervention;
 import org.CDISC.DDF.model.versioning.Section;
 import org.CDISC.DDF.model.versioning.SectionType;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
+
+/**
+ * org.CDISC.DDF.composer.SDR.InvestigationalInterventionSection is in implementation of the
+ * Section abstract class.  This section pertains to the collection of interventions associated
+ * with studies.
+ *
+ * @author Chris Upkes
+ */
 
 public class InvestigationalInterventionsSection extends Section {
 

@@ -8,6 +8,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * org.CDISC.DDF.composer.SDR.StudyDesignsSection is in implementation of the
+ * Section abstract class.  This section pertains to the collection of sub-studies associated
+ * with umbrella or basket studies.
+ *
+ * @author Chris Upkes
+ */
+
 public class StudyDesignsSection extends Section {
     public StudyDesignsSection(UUID id) {
         super(id,SectionType.STUDY_DESIGNS);

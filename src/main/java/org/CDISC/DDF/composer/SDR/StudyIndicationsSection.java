@@ -8,6 +8,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * org.CDISC.DDF.composer.SDR.StudyIndicationsSection is in implementation of the
+ * Section abstract class.  This section pertains to the collection of Indications associated
+ * with studies.
+ *
+ * @author Chris Upkes
+ */
+
 public class StudyIndicationsSection extends Section {
     public StudyIndicationsSection(UUID id) {
         super(id, SectionType.STUDY_INDICATIONS);

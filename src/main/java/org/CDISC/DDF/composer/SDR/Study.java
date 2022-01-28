@@ -1,5 +1,8 @@
 package org.CDISC.DDF.composer.SDR;
 
+
+
+import org.CDISC.DDF.model.study.InterventionModel;
 import org.CDISC.DDF.model.study.Phase;
 import org.CDISC.DDF.model.study.StudyIdentifier;
 import org.CDISC.DDF.model.study.StudyType;
@@ -9,6 +12,13 @@ import org.CDISC.DDF.model.versioning.SectionType;
 
 import java.util.*;
 
+/**
+ * org.CDISC.DDF.composer.SDR.PlannedWorkflowsSection is in implementation of the
+ * IStudy interface.  This class represents a clinical study.
+ *
+ * @author Chris Upkes
+ */
+
 public class Study implements IStudy {
 
     private final UUID id;
@@ -17,6 +27,8 @@ public class Study implements IStudy {
     private Phase studyPhase;
     private String version;
     private String tag;
+    private String studyStatus;
+
     private List<StudyIdentifier> studyIdentifiers;
     private Map<SectionType,List<Section>> studySections = new HashMap<>();
     private List<Section> interventionHistory = new ArrayList<>();
@@ -75,6 +87,18 @@ public class Study implements IStudy {
     @Override
     public Phase getStudyPhase() {
         return this.studyPhase;
+    }
+
+    @Override
+    public String getStudyStatus() {
+        return this.studyStatus;
+    }
+
+
+
+    @Override
+    public void setStudyStatus(String studyStatus) {
+        this.studyStatus = studyStatus;
     }
 
     @Override

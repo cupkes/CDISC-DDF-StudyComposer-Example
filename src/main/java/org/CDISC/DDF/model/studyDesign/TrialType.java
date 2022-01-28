@@ -3,7 +3,7 @@ package org.CDISC.DDF.model.studyDesign;
 import java.util.UUID;
 
 /**
- * org.CDISC.DDF.model.studyDesign.TrialType is Tan enum used in study design
+ * org.CDISC.DDF.model.studyDesign.TrialType is an enum used in study design
  *
  * @author Chris Upkes
  */

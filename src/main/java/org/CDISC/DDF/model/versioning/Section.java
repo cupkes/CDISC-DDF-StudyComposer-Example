@@ -3,7 +3,9 @@ package org.CDISC.DDF.model.versioning;
 import java.util.UUID;
 
 /**
- * org.CDISC.DDF.model.versioning.Section is a
+ * org.CDISC.DDF.model.versioning.Section is an abstract class used to provide a
+ * polymorphic collection of components available in the IStudy and IStudyDesign
+ * interfaces.
  *
  * @author Chris Upkes
  */

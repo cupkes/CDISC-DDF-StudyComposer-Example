@@ -6,6 +6,13 @@ import org.CDISC.DDF.model.versioning.SectionType;
 
 import java.util.*;
 
+/**
+ * org.CDISC.DDF.composer.SDR.PlannedWorkflowsSection is in implementation of the
+ * IStudyDesign interface.  This class represents a clinical sub-study.
+ *
+ * @author Chris Upkes
+ */
+
 public class StudyDesign implements IStudyDesign {
 
     private final UUID id;

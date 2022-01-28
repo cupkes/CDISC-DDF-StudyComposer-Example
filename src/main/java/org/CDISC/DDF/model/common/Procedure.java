@@ -3,7 +3,8 @@ package org.CDISC.DDF.model.common;
 import java.util.UUID;
 
 /**
- * org.CDISC.DDF.model.common.Procedure is a .
+ * org.CDISC.DDF.model.common.Procedure is an abstract class used to provide
+ * polymorphism for various collections of specific procedure types.
  *
  * @author Chris Upkes
  */

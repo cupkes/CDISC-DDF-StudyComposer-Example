@@ -4,7 +4,9 @@ import java.net.URI;
 import java.util.UUID;
 
 /**
- * org.CDISC.DDF.model.common.AssessmentGroup is a .
+ * org.CDISC.DDF.model.common.AssessmentGroup is a is used to group related
+ * Assessment objects.  The AssessmentGroup is also used to provide standard library
+ * related information to groups of assessments.
  *
  * @author Chris Upkes
  */
