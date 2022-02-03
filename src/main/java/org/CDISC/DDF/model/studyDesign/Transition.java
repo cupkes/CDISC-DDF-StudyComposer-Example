@@ -1,5 +1,6 @@
 package org.CDISC.DDF.model.studyDesign;
 
+import org.CDISC.DDF.model.common.Activity;
 import org.CDISC.DDF.model.common.Criterion;
 import org.CDISC.DDF.model.common.Rule;
 
@@ -26,13 +27,22 @@ public class Transition extends WorkflowItem{
     private Integer studyProtocolCriterionTransitionNumber;
 
 
-    public Transition(UUID id, String description, PointInTime fromPointInTime, PointInTime toPointInTime, Rule transitionRule) {
-        super(id, description,fromPointInTime,toPointInTime);
+    public Transition(UUID id,
+                      String description,
+                      PointInTime fromPointInTime,
+                      PointInTime toPointInTime,
+                      Rule transitionRule,
+                      Activity activity) {
+        super(id, description,fromPointInTime,toPointInTime, activity);
         this.transitionRule = transitionRule;
     }
 
-    public Transition(UUID id, String description, PointInTime fromPointInTime, PointInTime toPointInTime) {
-        super(id, description,fromPointInTime,toPointInTime);
+    public Transition(UUID id,
+                      String description,
+                      PointInTime fromPointInTime,
+                      PointInTime toPointInTime,
+                      Activity activity) {
+        super(id, description,fromPointInTime,toPointInTime, activity);
     }
 
 

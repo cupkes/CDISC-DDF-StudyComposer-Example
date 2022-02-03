@@ -10,6 +10,7 @@ package org.CDISC.DDF.composer.engine;
 
 
 import org.CDISC.DDF.composer.SDR.*;
+import org.CDISC.DDF.composer.SDR.Study;
 import org.CDISC.DDF.composer.SDR.StudyDesign;
 import org.CDISC.DDF.composer.util.StaticStudyDataProvider;
 import org.CDISC.DDF.model.common.*;
@@ -100,6 +101,7 @@ public class MockBroker  implements IStudyComponentBroker{
         // first get a matrix of workflowitems
 
 
+
         // second, build points in time
 
         PointInTime fromPointInTime = new PointInTime(UUID.randomUUID(),
@@ -166,8 +168,23 @@ public class MockBroker  implements IStudyComponentBroker{
                 new Date(),
                 new Date());
 
+
+        Procedure procedure = new MedicalProcedure(UUID.randomUUID());
+        List<Procedure> procedures = new ArrayList<>();
+        procedures.add(procedure);
+
+        StudyData studyData = new Observation(UUID.randomUUID(), UUID.randomUUID());
+        List<StudyData> studyDataList = new ArrayList<>();
+        studyDataList.add(studyData);
+
+
+        Activity activity = new Activity(UUID.randomUUID(), procedures, studyDataList);
+
+
         Transition transition = new  Transition(UUID.randomUUID(),StaticStudyDataProvider.TRANSITION_DESC,
-                fromPointInTime,toPointInTime,rule);
+                fromPointInTime,toPointInTime,rule, activity);
+
+
 
         transition.setStudyProtocolCriterionTransitionNumber(StaticStudyDataProvider.STUDY_PROTOCOL_CRITERION_TRANSITION_NUMBER);
         transition.setTransitionCriteria(criteria);

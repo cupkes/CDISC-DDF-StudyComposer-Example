@@ -2,6 +2,9 @@ package org.CDISC.DDF.model.studyDesign;
 
 
 
+import org.CDISC.DDF.model.common.Activity;
+import org.CDISC.DDF.model.common.Visit;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -20,18 +23,23 @@ public abstract class WorkflowItem {
     private final String description;
     private final PointInTime fromPointInTime;
     private final PointInTime toPointInTime;
+    private final Activity activity;
+    private Visit visit;
 
 
     private List<UUID> previousItems = new ArrayList<>();
     private List<UUID> nextItems = new ArrayList<>();
 
+// TO_DO:  remove point in time constructor values.
 
-    protected WorkflowItem(UUID id, String description, PointInTime fromPointInTime, PointInTime toPointInTime) {
+    // WorklfowItem objects are now for sequencing.
+    protected WorkflowItem(UUID id, String description, PointInTime fromPointInTime, PointInTime toPointInTime, Activity activity) {
 
         this.id = id;
         this.description = description;
         this.fromPointInTime = fromPointInTime;
         this.toPointInTime = toPointInTime;
+        this.activity = activity;
     }
 
 
@@ -84,5 +92,17 @@ public abstract class WorkflowItem {
 
     public PointInTime getToPointInTime() {
         return toPointInTime;
+    }
+
+    public Activity getActivity() {
+        return activity;
+    }
+
+    public Visit getVisit() {
+        return visit;
+    }
+
+    public void setVisit(Visit visit) {
+        this.visit = visit;
     }
 }

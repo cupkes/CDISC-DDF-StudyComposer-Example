@@ -1,5 +1,7 @@
 package org.CDISC.DDF.model.common;
 
+import org.CDISC.DDF.model.studyDesign.WorkflowItem;
+
 import java.util.UUID;
 
 /**
@@ -12,13 +14,14 @@ public class Visit extends Encounter {
 
     private final ContactMode contactMode;
     private final EnvironmentalSetting environmentalSetting;
-    private ActivitySchedule scheduleOfActivities;
+    private final WorkflowItem workflowItem;
 
 
-    protected Visit(UUID id, String name, String description, Rule startRule, Rule endRule, ContactMode contactMode, EnvironmentalSetting environmentalSetting) {
+    protected Visit(UUID id, String name, String description, Rule startRule, Rule endRule, ContactMode contactMode, EnvironmentalSetting environmentalSetting, WorkflowItem workflowItem) {
         super(id, name, description, startRule, endRule);
         this.contactMode = contactMode;
         this.environmentalSetting = environmentalSetting;
+        this.workflowItem = workflowItem;
     }
 
 
@@ -30,12 +33,7 @@ public class Visit extends Encounter {
         return environmentalSetting;
     }
 
-    public ActivitySchedule getScheduleOfActivities() {
-        return scheduleOfActivities;
+    public WorkflowItem getWorkflowItem() {
+        return workflowItem;
     }
-
-    public void setScheduleOfActivities(ActivitySchedule scheduleOfActivities) {
-        this.scheduleOfActivities = scheduleOfActivities;
-    }
-
 }

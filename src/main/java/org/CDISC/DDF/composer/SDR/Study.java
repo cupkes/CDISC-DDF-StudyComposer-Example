@@ -11,13 +11,13 @@ import org.CDISC.DDF.model.versioning.Section;
 import org.CDISC.DDF.model.versioning.SectionType;
 
 import java.util.*;
-
 /**
  * org.CDISC.DDF.composer.SDR.PlannedWorkflowsSection is in implementation of the
  * IStudy interface.  This class represents a clinical study.
  *
  * @author Chris Upkes
  */
+
 
 public class Study implements IStudy {
 
@@ -35,6 +35,10 @@ public class Study implements IStudy {
     private List<Section> indicationHistory = new ArrayList<>();
     private List<Section> objectiveHistory = new ArrayList<>();
     private List<Section> studyDesignHistory = new ArrayList<>();
+
+
+
+    private StudyIdentifier sponsorId;
 
 
     public Study(UUID id, String studyTitle, StudyType studyType, Phase studyPhase, String version, List<StudyIdentifier> studyIdentifiers) {
@@ -107,6 +111,11 @@ public class Study implements IStudy {
     }
 
     @Override
+    public StudyIdentifier getOriginalSponserIdentifier() {
+        return this.sponsorId;
+    }
+
+    @Override
     public List<Section> getCurrentSections() {
 
         List<Section> currentSections = new ArrayList<>();
@@ -173,4 +182,14 @@ public class Study implements IStudy {
     public List<Section> getSectionHistory(SectionType sectionType) {
         return this.studySections.get(sectionType);
     }
+
+    public StudyIdentifier getSponsorId() {
+        return sponsorId;
+    }
+
+    public void setSponsorId(StudyIdentifier sponsorId) {
+        this.sponsorId = sponsorId;
+    }
 }
+
+

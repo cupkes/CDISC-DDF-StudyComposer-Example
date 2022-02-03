@@ -9,7 +9,7 @@ import java.util.UUID;
  * @author Chris Upkes
  */
 
-public class Assessment {
+public class Assessment extends StudyData {
 
     private final UUID id;
     private final String name;
@@ -18,7 +18,8 @@ public class Assessment {
     private final AssessmentDataType expectedDataType;
     private final String expectedUnits;
 
-    public Assessment(UUID id, String name, String description, AssessmentType mainAssessmentType, AssessmentDataType expectedDataType, String expectedUnits) {
+    public Assessment(UUID id, UUID collectionEventId, String name, String description, AssessmentType mainAssessmentType, AssessmentDataType expectedDataType, String expectedUnits) {
+        super(id,collectionEventId);
         this.id = id;
         this.name = name;
         this.description = description;

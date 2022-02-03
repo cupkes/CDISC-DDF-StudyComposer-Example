@@ -39,6 +39,8 @@ public interface IStudy {
 
     List<StudyIdentifier> getStudyIdentifiers();
 
+    StudyIdentifier getOriginalSponserIdentifier();
+
     List<Section> getCurrentSections();
 
 //    Section getSection(SectionType sectionType, String tag);
