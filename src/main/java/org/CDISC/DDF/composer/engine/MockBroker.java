@@ -118,8 +118,13 @@ public class MockBroker  implements IStudyComponentBroker{
 
         // build and return the workflow
 
-        return new PlannedWorkflow(plannedWorkflowId,StaticStudyDataProvider.PLANNED_WORKFLOW_DESC,
+        PlannedWorkflow wf = new PlannedWorkflow(plannedWorkflowId,StaticStudyDataProvider.PLANNED_WORKFLOW_DESC,
                 fromPointInTime,toPointInTime);
+
+        wf.setItemMatrix(this.getWorkflowItemMatrix(plannedWorkflowId));
+
+        return wf;
+
 
     }
 
@@ -134,7 +139,11 @@ public class MockBroker  implements IStudyComponentBroker{
 
     @Override
     public List<List<WorkflowItem>> getWorkflowItemMatrix(UUID plannedWorkflowId) {
-        return null;
+
+        List<List<WorkflowItem>> workflowItemMatrix = new ArrayList<>();
+        workflowItemMatrix.add(this.getWorkflowItems(plannedWorkflowId));
+        return workflowItemMatrix;
+
     }
 
     @Override
@@ -181,6 +190,8 @@ public class MockBroker  implements IStudyComponentBroker{
         Activity activity = new Activity(UUID.randomUUID(), procedures, studyDataList);
 
 
+
+
         Transition transition = new  Transition(UUID.randomUUID(),StaticStudyDataProvider.TRANSITION_DESC,
                 fromPointInTime,toPointInTime,rule, activity);
 
@@ -188,6 +199,7 @@ public class MockBroker  implements IStudyComponentBroker{
 
         transition.setStudyProtocolCriterionTransitionNumber(StaticStudyDataProvider.STUDY_PROTOCOL_CRITERION_TRANSITION_NUMBER);
         transition.setTransitionCriteria(criteria);
+        transition.setVisit(this.getMockVisit());
         return transition;
 
     }
@@ -438,6 +450,29 @@ public class MockBroker  implements IStudyComponentBroker{
 
 
     }
+
+    public Visit getMockVisit() {
+
+        List<Code> coding = new ArrayList<>();
+        Code code = new Code("xyz", "test system","1.0", "the decode string");
+        coding.add(code);
+
+
+        Rule startRule = new Rule(UUID.randomUUID(), "start rule", coding);
+        Rule endRule = new Rule(UUID.randomUUID(), "end rule", coding);
+
+        return new Visit(UUID.randomUUID(),
+                "test visit",
+                "visit description",
+                startRule,
+                endRule,
+                ContactMode.IN_PERSON,
+                EnvironmentalSetting.CLINIC);
+
+
+
+    }
+
 
 
     // I didn't make the StaticStudyDataProvider a private class for MockBroker in case that

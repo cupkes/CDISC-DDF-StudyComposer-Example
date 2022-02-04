@@ -14,14 +14,14 @@ public class Visit extends Encounter {
 
     private final ContactMode contactMode;
     private final EnvironmentalSetting environmentalSetting;
-    private final WorkflowItem workflowItem;
+    //private final WorkflowItem workflowItem;
 
 
-    protected Visit(UUID id, String name, String description, Rule startRule, Rule endRule, ContactMode contactMode, EnvironmentalSetting environmentalSetting, WorkflowItem workflowItem) {
+    public Visit(UUID id, String name, String description, Rule startRule, Rule endRule, ContactMode contactMode, EnvironmentalSetting environmentalSetting) {
         super(id, name, description, startRule, endRule);
         this.contactMode = contactMode;
         this.environmentalSetting = environmentalSetting;
-        this.workflowItem = workflowItem;
+       // this.workflowItem = workflowItem;
     }
 
 
@@ -33,7 +33,7 @@ public class Visit extends Encounter {
         return environmentalSetting;
     }
 
-    public WorkflowItem getWorkflowItem() {
-        return workflowItem;
-    }
+    //public WorkflowItem getWorkflowItem() {
+    //  return workflowItem;
+    //}
 }

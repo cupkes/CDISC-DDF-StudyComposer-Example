@@ -10,7 +10,20 @@ import java.util.UUID;
 
 
 public class MedicalProcedure extends Procedure{
+
+
+
+    private String procedureCode;
+
     public MedicalProcedure(UUID id) {
         super(id);
+    }
+
+    public String getProcedureCode() {
+        return procedureCode;
+    }
+
+    public void setProcedureCode(String procedureCode) {
+        this.procedureCode = procedureCode;
     }
 }
