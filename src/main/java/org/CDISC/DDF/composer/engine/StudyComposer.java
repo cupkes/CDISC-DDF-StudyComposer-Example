@@ -42,8 +42,9 @@ public class StudyComposer {
                 mockBroker.getStudyIdentifiers(UUID.randomUUID())
                 );
 
-
         this.study.setStudyStatus("this is a study status");
+        this.study.setProtocolId(UUID.randomUUID());
+        this.study.setProtocolVersion("1.0");
         this.study.addSection(SectionType.STUDY_DESIGNS, mockBroker.getStudyDesignsSection(studyId));
         this.study.addSection(SectionType.INVESTIGATIONAL_INTERVENTIONS,
                 mockBroker.getInvestigationalInterventionsSection(studyId));

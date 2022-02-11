@@ -28,6 +28,8 @@ public class Study implements IStudy {
     private String version;
     private String tag;
     private String studyStatus;
+    private UUID protocolId;
+    private String protocolVersion;
 
     private List<StudyIdentifier> studyIdentifiers;
     private Map<SectionType,List<Section>> studySections = new HashMap<>();
@@ -106,13 +108,32 @@ public class Study implements IStudy {
     }
 
     @Override
-    public List<StudyIdentifier> getStudyIdentifiers() {
-        return this.studyIdentifiers;
+    public UUID getProtocolId() {
+        return this.protocolId;
     }
 
     @Override
-    public StudyIdentifier getOriginalSponserIdentifier() {
-        return this.sponsorId;
+    public String getProtocolVersion() {
+        return this.protocolVersion;
+    }
+
+    @Override
+    public void setProtocolId(UUID protocolId) {
+
+        this.protocolId = protocolId;
+
+    }
+
+    @Override
+    public void setProtocolVersion(String version) {
+
+        this.protocolVersion = version;
+
+    }
+
+    @Override
+    public List<StudyIdentifier> getStudyIdentifiers() {
+        return this.studyIdentifiers;
     }
 
     @Override

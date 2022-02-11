@@ -37,9 +37,15 @@ public interface IStudy {
 
     void setStudyStatus(String studyStatus);
 
-    List<StudyIdentifier> getStudyIdentifiers();
+    UUID getProtocolId();
 
-    StudyIdentifier getOriginalSponserIdentifier();
+    String getProtocolVersion();
+
+    void setProtocolId(UUID protocolId);
+
+    void setProtocolVersion(String version);
+
+    List<StudyIdentifier> getStudyIdentifiers();
 
     void addStuyIdentifier(StudyIdentifier studyIdentifier);
 
