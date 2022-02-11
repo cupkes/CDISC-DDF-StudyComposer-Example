@@ -34,15 +34,15 @@ public class StudyComposer {
 
 
         UUID studyId = UUID.randomUUID();
-        Study studyObj = new Study(studyId,
+        this.study = new Study(studyId,
                 "Study Number One",
                 StudyType.INTERVENTIONAL,
                 Phase.PHASE_1_TRIAL,
                 "1.0",
                 mockBroker.getStudyIdentifiers(UUID.randomUUID())
                 );
-        studyObj.setSponsorId(mockBroker.getStudyIdentifiers(UUID.randomUUID()).get(0));
-        this.study = studyObj;
+
+
         this.study.setStudyStatus("this is a study status");
         this.study.addSection(SectionType.STUDY_DESIGNS, mockBroker.getStudyDesignsSection(studyId));
         this.study.addSection(SectionType.INVESTIGATIONAL_INTERVENTIONS,

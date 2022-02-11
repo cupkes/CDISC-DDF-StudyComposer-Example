@@ -11,7 +11,7 @@ package org.CDISC.DDF.model.study;
 
 public enum IdentifierType {
 
-REGISTRY_STUDY, NON_REGISTERED_STUDY
+REGISTRY_STUDY, NON_REGISTERED_STUDY, SPONSOR_ID
 
 
 }

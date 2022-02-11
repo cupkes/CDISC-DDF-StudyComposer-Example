@@ -41,6 +41,10 @@ public interface IStudy {
 
     StudyIdentifier getOriginalSponserIdentifier();
 
+    void addStuyIdentifier(StudyIdentifier studyIdentifier);
+
+    void removeStudyIdentifier(StudyIdentifier studyIdentifier);
+
     List<Section> getCurrentSections();
 
 //    Section getSection(SectionType sectionType, String tag);

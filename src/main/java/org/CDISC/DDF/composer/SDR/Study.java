@@ -116,6 +116,20 @@ public class Study implements IStudy {
     }
 
     @Override
+    public void addStuyIdentifier(StudyIdentifier studyIdentifier) {
+
+        this.studyIdentifiers.add(studyIdentifier);
+
+    }
+
+    @Override
+    public void removeStudyIdentifier(StudyIdentifier studyIdentifier) {
+
+        this.studyIdentifiers.remove(studyIdentifier);
+
+    }
+
+    @Override
     public List<Section> getCurrentSections() {
 
         List<Section> currentSections = new ArrayList<>();
@@ -183,13 +197,7 @@ public class Study implements IStudy {
         return this.studySections.get(sectionType);
     }
 
-    public StudyIdentifier getSponsorId() {
-        return sponsorId;
-    }
 
-    public void setSponsorId(StudyIdentifier sponsorId) {
-        this.sponsorId = sponsorId;
-    }
 }
 
 

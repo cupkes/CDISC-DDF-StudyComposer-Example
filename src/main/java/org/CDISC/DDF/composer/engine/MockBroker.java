@@ -437,6 +437,7 @@ public class MockBroker  implements IStudyComponentBroker{
     public List<StudyIdentifier> getStudyIdentifiers(UUID studyId) {
         List<StudyIdentifier> studyIdentifiers = new ArrayList<>();
         studyIdentifiers.add(this.getStudyIdentifier(UUID.randomUUID()));
+        studyIdentifiers.add(this.getSponsorIdentifier(UUID.randomUUID()));
         return studyIdentifiers;
 
     }
@@ -450,6 +451,15 @@ public class MockBroker  implements IStudyComponentBroker{
 
 
     }
+
+    private StudyIdentifier getSponsorIdentifier(UUID studyId) {
+        return new StudyIdentifier(UUID.randomUUID(),
+                StaticStudyDataProvider.IDENTIFIER_CODE,
+                StaticStudyDataProvider.IDENTIFIER_NAME,
+                IdentifierType.SPONSOR_ID);
+    }
+
+
 
     public Visit getMockVisit() {
 
