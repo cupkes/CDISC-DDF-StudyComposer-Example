@@ -2,10 +2,7 @@ package org.CDISC.DDF.composer.SDR;
 
 
 
-import org.CDISC.DDF.model.study.InterventionModel;
-import org.CDISC.DDF.model.study.Phase;
-import org.CDISC.DDF.model.study.StudyIdentifier;
-import org.CDISC.DDF.model.study.StudyType;
+import org.CDISC.DDF.model.study.*;
 import org.CDISC.DDF.model.versioning.IStudy;
 import org.CDISC.DDF.model.versioning.Section;
 import org.CDISC.DDF.model.versioning.SectionType;
@@ -22,25 +19,22 @@ import java.util.*;
 public class Study implements IStudy {
 
     private final UUID id;
-    private String studyTitle;
-    private StudyType studyType;
-    private Phase studyPhase;
+
+
+
+    private final String studyTitle;
+    private final StudyType studyType;
+    private final Phase studyPhase;
     private String version;
     private String tag;
     private String studyStatus;
-    private UUID protocolId;
-    private String protocolVersion;
 
-    private List<StudyIdentifier> studyIdentifiers;
-    private Map<SectionType,List<Section>> studySections = new HashMap<>();
-    private List<Section> interventionHistory = new ArrayList<>();
-    private List<Section> indicationHistory = new ArrayList<>();
-    private List<Section> objectiveHistory = new ArrayList<>();
-    private List<Section> studyDesignHistory = new ArrayList<>();
-
-
-
-    private StudyIdentifier sponsorId;
+    private final List<StudyIdentifier> studyIdentifiers;
+    private List<StudyProtocolReference> studyProtocolReferences = new ArrayList<>();
+    private final Map<SectionType,List<Section>> studySections = new HashMap<>();
+    private final List<Section> indicationHistory = new ArrayList<>();
+    private final List<Section> objectiveHistory = new ArrayList<>();
+    private final List<Section> studyDesignHistory = new ArrayList<>();
 
 
     public Study(UUID id, String studyTitle, StudyType studyType, Phase studyPhase, String version, List<StudyIdentifier> studyIdentifiers) {
@@ -100,35 +94,9 @@ public class Study implements IStudy {
         return this.studyStatus;
     }
 
-
-
     @Override
     public void setStudyStatus(String studyStatus) {
         this.studyStatus = studyStatus;
-    }
-
-    @Override
-    public UUID getProtocolId() {
-        return this.protocolId;
-    }
-
-    @Override
-    public String getProtocolVersion() {
-        return this.protocolVersion;
-    }
-
-    @Override
-    public void setProtocolId(UUID protocolId) {
-
-        this.protocolId = protocolId;
-
-    }
-
-    @Override
-    public void setProtocolVersion(String version) {
-
-        this.protocolVersion = version;
-
     }
 
     @Override
@@ -147,6 +115,28 @@ public class Study implements IStudy {
     public void removeStudyIdentifier(StudyIdentifier studyIdentifier) {
 
         this.studyIdentifiers.remove(studyIdentifier);
+
+    }
+
+    @Override
+    public List<StudyProtocolReference> getStudyProtocolReferences() {
+        return this.studyProtocolReferences;
+    }
+
+    @Override
+    public void setStudyProtocolReferences(List<StudyProtocolReference> studyProtocolReferences) {
+        this.studyProtocolReferences = studyProtocolReferences;
+
+    }
+
+    @Override
+    public void addStudyProtocolReference(StudyProtocolReference studyProtocolReference) {
+        this.studyProtocolReferences.add(studyProtocolReference);
+    }
+
+    @Override
+    public void removeStudyProtocolReference(StudyProtocolReference studyProtocolReference) {
+        this.studyProtocolReferences.remove(studyProtocolReference);
 
     }
 
@@ -200,10 +190,6 @@ public class Study implements IStudy {
             case OBJECTIVES -> {
                 this.objectiveHistory.add(section);
                 this.studySections.put(SectionType.OBJECTIVES, objectiveHistory);
-            }
-            case INVESTIGATIONAL_INTERVENTIONS -> {
-                this.interventionHistory.add(section);
-                this.studySections.put(SectionType.INVESTIGATIONAL_INTERVENTIONS, interventionHistory);
             }
             default -> {
             }

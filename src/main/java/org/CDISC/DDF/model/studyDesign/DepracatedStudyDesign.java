@@ -9,18 +9,18 @@ import java.util.UUID;
  * @author Nathan Smith
  */
 
-public class StudyDesign {
+public class DepracatedStudyDesign {
 
     private final UUID id;
     private List<StudyCell> studyCells;
     private List<PlannedWorkflow> plannedWorkflows;
 
-    public StudyDesign(UUID id, List<StudyCell> studyCells) {
+    public DepracatedStudyDesign(UUID id, List<StudyCell> studyCells) {
         this.id = id;
         this.studyCells = studyCells;
     }
 
-    public StudyDesign(UUID id) {
+    public DepracatedStudyDesign(UUID id) {
         this.id = id;
     }
 

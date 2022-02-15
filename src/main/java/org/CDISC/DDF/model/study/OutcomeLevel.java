@@ -1,7 +1,7 @@
 package org.CDISC.DDF.model.study;
 
 /**
- * org.CDISC.DDF.model.study.OutcomeLevel is an enum used to provide values for categorizing endpoints for the Study class.
+ * org.CDISC.DDF.model.study.OutcomeLevel is an enum used to provide values for categorizing endpoints for the DeprecatedStudy class.
  *
  * @author Chris Upkes
  */

@@ -1,6 +1,6 @@
 package org.CDISC.DDF.model.study;
 /**
- * org.CDISC.DDF.model.study.InterventionModel is an enum used to provide values for determining Intervention Models for the Study class.
+ * org.CDISC.DDF.model.study.InterventionModel is an enum used to provide values for determining Intervention Models for the DeprecatedStudy class.
  *
  * @author Chris Upkes
  */

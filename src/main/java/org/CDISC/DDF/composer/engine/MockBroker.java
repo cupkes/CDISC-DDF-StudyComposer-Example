@@ -199,7 +199,7 @@ public class MockBroker  implements IStudyComponentBroker{
 
         transition.setStudyProtocolCriterionTransitionNumber(StaticStudyDataProvider.STUDY_PROTOCOL_CRITERION_TRANSITION_NUMBER);
         transition.setTransitionCriteria(criteria);
-        transition.setVisit(this.getMockVisit());
+        transition.setEncounter(this.getMockVisit());
         return transition;
 
     }
@@ -452,6 +452,23 @@ public class MockBroker  implements IStudyComponentBroker{
 
     }
 
+    @Override
+    public StudyData getAssessment(UUID studyId) {
+        return new Assessment(UUID.randomUUID(),
+                UUID.randomUUID(),
+                StaticStudyDataProvider.ASSESSMENT_NAME,
+                StaticStudyDataProvider.ASSESSMENT_DESC,
+                AssessmentType.SINGLE_ASSESSMENT,
+                AssessmentDataType.INTEGER,
+                "mmHg"
+                );
+    }
+
+    @Override
+    public AssessmentGroup getAssessmentGroup(UUID studyId) {
+        return null;
+    }
+
     private StudyIdentifier getSponsorIdentifier(UUID studyId) {
         return new StudyIdentifier(UUID.randomUUID(),
                 StaticStudyDataProvider.IDENTIFIER_CODE,
@@ -461,7 +478,7 @@ public class MockBroker  implements IStudyComponentBroker{
 
 
 
-    public Visit getMockVisit() {
+    public Encounter getMockVisit() {
 
         List<Code> coding = new ArrayList<>();
         Code code = new Code("xyz", "test system","1.0", "the decode string");

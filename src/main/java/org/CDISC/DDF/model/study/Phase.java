@@ -1,6 +1,6 @@
 package org.CDISC.DDF.model.study;
 /**
- * org.CDISC.DDF.model.study.Phase is an enum used to provide values for determining which phase is associated with a Study.
+ * org.CDISC.DDF.model.study.Phase is an enum used to provide values for determining which phase is associated with a DeprecatedStudy.
  *
  * @author Chris Upkes
  */

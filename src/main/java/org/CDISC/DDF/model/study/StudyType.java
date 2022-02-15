@@ -1,6 +1,6 @@
 package org.CDISC.DDF.model.study;
 /**
- * org.CDISC.DDF.model.study.StudyType is an enum used to provide values for determining study types for the Study class.
+ * org.CDISC.DDF.model.study.StudyType is an enum used to provide values for determining study types for the DeprecatedStudy class.
  *
  * @author Chris Upkes
  */

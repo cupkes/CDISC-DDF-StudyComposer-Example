@@ -3,6 +3,7 @@ package org.CDISC.DDF.model.studyDesign;
 
 
 import org.CDISC.DDF.model.common.Activity;
+import org.CDISC.DDF.model.common.Encounter;
 import org.CDISC.DDF.model.common.Visit;
 
 import java.util.ArrayList;
@@ -24,11 +25,10 @@ public abstract class WorkflowItem {
     private final PointInTime fromPointInTime;
     private final PointInTime toPointInTime;
     private final Activity activity;
-    private Visit visit;
+    private Encounter encounter;
 
-
-    private List<UUID> previousItems = new ArrayList<>();
-    private List<UUID> nextItems = new ArrayList<>();
+    private List<UUID> previousItemsInSequence = new ArrayList<>();
+    private List<UUID> nextItemsInSequence = new ArrayList<>();
 
 // TO_DO:  remove point in time constructor values.
 
@@ -44,35 +44,35 @@ public abstract class WorkflowItem {
 
 
     public List<UUID> getPreviousItems() {
-        return previousItems;
+        return previousItemsInSequence;
     }
 
     public void setPreviousItems(List<UUID> previousItems) {
-        this.previousItems = previousItems;
+        this.previousItemsInSequence = previousItems;
     }
 
     public List<UUID> getNextItems() {
-        return nextItems;
+        return nextItemsInSequence;
     }
 
     public void setNextItems(List<UUID> nextItems) {
-        this.nextItems = nextItems;
+        this.nextItemsInSequence = nextItems;
     }
 
     public void removeItem(UUID item, WorkflowItemType workflowItemType) {
         if (workflowItemType == WorkflowItemType.NEXT) {
-            this.nextItems.remove(item);
+            this.nextItemsInSequence.remove(item);
         } else if (workflowItemType == WorkflowItemType.PREVIOUS) {
-            this.previousItems.remove(item);
+            this.previousItemsInSequence.remove(item);
         }
     }
 
     public void addItem(UUID item, WorkflowItemType workflowItemType) {
 
         if (workflowItemType == WorkflowItemType.NEXT) {
-            this.nextItems.add(item);
+            this.nextItemsInSequence.add(item);
         } else if (workflowItemType == WorkflowItemType.PREVIOUS) {
-            this.previousItems.add(item);
+            this.previousItemsInSequence.add(item);
         }
 
 
@@ -98,11 +98,11 @@ public abstract class WorkflowItem {
         return activity;
     }
 
-    public Visit getVisit() {
-        return visit;
+    public Encounter getEncounter() {
+        return encounter;
     }
 
-    public void setVisit(Visit visit) {
-        this.visit = visit;
+    public void setEncounter(Encounter encounter) {
+        this.encounter = encounter;
     }
 }

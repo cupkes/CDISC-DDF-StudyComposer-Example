@@ -21,6 +21,7 @@ public class StudyDesign implements IStudyDesign {
     private List<Section> studyCellHistory = new ArrayList<>();
     private List<Section> workflowHistory = new ArrayList<>();
     private List<Section> populationHistory = new ArrayList<>();
+    private final List<Section> interventionHistory = new ArrayList<>();
 
 
     public StudyDesign(UUID id) {
@@ -98,6 +99,10 @@ public class StudyDesign implements IStudyDesign {
             case STUDY_POPULATIONS -> {
                 this.populationHistory.add(section);
                 this.designSections.put(SectionType.STUDY_POPULATIONS, this.populationHistory);
+            }
+            case INVESTIGATIONAL_INTERVENTIONS -> {
+                this.interventionHistory.add(section);
+                this.designSections.put(SectionType.INVESTIGATIONAL_INTERVENTIONS, interventionHistory);
             }
             default -> {
             }

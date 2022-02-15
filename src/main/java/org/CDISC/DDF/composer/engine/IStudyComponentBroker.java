@@ -3,6 +3,8 @@ package org.CDISC.DDF.composer.engine;
 
 import org.CDISC.DDF.composer.SDR.*;
 import org.CDISC.DDF.composer.SDR.StudyDesign;
+import org.CDISC.DDF.model.common.AssessmentGroup;
+import org.CDISC.DDF.model.common.StudyData;
 import org.CDISC.DDF.model.study.Objective;
 import org.CDISC.DDF.model.study.StudyIdentifier;
 import org.CDISC.DDF.model.studyDesign.*;
@@ -83,6 +85,15 @@ public interface IStudyComponentBroker {
     List<StudyIdentifier> getStudyIdentifiers(UUID studyId);
 
     StudyIdentifier getStudyIdentifier(UUID studyId);
+
+    StudyData getAssessment(UUID studyId);
+
+    AssessmentGroup getAssessmentGroup(UUID studyId);
+
+
+
+
+
 
 
 

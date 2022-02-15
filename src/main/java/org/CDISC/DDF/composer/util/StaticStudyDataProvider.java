@@ -12,7 +12,7 @@ public class StaticStudyDataProvider {
 
 
     public static String STUDY_IDENTIFIER_ORG_ID = "ACME001";
-    public static String PLANNED_WORKFLOW_DESC = "Planned Workflow for Study ACME001";
+    public static String PLANNED_WORKFLOW_DESC = "Planned Workflow for DeprecatedStudy ACME001";
     public static String TRANSITION_DESC = "go to next when subject has systolic blood pressure below 130 mmHg";
     public static String CODE = "test transition rule in Python";
     public static String CODE_SYSTEM = "Python";
@@ -38,6 +38,9 @@ public class StaticStudyDataProvider {
     public static String IDENTIFIER_CODE = "2.16.840.1.113883.3.1077";
     public static String IDENTIFIER_NAME = "ClinicalTrials.gov";
     public static String STUDY_STATUS = "this is a study status value";
+    public static String ASSESSMENT_NAME = "Systolic Blood Pressure";
+    public static String ASSESSMENT_DESC = "Measurement of systolic blood pressure in sitting position in either mm or cm Mercury column";
+
 
 
 

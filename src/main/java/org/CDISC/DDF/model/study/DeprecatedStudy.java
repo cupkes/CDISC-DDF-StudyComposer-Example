@@ -2,19 +2,18 @@ package org.CDISC.DDF.model.study;
 
 
 import org.CDISC.DDF.model.common.StudyIndication;
-import org.CDISC.DDF.model.studyDesign.StudyDesign;
+import org.CDISC.DDF.model.studyDesign.DepracatedStudyDesign;
 
 import java.util.List;
-import java.util.Map;
 import java.util.UUID;
 
 /**
- * org.CDISC.DDF.model.study.Study is an class representing a study in a clinical trial.
+ * org.CDISC.DDF.model.study.DeprecatedStudy is an class representing a study in a clinical trial.
  *
  * @author Chris Upkes
  */
 
-public class Study {
+public class DeprecatedStudy {
 
     private UUID id;
     private String studyTitle;
@@ -28,25 +27,25 @@ public class Study {
     // should study indications, populations and investigational interventions be pushed down
     // to the StudyDesign class?  Maybe even study objectives?
     // I think we should learn more about both umbrella and basket studies
-    // make sure they don't flip-flop (population on the Study for umbrella and vice versa for basket).
+    // make sure they don't flip-flop (population on the DeprecatedStudy for umbrella and vice versa for basket).
     private List<StudyIndication> studyTargetIndications;
     private List<Population> studyTargetPopulations;
     private List<InvestigationalIntervention> investigationalInterventions;
     // a study can have multiple study designs
     // example, basket or umbrella study
-    private List<StudyDesign> studyDesigns;
+    private List<DepracatedStudyDesign> studyDesigns;
     private List<Objective> studyObjectives = null;
     // add boolean for multiDesign if agreed upon
     // TO_DO
 
 
-    public Study(UUID id, String studyTitle, List<StudyIdentifier> studyIdentifiers) {
+    public DeprecatedStudy(UUID id, String studyTitle, List<StudyIdentifier> studyIdentifiers) {
         this.id = id;
         this.studyTitle = studyTitle;
         this.studyIdentifiers = studyIdentifiers;
     }
 
-    public Study(StudyIdentifier studyIdentifier, UUID id){
+    public DeprecatedStudy(StudyIdentifier studyIdentifier, UUID id){
         this.id = id;
         //this.studyIdentifiers.add(studyIdentifier);
     }
@@ -151,11 +150,11 @@ public class Study {
         // TO_DO
     }
 
-    public List<StudyDesign> getStudyDesigns() {
+    public List<DepracatedStudyDesign> getStudyDesigns() {
         return studyDesigns;
     }
 
-    public void setStudyDesigns(List<StudyDesign> studyDesigns) {
+    public void setStudyDesigns(List<DepracatedStudyDesign> studyDesigns) {
         this.studyDesigns = studyDesigns;
     }
 

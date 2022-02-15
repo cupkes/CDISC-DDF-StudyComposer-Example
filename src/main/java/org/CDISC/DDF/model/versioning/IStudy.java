@@ -1,9 +1,6 @@
 package org.CDISC.DDF.model.versioning;
 
-import org.CDISC.DDF.model.study.InterventionModel;
-import org.CDISC.DDF.model.study.Phase;
-import org.CDISC.DDF.model.study.StudyIdentifier;
-import org.CDISC.DDF.model.study.StudyType;
+import org.CDISC.DDF.model.study.*;
 
 import java.util.List;
 import java.util.UUID;
@@ -37,19 +34,19 @@ public interface IStudy {
 
     void setStudyStatus(String studyStatus);
 
-    UUID getProtocolId();
-
-    String getProtocolVersion();
-
-    void setProtocolId(UUID protocolId);
-
-    void setProtocolVersion(String version);
-
     List<StudyIdentifier> getStudyIdentifiers();
 
     void addStuyIdentifier(StudyIdentifier studyIdentifier);
 
     void removeStudyIdentifier(StudyIdentifier studyIdentifier);
+
+    List<StudyProtocolReference> getStudyProtocolReferences();
+
+    void setStudyProtocolReferences(List<StudyProtocolReference> studyProtocolReferences);
+
+    void addStudyProtocolReference(StudyProtocolReference studyProtocolReference);
+
+    void removeStudyProtocolReference(StudyProtocolReference studyProtocolReference);
 
     List<Section> getCurrentSections();
 

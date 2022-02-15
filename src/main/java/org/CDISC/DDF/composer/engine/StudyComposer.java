@@ -35,7 +35,7 @@ public class StudyComposer {
 
         UUID studyId = UUID.randomUUID();
         this.study = new Study(studyId,
-                "Study Number One",
+                "DeprecatedStudy Number One",
                 StudyType.INTERVENTIONAL,
                 Phase.PHASE_1_TRIAL,
                 "1.0",
@@ -43,11 +43,9 @@ public class StudyComposer {
                 );
 
         this.study.setStudyStatus("this is a study status");
-        this.study.setProtocolId(UUID.randomUUID());
-        this.study.setProtocolVersion("1.0");
+        this.study.addStudyProtocolReference(new StudyProtocolReference(UUID.randomUUID(),
+                "1.0"));
         this.study.addSection(SectionType.STUDY_DESIGNS, mockBroker.getStudyDesignsSection(studyId));
-        this.study.addSection(SectionType.INVESTIGATIONAL_INTERVENTIONS,
-                mockBroker.getInvestigationalInterventionsSection(studyId));
         this.study.addSection(SectionType.STUDY_INDICATIONS, mockBroker.getStudyIndicationsSection(studyId));
         this.study.addSection(SectionType.OBJECTIVES, mockBroker.getStudyObjectivesSection(studyId));
         return study;
@@ -71,6 +69,8 @@ public class StudyComposer {
         studyDesign.addSection(SectionType.STUDY_CELLS, mockBroker.getStudyCellsSection(UUID.randomUUID()));
         studyDesign.addSection(SectionType.PLANNED_WORKFLOWS, mockBroker.getPlannedWorkflowsSection(UUID.randomUUID()));
         studyDesign.addSection(SectionType.STUDY_POPULATIONS, mockBroker.getStudyPopulationsSection(UUID.randomUUID()));
+        this.studyDesign.addSection(SectionType.INVESTIGATIONAL_INTERVENTIONS,
+                mockBroker.getInvestigationalInterventionsSection(UUID.randomUUID()));
         return studyDesign;
 
 
