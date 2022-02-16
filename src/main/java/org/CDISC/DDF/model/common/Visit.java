@@ -1,7 +1,5 @@
 package org.CDISC.DDF.model.common;
 
-import org.CDISC.DDF.model.studyDesign.WorkflowItem;
-
 import java.util.UUID;
 
 /**

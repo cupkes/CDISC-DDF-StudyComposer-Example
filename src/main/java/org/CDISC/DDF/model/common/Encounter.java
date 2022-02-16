@@ -1,5 +1,7 @@
 package org.CDISC.DDF.model.common;
 
+import org.CDISC.DDF.model.studyDesign.StudyEpoch;
+
 import java.util.UUID;
 
 /**
@@ -15,6 +17,7 @@ public abstract class Encounter {
     private final String description;
     private final Rule startRule;
     private final Rule endRule;
+    private StudyEpoch epoch;
 
     protected Encounter(UUID id, String name, String description, Rule startRule, Rule endRule) {
         this.id = id;
@@ -22,6 +25,15 @@ public abstract class Encounter {
         this.description = description;
         this.startRule = startRule;
         this.endRule = endRule;
+    }
+
+    protected Encounter(UUID id, String name, String description, Rule startRule, Rule endRule, StudyEpoch epoch) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.startRule = startRule;
+        this.endRule = endRule;
+        this.epoch = epoch;
     }
 
     public UUID getId() {
@@ -42,5 +54,13 @@ public abstract class Encounter {
 
     public Rule getEndRule() {
         return endRule;
+    }
+
+    public StudyEpoch getEpoch() {
+        return epoch;
+    }
+
+    public void setEpoch(StudyEpoch epoch) {
+        this.epoch = epoch;
     }
 }
