@@ -1,5 +1,7 @@
 package org.CDISC.DDF.model.common;
 
+import org.CDISC.DDF.model.studyDesign.StudyEpoch;
+
 import java.util.UUID;
 
 /**
@@ -20,6 +22,13 @@ public class Visit extends Encounter {
         this.contactMode = contactMode;
         this.environmentalSetting = environmentalSetting;
        // this.workflowItem = workflowItem;
+    }
+
+    public Visit(UUID id, String name, String description, Rule startRule, Rule endRule, ContactMode contactMode, EnvironmentalSetting environmentalSetting, StudyEpoch epoch) {
+        super(id, name, description, startRule, endRule, epoch);
+        this.contactMode = contactMode;
+        this.environmentalSetting = environmentalSetting;
+        // this.workflowItem = workflowItem;
     }
 
 
