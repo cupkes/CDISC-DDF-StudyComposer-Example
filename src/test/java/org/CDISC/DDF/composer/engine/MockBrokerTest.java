@@ -80,40 +80,9 @@ class MockBrokerTest {
         assertEquals(pointInTime.getSubjectStatusGrouping(),StaticStudyDataProvider.PIT_SUBJECT_STATUS_GROUPING);
     }
 
-    @org.junit.jupiter.api.Test
-    void getTransitions() {
-
-        List<DeprecatedWorkflowItem> transitions;
-        try {
-            transitions = mockBroker.getWorkflowItems(UUID.randomUUID());
-            DeprecatedTransition deprecatedTransition = (DeprecatedTransition) transitions.get(0);
-            assertNotNull(deprecatedTransition);
-            assertEquals(deprecatedTransition.getDescription(),StaticStudyDataProvider.TRANSITION_DESC);
-            DeprecatedCriterion deprecatedCriterion = deprecatedTransition.getTransitionCriteria().get(0);
-            assertNotNull(deprecatedCriterion);
-            assertEquals(deprecatedCriterion.getDescription(),StaticStudyDataProvider.CRITERION_DESC);
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
 
 
-    }
 
-    @org.junit.jupiter.api.Test
-    void getTransition() {
-
-        DeprecatedTransition deprecatedTransition = null;
-        try {
-            deprecatedTransition = (DeprecatedTransition) mockBroker.getTransitionWorkflowItem(UUID.randomUUID(), null);
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
-        assertNotNull(deprecatedTransition);
-        assertEquals(deprecatedTransition.getDescription(),StaticStudyDataProvider.TRANSITION_DESC);
-        DeprecatedCriterion deprecatedCriterion = deprecatedTransition.getTransitionCriteria().get(0);
-        assertNotNull(deprecatedCriterion);
-        assertEquals(deprecatedCriterion.getDescription(),StaticStudyDataProvider.CRITERION_DESC);
-    }
 
     @org.junit.jupiter.api.Test
     void getStudyElements() {

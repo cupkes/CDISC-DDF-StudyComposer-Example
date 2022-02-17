@@ -46,30 +46,32 @@ class StudyComponentTranslatorTest {
     void translateIStudyDesignToJSON() throws JsonProcessingException{
 
 
-        IStudyDesign studyDesign = null;
+        IStudyDesign studyDesign;
         try {
             studyDesign = this.studyComposer.getMockIStudyDesign();
+            String studyDesignJSON = this.studyComponentTranslator.translateIStudyDesignToJSON(studyDesign);
+            assertNotNull(studyDesignJSON);
+            System.out.println(studyDesignJSON);
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
-        String studyDesignJSON = this.studyComponentTranslator.translateIStudyDesignToJSON(studyDesign);
-        assertNotNull(studyDesignJSON);
-        System.out.println(studyDesignJSON);
+
 
     }
 
     @Test
     void translateIStudyToJSON() throws JsonProcessingException{
 
-        IStudy study = null;
+        IStudy study;
         try {
             study = this.studyComposer.getMockIStudy();
+            String studyJSON = this.studyComponentTranslator.translateIStudyToJSON(study);
+            assertNotNull(studyJSON);
+            System.out.println(studyJSON);
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
-        String studyJSON = this.studyComponentTranslator.translateIStudyToJSON(study);
-        assertNotNull(studyJSON);
-        System.out.println(studyJSON);
+
 
     }
 

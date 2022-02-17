@@ -43,13 +43,13 @@ public interface IStudyComponentBroker {
 
 //    PlannedWorkflowsSection getPlannedWorkflowsSection(UUID studyDesignId, String tag);
 
-    List<List<DeprecatedWorkflowItem>> getWorkflowItemMatrix(UUID plannedWorkflowId) throws URISyntaxException;
+    List<List<WorkflowItem>> getWorkflowItemMatrix(UUID plannedWorkflowId) throws URISyntaxException;
 
-    DeprecatedWorkflowItem getTransitionWorkflowItem(UUID workFlowItemId, UUID previousItemId) throws URISyntaxException;
+    WorkflowItem getTransitionWorkflowItem(UUID workFlowItemId, UUID previousItemId) throws URISyntaxException;
 
-    List<DeprecatedWorkflowItem> getWorkflowItems(UUID plannedWorkflowId) throws URISyntaxException;
+    List<WorkflowItem> getWorkflowItems(UUID plannedWorkflowId) throws URISyntaxException;
 
-    List<DeprecatedWorkflowItem> getBranchedWorkflowItems(UUID plannedWorkflowId) throws URISyntaxException;
+    List<WorkflowItem> getBranchedWorkflowItems(UUID plannedWorkflowId) throws URISyntaxException;
 
     List<StudyElement> getStudyElements(UUID studyCellId);
 

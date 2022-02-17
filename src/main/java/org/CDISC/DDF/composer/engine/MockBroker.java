@@ -139,30 +139,17 @@ public class MockBroker  implements IStudyComponentBroker{
     }
 
     @Override
-    public List<List<DeprecatedWorkflowItem>> getWorkflowItemMatrix(UUID plannedWorkflowId) throws URISyntaxException {
+    public List<List<WorkflowItem>> getWorkflowItemMatrix(UUID plannedWorkflowId) throws URISyntaxException {
 
-        List<List<DeprecatedWorkflowItem>> workflowItemMatrix = new ArrayList<>();
+        List<List<WorkflowItem>> workflowItemMatrix = new ArrayList<>();
         workflowItemMatrix.add(this.getWorkflowItems(plannedWorkflowId));
         return workflowItemMatrix;
 
     }
 
     @Override
-    public DeprecatedWorkflowItem getTransitionWorkflowItem(UUID workFlowItemId, UUID previousItemId) throws URISyntaxException {
-        // first, build a list of criteria
-        List<DeprecatedCriterion> criteria = new ArrayList<>();
-        DeprecatedCriterion deprecatedCriterion = new DeprecatedCriterion(UUID.randomUUID(),
-                DeprecatedCriterionType.RANDOMIZATION,
-                StaticStudyDataProvider.CRITERION_DESC);
-        criteria.add(deprecatedCriterion);
-        // second, build a rule
-        List<Code> ruleCoding = new ArrayList<>();
-        Code code = new Code(StaticStudyDataProvider.CODE,
-                StaticStudyDataProvider.CODE_SYSTEM,
-                StaticStudyDataProvider.CODE_SYSTEM_VERSION,
-                StaticStudyDataProvider.DECODE);
-        ruleCoding.add(code);
-        Rule rule = new Rule(UUID.randomUUID(),StaticStudyDataProvider.RULE_DESC,ruleCoding);
+    public WorkflowItem getTransitionWorkflowItem(UUID workFlowItemId, UUID previousItemId) throws URISyntaxException {
+
 
         // third build points in time
 
@@ -196,15 +183,14 @@ public class MockBroker  implements IStudyComponentBroker{
 
 
 
-        DeprecatedTransition deprecatedTransition = new DeprecatedTransition(UUID.randomUUID(),StaticStudyDataProvider.TRANSITION_DESC,
-                fromPointInTime,toPointInTime,rule, activity);
+        WorkflowItem workflowItem = new WorkflowItem (UUID.randomUUID(),StaticStudyDataProvider.TRANSITION_DESC,
+                fromPointInTime,toPointInTime, activity);
 
 
 
-        deprecatedTransition.setStudyProtocolCriterionTransitionNumber(StaticStudyDataProvider.STUDY_PROTOCOL_CRITERION_TRANSITION_NUMBER);
-        deprecatedTransition.setTransitionCriteria(criteria);
-        deprecatedTransition.setEncounter(this.getMockVisit());
-        return deprecatedTransition;
+
+        workflowItem.setEncounter(this.getMockVisit());
+        return workflowItem;
 
     }
 
@@ -217,9 +203,9 @@ public class MockBroker  implements IStudyComponentBroker{
 //    }
 
     @Override
-    public List<DeprecatedWorkflowItem> getWorkflowItems(UUID plannedWorkflowId) throws URISyntaxException {
+    public List<WorkflowItem> getWorkflowItems(UUID plannedWorkflowId) throws URISyntaxException {
 
-        List<DeprecatedWorkflowItem> deprecatedWorkflowItems = new ArrayList<>();
+        List<WorkflowItem> deprecatedWorkflowItems = new ArrayList<>();
         deprecatedWorkflowItems.add( this.getTransitionWorkflowItem(UUID.randomUUID(), null));
         // TODO: add an event and then another transition
         return deprecatedWorkflowItems;
@@ -227,11 +213,11 @@ public class MockBroker  implements IStudyComponentBroker{
     }
 
     @Override
-    public List<DeprecatedWorkflowItem> getBranchedWorkflowItems(UUID plannedWorkflowId) throws URISyntaxException {
-        List<DeprecatedWorkflowItem> deprecatedWorkflowItems = new ArrayList<>();
-        deprecatedWorkflowItems.add( this.getTransitionWorkflowItem(UUID.randomUUID(), null));
+    public List<WorkflowItem> getBranchedWorkflowItems(UUID plannedWorkflowId) throws URISyntaxException {
+        List<WorkflowItem> workflowItems = new ArrayList<>();
+        workflowItems.add( this.getTransitionWorkflowItem(UUID.randomUUID(), null));
         // TODO: add an event and then another transition
-        return deprecatedWorkflowItems;
+        return workflowItems;
     }
 
     @Override

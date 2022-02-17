@@ -22,7 +22,7 @@ public class PlannedWorkflow {
     private String description;
     private final PointInTime startPoint;
     private final PointInTime endPoint;
-    private List<List<DeprecatedWorkflowItem>> itemMatrix = new ArrayList<>();
+    private List<List<WorkflowItem>> itemMatrix = new ArrayList<>();
 
 
     public PlannedWorkflow(UUID id, String description, PointInTime startPoint, PointInTime endPoint){
@@ -54,27 +54,27 @@ public class PlannedWorkflow {
     }
 
 
-    public List<List<DeprecatedWorkflowItem>> getItemMatrix() {
+    public List<List<WorkflowItem>> getItemMatrix() {
         return itemMatrix;
     }
 
-    public void setItemMatrix(List<List<DeprecatedWorkflowItem>> itemMatrix) {
+    public void setItemMatrix(List<List<WorkflowItem>> itemMatrix) {
         this.itemMatrix = itemMatrix;
     }
 
-    public void addItemList(List<DeprecatedWorkflowItem> deprecatedWorkflowItems) {
+    public void addItemList(List<WorkflowItem> workflowItems) {
         //TODO:  implement
     }
 
-    public void removeItemList(List<DeprecatedWorkflowItem> deprecatedWorkflowItems) {
+    public void removeItemList(List<WorkflowItem> workflowItems) {
         //TODO: implement
     }
 
-    public void addItem(DeprecatedWorkflowItem deprecatedWorkflowItem) {
+    public void addItem(WorkflowItem workflowItem) {
         //TODO: implement
     }
 
-    public void removeItem(DeprecatedWorkflowItem deprecatedWorkflowItem) {
+    public void removeItem(WorkflowItem workflowItem) {
         //TODO: implement
     }
 }

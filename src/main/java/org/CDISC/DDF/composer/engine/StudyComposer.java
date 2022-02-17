@@ -36,7 +36,7 @@ public class StudyComposer {
 
         UUID studyId = UUID.randomUUID();
         this.study = new Study(studyId,
-                "DeprecatedStudy Number One",
+                "Study Number One",
                 StudyType.INTERVENTIONAL,
                 Phase.PHASE_1_TRIAL,
                 "1.0",
