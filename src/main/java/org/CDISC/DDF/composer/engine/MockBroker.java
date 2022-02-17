@@ -10,7 +10,6 @@ package org.CDISC.DDF.composer.engine;
 
 
 import org.CDISC.DDF.composer.SDR.*;
-import org.CDISC.DDF.composer.SDR.Study;
 import org.CDISC.DDF.composer.SDR.StudyDesign;
 import org.CDISC.DDF.composer.util.StaticStudyDataProvider;
 import org.CDISC.DDF.model.common.*;
@@ -138,22 +137,22 @@ public class MockBroker  implements IStudyComponentBroker{
     }
 
     @Override
-    public List<List<WorkflowItem>> getWorkflowItemMatrix(UUID plannedWorkflowId) {
+    public List<List<DeprecatedWorkflowItem>> getWorkflowItemMatrix(UUID plannedWorkflowId) {
 
-        List<List<WorkflowItem>> workflowItemMatrix = new ArrayList<>();
+        List<List<DeprecatedWorkflowItem>> workflowItemMatrix = new ArrayList<>();
         workflowItemMatrix.add(this.getWorkflowItems(plannedWorkflowId));
         return workflowItemMatrix;
 
     }
 
     @Override
-    public WorkflowItem getTransitionWorkflowItem(UUID workFlowItemId, UUID previousItemId) {
+    public DeprecatedWorkflowItem getTransitionWorkflowItem(UUID workFlowItemId, UUID previousItemId) {
         // first, build a list of criteria
-        List<Criterion> criteria = new ArrayList<>();
-        Criterion criterion = new Criterion(UUID.randomUUID(),
-                CriterionType.RANDOMIZATION,
+        List<DeprecatedCriterion> criteria = new ArrayList<>();
+        DeprecatedCriterion deprecatedCriterion = new DeprecatedCriterion(UUID.randomUUID(),
+                DeprecatedCriterionType.RANDOMIZATION,
                 StaticStudyDataProvider.CRITERION_DESC);
-        criteria.add(criterion);
+        criteria.add(deprecatedCriterion);
         // second, build a rule
         List<Code> ruleCoding = new ArrayList<>();
         Code code = new Code(StaticStudyDataProvider.CODE,
@@ -182,25 +181,25 @@ public class MockBroker  implements IStudyComponentBroker{
         List<Procedure> procedures = new ArrayList<>();
         procedures.add(procedure);
 
-        StudyData studyData = new Observation(UUID.randomUUID(), UUID.randomUUID());
-        List<StudyData> studyDataList = new ArrayList<>();
-        studyDataList.add(studyData);
+        DeprecatedStudyData deprecatedStudyData = new DeprecatedObservation(UUID.randomUUID(), UUID.randomUUID());
+        List<DeprecatedStudyData> deprecatedStudyDataList = new ArrayList<>();
+        deprecatedStudyDataList.add(deprecatedStudyData);
 
 
-        Activity activity = new Activity(UUID.randomUUID(), procedures, studyDataList);
+        Activity activity = new Activity(UUID.randomUUID(), procedures, deprecatedStudyDataList);
 
 
 
 
-        Transition transition = new  Transition(UUID.randomUUID(),StaticStudyDataProvider.TRANSITION_DESC,
+        DeprecatedTransition deprecatedTransition = new DeprecatedTransition(UUID.randomUUID(),StaticStudyDataProvider.TRANSITION_DESC,
                 fromPointInTime,toPointInTime,rule, activity);
 
 
 
-        transition.setStudyProtocolCriterionTransitionNumber(StaticStudyDataProvider.STUDY_PROTOCOL_CRITERION_TRANSITION_NUMBER);
-        transition.setTransitionCriteria(criteria);
-        transition.setEncounter(this.getMockVisit());
-        return transition;
+        deprecatedTransition.setStudyProtocolCriterionTransitionNumber(StaticStudyDataProvider.STUDY_PROTOCOL_CRITERION_TRANSITION_NUMBER);
+        deprecatedTransition.setTransitionCriteria(criteria);
+        deprecatedTransition.setEncounter(this.getMockVisit());
+        return deprecatedTransition;
 
     }
 
@@ -213,21 +212,21 @@ public class MockBroker  implements IStudyComponentBroker{
 //    }
 
     @Override
-    public List<WorkflowItem> getWorkflowItems(UUID plannedWorkflowId) {
+    public List<DeprecatedWorkflowItem> getWorkflowItems(UUID plannedWorkflowId) {
 
-        List<WorkflowItem> workflowItems = new ArrayList<>();
-        workflowItems.add( this.getTransitionWorkflowItem(UUID.randomUUID(), null));
+        List<DeprecatedWorkflowItem> deprecatedWorkflowItems = new ArrayList<>();
+        deprecatedWorkflowItems.add( this.getTransitionWorkflowItem(UUID.randomUUID(), null));
         // TODO: add an event and then another transition
-        return workflowItems;
+        return deprecatedWorkflowItems;
 
     }
 
     @Override
-    public List<WorkflowItem> getBranchedWorkflowItems(UUID plannedWorkflowId) {
-        List<WorkflowItem> workflowItems = new ArrayList<>();
-        workflowItems.add( this.getTransitionWorkflowItem(UUID.randomUUID(), null));
+    public List<DeprecatedWorkflowItem> getBranchedWorkflowItems(UUID plannedWorkflowId) {
+        List<DeprecatedWorkflowItem> deprecatedWorkflowItems = new ArrayList<>();
+        deprecatedWorkflowItems.add( this.getTransitionWorkflowItem(UUID.randomUUID(), null));
         // TODO: add an event and then another transition
-        return workflowItems;
+        return deprecatedWorkflowItems;
     }
 
     @Override
@@ -453,19 +452,19 @@ public class MockBroker  implements IStudyComponentBroker{
     }
 
     @Override
-    public StudyData getAssessment(UUID studyId) {
-        return new Assessment(UUID.randomUUID(),
+    public DeprecatedStudyData getAssessment(UUID studyId) {
+        return new DeprecatedAssessment(UUID.randomUUID(),
                 UUID.randomUUID(),
                 StaticStudyDataProvider.ASSESSMENT_NAME,
                 StaticStudyDataProvider.ASSESSMENT_DESC,
-                AssessmentType.SINGLE_ASSESSMENT,
-                AssessmentDataType.INTEGER,
+                DeprecatedAssessmentType.SINGLE_ASSESSMENT,
+                DeprecatedAssessmentDataType.INTEGER,
                 "mmHg"
                 );
     }
 
     @Override
-    public AssessmentGroup getAssessmentGroup(UUID studyId) {
+    public DeprecatedAssessmentGroup getAssessmentGroup(UUID studyId) {
         return null;
     }
 

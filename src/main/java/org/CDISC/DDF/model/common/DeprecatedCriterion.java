@@ -17,10 +17,10 @@ time window and coding.  Criteria have many more attributes and are therefore mo
 In this model, transitions have rules and criteria.  We may decide that criteria extend rules.  We need
 to think about this.
  */
-public class Criterion {
+public class DeprecatedCriterion {
 
     private UUID id;
-    private CriterionType type;
+    private DeprecatedCriterionType type;
     private String description;
     private List<UUID> specificationIds;
     private String domain;
@@ -40,7 +40,7 @@ public class Criterion {
     private Integer timingDays;
     private String route;
 
-    public Criterion(UUID id, CriterionType type, String description) {
+    public DeprecatedCriterion(UUID id, DeprecatedCriterionType type, String description) {
         this.id = id;
         this.type = type;
         this.description = description;
@@ -50,7 +50,7 @@ public class Criterion {
         return id;
     }
 
-    public CriterionType getType() {
+    public DeprecatedCriterionType getType() {
         return type;
     }
 

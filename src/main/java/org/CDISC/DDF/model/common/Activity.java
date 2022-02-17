@@ -13,15 +13,15 @@ public class Activity {
 
     private final UUID id;
     private List<Procedure> definedProcedures;
-    private List<StudyData> studyDataCollection;
+    private List<DeprecatedStudyData> deprecatedStudyDataCollection;
 
     // add procedure list
 
 
-    public Activity(UUID id, List<Procedure> definedProcedures, List<StudyData> studyDataCollection) {
+    public Activity(UUID id, List<Procedure> definedProcedures, List<DeprecatedStudyData> deprecatedStudyDataCollection) {
         this.id = id;
         this.definedProcedures = definedProcedures;
-        this.studyDataCollection = studyDataCollection;
+        this.deprecatedStudyDataCollection = deprecatedStudyDataCollection;
     }
 
 
@@ -58,20 +58,20 @@ public class Activity {
         // TO_DO implement
     }
 
-    public List<StudyData> getStudyDataCollection() {
-        return studyDataCollection;
+    public List<DeprecatedStudyData> getStudyDataCollection() {
+        return deprecatedStudyDataCollection;
     }
 
-    public void setStudyDataCollection(List<StudyData> studyDataCollection) {
-        this.studyDataCollection = studyDataCollection;
+    public void setStudyDataCollection(List<DeprecatedStudyData> deprecatedStudyDataCollection) {
+        this.deprecatedStudyDataCollection = deprecatedStudyDataCollection;
     }
 
-    public void addStudyData(StudyData studyData){
+    public void addStudyData(DeprecatedStudyData deprecatedStudyData){
 
         // TO_DO implement
     }
 
-    public void removeStudyData(StudyData studyData){
+    public void removeStudyData(DeprecatedStudyData deprecatedStudyData){
 
         // TO_DO implement
     }

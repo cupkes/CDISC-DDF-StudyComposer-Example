@@ -8,7 +8,7 @@ import java.util.UUID;
  * @author Chris Upkes
  */
 
-public class Observation extends StudyData{
+public class DeprecatedObservation extends DeprecatedStudyData {
 
 /* An observation is defined separately from a query because it doesn't require a pre-determined
 query.  Observations are ad-hoc by nature.
@@ -19,11 +19,11 @@ query.  Observations are ad-hoc by nature.
 
     private String response;
 
-    public Observation(UUID id, UUID collectionEventId){
+    public DeprecatedObservation(UUID id, UUID collectionEventId){
         super(id, collectionEventId);
     }
 
-    public Observation(UUID id, UUID collectionEventId, String response) {
+    public DeprecatedObservation(UUID id, UUID collectionEventId, String response) {
         super(id, collectionEventId);
         this.response = response;
     }

@@ -6,6 +6,6 @@ package org.CDISC.DDF.model.common;
  * @author Chris Upkes
  */
 
-public enum AssessmentType {
+public enum DeprecatedAssessmentType {
  SINGLE_ASSESSMENT, ASSESSMENT_GROUP
 }

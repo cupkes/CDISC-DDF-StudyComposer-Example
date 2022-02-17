@@ -9,7 +9,7 @@ import java.util.UUID;
  * @author Chris Upkes
  */
 
-public abstract class StudyData {
+public abstract class DeprecatedStudyData {
 
 /* the study data element illustrated in section 3 of the mind map is not explicitly associated with
 elements in sections 4,5 or 6.  However, it is my assumption that study data was meant to be
@@ -24,12 +24,12 @@ associated with elements such as observations, measurements, q&a, etc...which ar
     // of collected information by the event and the concept, if one is associated.
     // It's important to agree that a biomedical concept is important in the attribution or categorization
     // of data collected from individual study events.
-    private Concept biomedicalConcept;
+    private DeprecatedConcept biomedicalDeprecatedConcept;
     private Code coding;
     private String technology;
 
 
-    public StudyData(UUID id, UUID collectionEventId) {
+    public DeprecatedStudyData(UUID id, UUID collectionEventId) {
         this.id = id;
         this.collectionEventId = collectionEventId;
     }
@@ -52,12 +52,12 @@ associated with elements such as observations, measurements, q&a, etc...which ar
     public void setTechnology(String technology) {
         this.technology = technology;
     }
-    public Concept getBiomedicalConcept() {
-        return biomedicalConcept;
+    public DeprecatedConcept getBiomedicalConcept() {
+        return biomedicalDeprecatedConcept;
     }
 
-    public void setBiomedicalConcept(Concept biomedicalConcept) {
-        this.biomedicalConcept = biomedicalConcept;
+    public void setBiomedicalConcept(DeprecatedConcept biomedicalDeprecatedConcept) {
+        this.biomedicalDeprecatedConcept = biomedicalDeprecatedConcept;
     }
 
     public UUID getCollectionEventId() {

@@ -3,8 +3,8 @@ package org.CDISC.DDF.composer.engine;
 
 import org.CDISC.DDF.composer.SDR.*;
 import org.CDISC.DDF.composer.SDR.StudyDesign;
-import org.CDISC.DDF.model.common.AssessmentGroup;
-import org.CDISC.DDF.model.common.StudyData;
+import org.CDISC.DDF.model.common.DeprecatedAssessmentGroup;
+import org.CDISC.DDF.model.common.DeprecatedStudyData;
 import org.CDISC.DDF.model.study.Objective;
 import org.CDISC.DDF.model.study.StudyIdentifier;
 import org.CDISC.DDF.model.studyDesign.*;
@@ -42,13 +42,13 @@ public interface IStudyComponentBroker {
 
 //    PlannedWorkflowsSection getPlannedWorkflowsSection(UUID studyDesignId, String tag);
 
-    List<List<WorkflowItem>> getWorkflowItemMatrix(UUID plannedWorkflowId);
+    List<List<DeprecatedWorkflowItem>> getWorkflowItemMatrix(UUID plannedWorkflowId);
 
-    WorkflowItem getTransitionWorkflowItem(UUID workFlowItemId, UUID previousItemId);
+    DeprecatedWorkflowItem getTransitionWorkflowItem(UUID workFlowItemId, UUID previousItemId);
 
-    List<WorkflowItem> getWorkflowItems(UUID plannedWorkflowId);
+    List<DeprecatedWorkflowItem> getWorkflowItems(UUID plannedWorkflowId);
 
-    List<WorkflowItem> getBranchedWorkflowItems(UUID plannedWorkflowId);
+    List<DeprecatedWorkflowItem> getBranchedWorkflowItems(UUID plannedWorkflowId);
 
     List<StudyElement> getStudyElements(UUID studyCellId);
 
@@ -86,9 +86,9 @@ public interface IStudyComponentBroker {
 
     StudyIdentifier getStudyIdentifier(UUID studyId);
 
-    StudyData getAssessment(UUID studyId);
+    DeprecatedStudyData getAssessment(UUID studyId);
 
-    AssessmentGroup getAssessmentGroup(UUID studyId);
+    DeprecatedAssessmentGroup getAssessmentGroup(UUID studyId);
 
 
 

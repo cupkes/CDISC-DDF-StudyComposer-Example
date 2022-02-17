@@ -9,17 +9,17 @@ import java.util.UUID;
  *
  * @author Chris Upkes
  */
-public class Concept {
+public class DeprecatedConcept {
 
 
     private UUID id;
     private String definition;
-    private ConceptType type;
+    private DeprecatedConceptType type;
     private UsageRule usageRule;
     private List<String> attributes;
 
 
-    public Concept(UUID id, String definition, ConceptType type, UsageRule usageRule) {
+    public DeprecatedConcept(UUID id, String definition, DeprecatedConceptType type, UsageRule usageRule) {
         this.id = id;
         this.definition = definition;
         this.type = type;
@@ -49,11 +49,11 @@ public class Concept {
         this.definition = definition;
     }
 
-    public ConceptType getType() {
+    public DeprecatedConceptType getType() {
         return type;
     }
 
-    public void setType(ConceptType type) {
+    public void setType(DeprecatedConceptType type) {
         this.type = type;
     }
 

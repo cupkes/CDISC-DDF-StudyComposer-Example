@@ -15,9 +15,9 @@ import java.util.UUID;
  * @author Chris Upkes
  */
 
-public class TransitionEvent extends WorkflowItem {
+public class DeprecatedTransitionEvent extends DeprecatedWorkflowItem {
 
-    protected TransitionEvent(UUID id, String description, PointInTime fromPointInTime, PointInTime toPointInTime, Activity activity) {
+    protected DeprecatedTransitionEvent(UUID id, String description, PointInTime fromPointInTime, PointInTime toPointInTime, Activity activity) {
         super(id, description, fromPointInTime, toPointInTime, activity);
     }
 

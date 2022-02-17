@@ -5,6 +5,6 @@ package org.CDISC.DDF.model.common;
  *
  * @author Chris Upkes
  */
-public enum CriterionType {
+public enum DeprecatedCriterionType {
     ELIGIBILITY_INCUSION,ELIGIBILITY_EXCLUSION,RANDOMIZATION,STUDY_COMPLETION,WITHDRAWAL
 }

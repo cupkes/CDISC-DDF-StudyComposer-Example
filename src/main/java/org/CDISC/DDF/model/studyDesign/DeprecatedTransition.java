@@ -1,7 +1,7 @@
 package org.CDISC.DDF.model.studyDesign;
 
 import org.CDISC.DDF.model.common.Activity;
-import org.CDISC.DDF.model.common.Criterion;
+import org.CDISC.DDF.model.common.DeprecatedCriterion;
 import org.CDISC.DDF.model.common.Rule;
 
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ import java.util.UUID;
  */
 
 
-public class Transition extends WorkflowItem{
+public class DeprecatedTransition extends DeprecatedWorkflowItem {
 
 //    private final UUID id; -- now in super constructor
 //    private final String description;
@@ -23,25 +23,25 @@ public class Transition extends WorkflowItem{
 //    private final PointInTime toPointInTime;
     private Rule transitionRule;
     private String describedBy;
-    private List<Criterion> transitionCriteria = new ArrayList<>();
+    private List<DeprecatedCriterion> transitionCriteria = new ArrayList<>();
     private Integer studyProtocolCriterionTransitionNumber;
 
 
-    public Transition(UUID id,
-                      String description,
-                      PointInTime fromPointInTime,
-                      PointInTime toPointInTime,
-                      Rule transitionRule,
-                      Activity activity) {
+    public DeprecatedTransition(UUID id,
+                                String description,
+                                PointInTime fromPointInTime,
+                                PointInTime toPointInTime,
+                                Rule transitionRule,
+                                Activity activity) {
         super(id, description,fromPointInTime,toPointInTime, activity);
         this.transitionRule = transitionRule;
     }
 
-    public Transition(UUID id,
-                      String description,
-                      PointInTime fromPointInTime,
-                      PointInTime toPointInTime,
-                      Activity activity) {
+    public DeprecatedTransition(UUID id,
+                                String description,
+                                PointInTime fromPointInTime,
+                                PointInTime toPointInTime,
+                                Activity activity) {
         super(id, description,fromPointInTime,toPointInTime, activity);
     }
 
@@ -75,11 +75,11 @@ public class Transition extends WorkflowItem{
         this.describedBy = describedBy;
     }
 
-    public List<Criterion> getTransitionCriteria() {
+    public List<DeprecatedCriterion> getTransitionCriteria() {
         return transitionCriteria;
     }
 
-    public void setTransitionCriteria(List<Criterion> transitionCriteria) {
+    public void setTransitionCriteria(List<DeprecatedCriterion> transitionCriteria) {
         this.transitionCriteria = transitionCriteria;
     }
 

@@ -7,7 +7,7 @@ package org.CDISC.DDF.model.studyDesign;
  * @author Chris Upkes
  */
 
-public enum WorkflowItemType {
+public enum DeprecatedWorkflowItemType {
 
     PREVIOUS, NEXT
 }

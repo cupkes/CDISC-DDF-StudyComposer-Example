@@ -5,6 +5,6 @@ package org.CDISC.DDF.model.common;
  *
  * @author Chris Upkes
  */
-public enum ConceptType {
+public enum DeprecatedConceptType {
     OBSERVATIONAL
 }

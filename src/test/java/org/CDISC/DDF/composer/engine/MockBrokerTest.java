@@ -2,7 +2,7 @@ package org.CDISC.DDF.composer.engine;
 
 import org.CDISC.DDF.composer.util.StaticStudyDataProvider;
 import org.CDISC.DDF.model.common.Code;
-import org.CDISC.DDF.model.common.Criterion;
+import org.CDISC.DDF.model.common.DeprecatedCriterion;
 import org.CDISC.DDF.model.common.Rule;
 import org.CDISC.DDF.model.study.Endpoint;
 import org.CDISC.DDF.model.study.Objective;
@@ -72,25 +72,25 @@ class MockBrokerTest {
     @org.junit.jupiter.api.Test
     void getTransitions() {
 
-        List<WorkflowItem> transitions = mockBroker.getWorkflowItems(UUID.randomUUID());
-        Transition transition = (Transition) transitions.get(0);
-        assertNotNull(transition);
-        assertEquals(transition.getDescription(),StaticStudyDataProvider.TRANSITION_DESC);
-        Criterion criterion = transition.getTransitionCriteria().get(0);
-        assertNotNull(criterion);
-        assertEquals(criterion.getDescription(),StaticStudyDataProvider.CRITERION_DESC);
+        List<DeprecatedWorkflowItem> transitions = mockBroker.getWorkflowItems(UUID.randomUUID());
+        DeprecatedTransition deprecatedTransition = (DeprecatedTransition) transitions.get(0);
+        assertNotNull(deprecatedTransition);
+        assertEquals(deprecatedTransition.getDescription(),StaticStudyDataProvider.TRANSITION_DESC);
+        DeprecatedCriterion deprecatedCriterion = deprecatedTransition.getTransitionCriteria().get(0);
+        assertNotNull(deprecatedCriterion);
+        assertEquals(deprecatedCriterion.getDescription(),StaticStudyDataProvider.CRITERION_DESC);
 
     }
 
     @org.junit.jupiter.api.Test
     void getTransition() {
 
-        Transition transition = (Transition) mockBroker.getTransitionWorkflowItem(UUID.randomUUID(), null);
-        assertNotNull(transition);
-        assertEquals(transition.getDescription(),StaticStudyDataProvider.TRANSITION_DESC);
-        Criterion criterion = transition.getTransitionCriteria().get(0);
-        assertNotNull(criterion);
-        assertEquals(criterion.getDescription(),StaticStudyDataProvider.CRITERION_DESC);
+        DeprecatedTransition deprecatedTransition = (DeprecatedTransition) mockBroker.getTransitionWorkflowItem(UUID.randomUUID(), null);
+        assertNotNull(deprecatedTransition);
+        assertEquals(deprecatedTransition.getDescription(),StaticStudyDataProvider.TRANSITION_DESC);
+        DeprecatedCriterion deprecatedCriterion = deprecatedTransition.getTransitionCriteria().get(0);
+        assertNotNull(deprecatedCriterion);
+        assertEquals(deprecatedCriterion.getDescription(),StaticStudyDataProvider.CRITERION_DESC);
     }
 
     @org.junit.jupiter.api.Test

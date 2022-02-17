@@ -9,21 +9,21 @@ import java.util.UUID;
  * @author Chris Upkes
  */
 
-public class Assessment extends StudyData {
+public class DeprecatedAssessment extends DeprecatedStudyData {
 
     private final UUID id;
     private final String name;
     private final String description;
-    private final AssessmentType mainAssessmentType;
-    private final AssessmentDataType expectedDataType;
+    private final DeprecatedAssessmentType mainDeprecatedAssessmentType;
+    private final DeprecatedAssessmentDataType expectedDataType;
     private final String expectedUnits;
 
-    public Assessment(UUID id, UUID collectionEventId, String name, String description, AssessmentType mainAssessmentType, AssessmentDataType expectedDataType, String expectedUnits) {
+    public DeprecatedAssessment(UUID id, UUID collectionEventId, String name, String description, DeprecatedAssessmentType mainDeprecatedAssessmentType, DeprecatedAssessmentDataType expectedDataType, String expectedUnits) {
         super(id,collectionEventId);
         this.id = id;
         this.name = name;
         this.description = description;
-        this.mainAssessmentType = mainAssessmentType;
+        this.mainDeprecatedAssessmentType = mainDeprecatedAssessmentType;
         this.expectedDataType = expectedDataType;
         this.expectedUnits = expectedUnits;
     }
@@ -40,11 +40,11 @@ public class Assessment extends StudyData {
         return description;
     }
 
-    public AssessmentType getMainAssessmentType() {
-        return mainAssessmentType;
+    public DeprecatedAssessmentType getMainAssessmentType() {
+        return mainDeprecatedAssessmentType;
     }
 
-    public AssessmentDataType getExpectedDataType() {
+    public DeprecatedAssessmentDataType getExpectedDataType() {
         return expectedDataType;
     }
 

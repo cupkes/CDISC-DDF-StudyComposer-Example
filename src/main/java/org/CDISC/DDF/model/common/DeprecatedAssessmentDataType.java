@@ -6,6 +6,6 @@ package org.CDISC.DDF.model.common;
  * @author Chris Upkes
  */
 
-public enum AssessmentDataType {
+public enum DeprecatedAssessmentDataType {
     INTEGER
 }

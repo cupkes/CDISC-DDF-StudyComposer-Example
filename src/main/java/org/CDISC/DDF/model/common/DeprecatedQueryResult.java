@@ -8,7 +8,7 @@ import java.util.UUID;
  * @author Chris Upkes
  */
 
-public class QueryResult extends StudyData{
+public class DeprecatedQueryResult extends DeprecatedStudyData {
 
 
 
@@ -19,7 +19,7 @@ public class QueryResult extends StudyData{
     private String result;
 
 
-    public QueryResult(UUID id, UUID collectionEventId, UUID queryId, String result) {
+    public DeprecatedQueryResult(UUID id, UUID collectionEventId, UUID queryId, String result) {
         super(id, collectionEventId);
         this.id = id;
         this.queryId = queryId;

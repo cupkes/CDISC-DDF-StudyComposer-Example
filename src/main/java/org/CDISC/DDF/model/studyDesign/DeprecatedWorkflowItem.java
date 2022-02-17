@@ -4,7 +4,6 @@ package org.CDISC.DDF.model.studyDesign;
 
 import org.CDISC.DDF.model.common.Activity;
 import org.CDISC.DDF.model.common.Encounter;
-import org.CDISC.DDF.model.common.Visit;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +17,7 @@ import java.util.UUID;
  * @author Chris Upkes
  */
 
-public abstract class WorkflowItem {
+public abstract class DeprecatedWorkflowItem {
 
     private final UUID id;
     private final String description;
@@ -33,7 +32,7 @@ public abstract class WorkflowItem {
 // TO_DO:  remove point in time constructor values.
 
     // WorklfowItem objects are now for sequencing.
-    protected WorkflowItem(UUID id, String description, PointInTime fromPointInTime, PointInTime toPointInTime, Activity activity) {
+    protected DeprecatedWorkflowItem(UUID id, String description, PointInTime fromPointInTime, PointInTime toPointInTime, Activity activity) {
 
         this.id = id;
         this.description = description;
@@ -59,19 +58,19 @@ public abstract class WorkflowItem {
         this.nextItemsInSequence = nextItems;
     }
 
-    public void removeItem(UUID item, WorkflowItemType workflowItemType) {
-        if (workflowItemType == WorkflowItemType.NEXT) {
+    public void removeItem(UUID item, DeprecatedWorkflowItemType deprecatedWorkflowItemType) {
+        if (deprecatedWorkflowItemType == DeprecatedWorkflowItemType.NEXT) {
             this.nextItemsInSequence.remove(item);
-        } else if (workflowItemType == WorkflowItemType.PREVIOUS) {
+        } else if (deprecatedWorkflowItemType == DeprecatedWorkflowItemType.PREVIOUS) {
             this.previousItemsInSequence.remove(item);
         }
     }
 
-    public void addItem(UUID item, WorkflowItemType workflowItemType) {
+    public void addItem(UUID item, DeprecatedWorkflowItemType deprecatedWorkflowItemType) {
 
-        if (workflowItemType == WorkflowItemType.NEXT) {
+        if (deprecatedWorkflowItemType == DeprecatedWorkflowItemType.NEXT) {
             this.nextItemsInSequence.add(item);
-        } else if (workflowItemType == WorkflowItemType.PREVIOUS) {
+        } else if (deprecatedWorkflowItemType == DeprecatedWorkflowItemType.PREVIOUS) {
             this.previousItemsInSequence.add(item);
         }
 

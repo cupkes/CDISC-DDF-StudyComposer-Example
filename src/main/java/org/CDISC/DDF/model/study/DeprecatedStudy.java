@@ -2,7 +2,7 @@ package org.CDISC.DDF.model.study;
 
 
 import org.CDISC.DDF.model.common.StudyIndication;
-import org.CDISC.DDF.model.studyDesign.DepracatedStudyDesign;
+import org.CDISC.DDF.model.studyDesign.DeprecatedStudyDesign;
 
 import java.util.List;
 import java.util.UUID;
@@ -33,7 +33,7 @@ public class DeprecatedStudy {
     private List<InvestigationalIntervention> investigationalInterventions;
     // a study can have multiple study designs
     // example, basket or umbrella study
-    private List<DepracatedStudyDesign> studyDesigns;
+    private List<DeprecatedStudyDesign> studyDesigns;
     private List<Objective> studyObjectives = null;
     // add boolean for multiDesign if agreed upon
     // TO_DO
@@ -150,11 +150,11 @@ public class DeprecatedStudy {
         // TO_DO
     }
 
-    public List<DepracatedStudyDesign> getStudyDesigns() {
+    public List<DeprecatedStudyDesign> getStudyDesigns() {
         return studyDesigns;
     }
 
-    public void setStudyDesigns(List<DepracatedStudyDesign> studyDesigns) {
+    public void setStudyDesigns(List<DeprecatedStudyDesign> studyDesigns) {
         this.studyDesigns = studyDesigns;
     }
 

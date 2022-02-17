@@ -8,7 +8,7 @@ import java.util.UUID;
  * @author Chris Upkes
  */
 
-public class Query {
+public class DeprecatedQuery {
 
 /* Firstly, I want to admit that this is the term I used at PhaseForward.  The term is more general than
 a question.  It encompasses measurements, readings, etc...
@@ -19,7 +19,7 @@ query results.
     private UUID id;
     private String question;
 
-    public Query(UUID id, String question) {
+    public DeprecatedQuery(UUID id, String question) {
 
         this.question = question;
     }

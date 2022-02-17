@@ -9,18 +9,18 @@ import java.util.UUID;
  * @author Nathan Smith
  */
 
-public class DepracatedStudyDesign {
+public class DeprecatedStudyDesign {
 
     private final UUID id;
     private List<StudyCell> studyCells;
     private List<PlannedWorkflow> plannedWorkflows;
 
-    public DepracatedStudyDesign(UUID id, List<StudyCell> studyCells) {
+    public DeprecatedStudyDesign(UUID id, List<StudyCell> studyCells) {
         this.id = id;
         this.studyCells = studyCells;
     }
 
-    public DepracatedStudyDesign(UUID id) {
+    public DeprecatedStudyDesign(UUID id) {
         this.id = id;
     }
 

@@ -12,19 +12,19 @@ import java.util.UUID;
 
 public abstract class Amendment {
 
-    private final Date  amendmentDate;
+    private final Date amendmentEffectiveDate;
     private final String version;
     private final UUID id;
 
     public Amendment(Date amendmentDate, String version, UUID id) {
-        this.amendmentDate = amendmentDate;
+        this.amendmentEffectiveDate = amendmentDate;
         this.version = version;
         this.id = id;
     }
 
 
-    public Date getAmendmentDate() {
-        return amendmentDate;
+    public Date getAmendmentEffectiveDate() {
+        return amendmentEffectiveDate;
     }
 
     public String getVersion() {

@@ -12,7 +12,7 @@ import java.util.UUID;
  */
 
 
-public class AssessmentGroup {
+public class DeprecatedAssessmentGroup {
 
     private final UUID id;
 //  this is the eCRF link seen in the API.  Not still sure that it belongs here
@@ -21,22 +21,22 @@ public class AssessmentGroup {
 
     private URI assementLink;
 
-    public AssessmentGroup getSubGroup() {
+    public DeprecatedAssessmentGroup getSubGroup() {
         return subGroup;
     }
 
-    public void setSubGroup(AssessmentGroup subGroup) {
+    public void setSubGroup(DeprecatedAssessmentGroup subGroup) {
         this.subGroup = subGroup;
     }
 
-    private AssessmentGroup subGroup;
+    private DeprecatedAssessmentGroup subGroup;
 
-    public AssessmentGroup(UUID id, URI assementLink) {
+    public DeprecatedAssessmentGroup(UUID id, URI assementLink) {
         this.id = id;
         this.assementLink = assementLink;
     }
 
-    public AssessmentGroup(UUID id) {
+    public DeprecatedAssessmentGroup(UUID id) {
         this.id = id;
 
     }
