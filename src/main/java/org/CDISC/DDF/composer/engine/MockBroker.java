@@ -17,6 +17,8 @@ import org.CDISC.DDF.model.study.*;
 import org.CDISC.DDF.model.studyDesign.*;
 import org.CDISC.DDF.model.versioning.SectionType;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -86,7 +88,7 @@ public class MockBroker  implements IStudyComponentBroker{
     }
 
     @Override
-    public List<PlannedWorkflow> getPlannedWorkflows(UUID studyCellId) {
+    public List<PlannedWorkflow> getPlannedWorkflows(UUID studyCellId) throws URISyntaxException {
 
         List<PlannedWorkflow> plannedWorkFlows = new ArrayList<>();
         plannedWorkFlows.add(this.getPlannedWorkflow(UUID.randomUUID()));
@@ -95,7 +97,7 @@ public class MockBroker  implements IStudyComponentBroker{
     }
 
     @Override
-    public PlannedWorkflow getPlannedWorkflow(UUID plannedWorkflowId) {
+    public PlannedWorkflow getPlannedWorkflow(UUID plannedWorkflowId) throws URISyntaxException {
 
         // first get a matrix of workflowitems
 
@@ -128,7 +130,7 @@ public class MockBroker  implements IStudyComponentBroker{
     }
 
     @Override
-    public PlannedWorkflowsSection getPlannedWorkflowsSection(UUID studyDesignId) {
+    public PlannedWorkflowsSection getPlannedWorkflowsSection(UUID studyDesignId) throws URISyntaxException {
 
         PlannedWorkflowsSection plannedWorkflowsSection = new PlannedWorkflowsSection(UUID.randomUUID());
         plannedWorkflowsSection.setPlannedWorkflows(this.getPlannedWorkflows(studyDesignId));
@@ -137,7 +139,7 @@ public class MockBroker  implements IStudyComponentBroker{
     }
 
     @Override
-    public List<List<DeprecatedWorkflowItem>> getWorkflowItemMatrix(UUID plannedWorkflowId) {
+    public List<List<DeprecatedWorkflowItem>> getWorkflowItemMatrix(UUID plannedWorkflowId) throws URISyntaxException {
 
         List<List<DeprecatedWorkflowItem>> workflowItemMatrix = new ArrayList<>();
         workflowItemMatrix.add(this.getWorkflowItems(plannedWorkflowId));
@@ -146,7 +148,7 @@ public class MockBroker  implements IStudyComponentBroker{
     }
 
     @Override
-    public DeprecatedWorkflowItem getTransitionWorkflowItem(UUID workFlowItemId, UUID previousItemId) {
+    public DeprecatedWorkflowItem getTransitionWorkflowItem(UUID workFlowItemId, UUID previousItemId) throws URISyntaxException {
         // first, build a list of criteria
         List<DeprecatedCriterion> criteria = new ArrayList<>();
         DeprecatedCriterion deprecatedCriterion = new DeprecatedCriterion(UUID.randomUUID(),
@@ -181,12 +183,15 @@ public class MockBroker  implements IStudyComponentBroker{
         List<Procedure> procedures = new ArrayList<>();
         procedures.add(procedure);
 
-        DeprecatedStudyData deprecatedStudyData = new DeprecatedObservation(UUID.randomUUID(), UUID.randomUUID());
-        List<DeprecatedStudyData> deprecatedStudyDataList = new ArrayList<>();
-        deprecatedStudyDataList.add(deprecatedStudyData);
+        StudyData studyData = new StudyData(UUID.randomUUID(),
+                StaticStudyDataProvider.ASSESSMENT_NAME,
+                StaticStudyDataProvider.ASSESSMENT_DESC,
+                new URI(StaticStudyDataProvider.ECRF_LINK));
+        List<StudyData> studyDataList = new ArrayList<>();
+        studyDataList.add(studyData);
 
 
-        Activity activity = new Activity(UUID.randomUUID(), procedures, deprecatedStudyDataList);
+        Activity activity = new Activity(UUID.randomUUID(), procedures, studyDataList);
 
 
 
@@ -212,7 +217,7 @@ public class MockBroker  implements IStudyComponentBroker{
 //    }
 
     @Override
-    public List<DeprecatedWorkflowItem> getWorkflowItems(UUID plannedWorkflowId) {
+    public List<DeprecatedWorkflowItem> getWorkflowItems(UUID plannedWorkflowId) throws URISyntaxException {
 
         List<DeprecatedWorkflowItem> deprecatedWorkflowItems = new ArrayList<>();
         deprecatedWorkflowItems.add( this.getTransitionWorkflowItem(UUID.randomUUID(), null));
@@ -222,7 +227,7 @@ public class MockBroker  implements IStudyComponentBroker{
     }
 
     @Override
-    public List<DeprecatedWorkflowItem> getBranchedWorkflowItems(UUID plannedWorkflowId) {
+    public List<DeprecatedWorkflowItem> getBranchedWorkflowItems(UUID plannedWorkflowId) throws URISyntaxException {
         List<DeprecatedWorkflowItem> deprecatedWorkflowItems = new ArrayList<>();
         deprecatedWorkflowItems.add( this.getTransitionWorkflowItem(UUID.randomUUID(), null));
         // TODO: add an event and then another transition
@@ -401,7 +406,7 @@ public class MockBroker  implements IStudyComponentBroker{
     }
 
     @Override
-    public List<StudyDesign> getStudyDesigns(UUID studyId) {
+    public List<StudyDesign> getStudyDesigns(UUID studyId) throws URISyntaxException {
 
         List<StudyDesign> studyDesigns = new ArrayList<>();
         studyDesigns.add(this.getStudyDesign(studyId));
@@ -410,7 +415,7 @@ public class MockBroker  implements IStudyComponentBroker{
     }
 
     @Override
-    public StudyDesign getStudyDesign(UUID studyId) {
+    public StudyDesign getStudyDesign(UUID studyId) throws URISyntaxException {
         StudyDesign studyDesign =  new StudyDesign(UUID.randomUUID());
         studyDesign.addSection(SectionType.STUDY_CELLS, this.getStudyCellsSection(UUID.randomUUID()));
         studyDesign.addSection(SectionType.PLANNED_WORKFLOWS, this.getPlannedWorkflowsSection(UUID.randomUUID()));
@@ -426,7 +431,7 @@ public class MockBroker  implements IStudyComponentBroker{
 //    }
 
     @Override
-    public StudyDesignsSection getStudyDesignsSection(UUID studyId) {
+    public StudyDesignsSection getStudyDesignsSection(UUID studyId) throws URISyntaxException {
        StudyDesignsSection studyDesignsSection = new StudyDesignsSection(UUID.randomUUID());
        studyDesignsSection.setStudyDesigns(this.getStudyDesigns(studyId));
        return studyDesignsSection;

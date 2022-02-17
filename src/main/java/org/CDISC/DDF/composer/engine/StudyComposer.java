@@ -11,6 +11,7 @@ import org.CDISC.DDF.model.versioning.IStudy;
 import org.CDISC.DDF.model.versioning.IStudyDesign;
 import org.CDISC.DDF.model.versioning.SectionType;
 
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -28,7 +29,7 @@ public class StudyComposer {
 
     private IStudyDesign studyDesign;
 
-    public IStudy getMockIStudy() {
+    public IStudy getMockIStudy() throws URISyntaxException {
 
         IStudyComponentBroker mockBroker = new MockBroker();
 
@@ -62,7 +63,7 @@ public class StudyComposer {
 //
 //    }
 
-    public IStudyDesign getMockIStudyDesign() {
+    public IStudyDesign getMockIStudyDesign() throws URISyntaxException {
 
         this.studyDesign =  new StudyDesign(UUID.randomUUID());
         IStudyComponentBroker mockBroker = new MockBroker();

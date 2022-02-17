@@ -40,6 +40,7 @@ public class StaticStudyDataProvider {
     public static String STUDY_STATUS = "this is a study status value";
     public static String ASSESSMENT_NAME = "Systolic Blood Pressure";
     public static String ASSESSMENT_DESC = "Measurement of systolic blood pressure in sitting position in either mm or cm Mercury column";
+    public static String ECRF_LINK = "https://library.cdisc.org/api/mdr/cdashig/2-1/domains/VS";
 
 
 

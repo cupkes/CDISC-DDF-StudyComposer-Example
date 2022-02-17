@@ -9,6 +9,7 @@ import org.CDISC.DDF.model.study.Objective;
 import org.CDISC.DDF.model.study.StudyIdentifier;
 import org.CDISC.DDF.model.studyDesign.*;
 
+import java.net.URISyntaxException;
 import java.util.List;
 import java.util.UUID;
 
@@ -34,21 +35,21 @@ public interface IStudyComponentBroker {
 
     StudyCellsSection getStudyCellsSection(UUID studyDesignId);
 
-    List<PlannedWorkflow> getPlannedWorkflows(UUID studyCellId);
+    List<PlannedWorkflow> getPlannedWorkflows(UUID studyCellId) throws URISyntaxException;
 
-    PlannedWorkflow getPlannedWorkflow(UUID plannedWorkflowId);
+    PlannedWorkflow getPlannedWorkflow(UUID plannedWorkflowId) throws URISyntaxException;
 
-    PlannedWorkflowsSection getPlannedWorkflowsSection(UUID studyDesignId);
+    PlannedWorkflowsSection getPlannedWorkflowsSection(UUID studyDesignId) throws URISyntaxException;
 
 //    PlannedWorkflowsSection getPlannedWorkflowsSection(UUID studyDesignId, String tag);
 
-    List<List<DeprecatedWorkflowItem>> getWorkflowItemMatrix(UUID plannedWorkflowId);
+    List<List<DeprecatedWorkflowItem>> getWorkflowItemMatrix(UUID plannedWorkflowId) throws URISyntaxException;
 
-    DeprecatedWorkflowItem getTransitionWorkflowItem(UUID workFlowItemId, UUID previousItemId);
+    DeprecatedWorkflowItem getTransitionWorkflowItem(UUID workFlowItemId, UUID previousItemId) throws URISyntaxException;
 
-    List<DeprecatedWorkflowItem> getWorkflowItems(UUID plannedWorkflowId);
+    List<DeprecatedWorkflowItem> getWorkflowItems(UUID plannedWorkflowId) throws URISyntaxException;
 
-    List<DeprecatedWorkflowItem> getBranchedWorkflowItems(UUID plannedWorkflowId);
+    List<DeprecatedWorkflowItem> getBranchedWorkflowItems(UUID plannedWorkflowId) throws URISyntaxException;
 
     List<StudyElement> getStudyElements(UUID studyCellId);
 
@@ -74,13 +75,13 @@ public interface IStudyComponentBroker {
 
     StudyPopulationsSection getStudyPopulationsSection(UUID studyDesignId);
 
-    List<StudyDesign> getStudyDesigns(UUID studyId);
+    List<StudyDesign> getStudyDesigns(UUID studyId) throws URISyntaxException;
 
-    StudyDesign getStudyDesign(UUID studyId);
+    StudyDesign getStudyDesign(UUID studyId) throws URISyntaxException;
 
 //    StudyDesignsSection getStudyDesignsSection(UUID studyId, String tag);
 
-    StudyDesignsSection getStudyDesignsSection(UUID studyId);
+    StudyDesignsSection getStudyDesignsSection(UUID studyId) throws URISyntaxException;
 
     List<StudyIdentifier> getStudyIdentifiers(UUID studyId);
 

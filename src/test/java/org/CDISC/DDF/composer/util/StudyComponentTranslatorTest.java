@@ -11,6 +11,7 @@ import org.CDISC.DDF.model.versioning.IStudyDesign;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.net.URISyntaxException;
 import java.util.List;
 import java.util.UUID;
 
@@ -45,8 +46,12 @@ class StudyComponentTranslatorTest {
     void translateIStudyDesignToJSON() throws JsonProcessingException{
 
 
-
-        IStudyDesign studyDesign = this.studyComposer.getMockIStudyDesign();
+        IStudyDesign studyDesign = null;
+        try {
+            studyDesign = this.studyComposer.getMockIStudyDesign();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
         String studyDesignJSON = this.studyComponentTranslator.translateIStudyDesignToJSON(studyDesign);
         assertNotNull(studyDesignJSON);
         System.out.println(studyDesignJSON);
@@ -56,7 +61,12 @@ class StudyComponentTranslatorTest {
     @Test
     void translateIStudyToJSON() throws JsonProcessingException{
 
-        IStudy study = this.studyComposer.getMockIStudy();
+        IStudy study = null;
+        try {
+            study = this.studyComposer.getMockIStudy();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
         String studyJSON = this.studyComponentTranslator.translateIStudyToJSON(study);
         assertNotNull(studyJSON);
         System.out.println(studyJSON);
