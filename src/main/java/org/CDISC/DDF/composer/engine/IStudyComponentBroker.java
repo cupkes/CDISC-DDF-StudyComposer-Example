@@ -43,7 +43,7 @@ public interface IStudyComponentBroker {
 
 //    PlannedWorkflowsSection getPlannedWorkflowsSection(UUID studyDesignId, String tag);
 
-    List<List<WorkflowItem>> getWorkflowItemMatrix(UUID plannedWorkflowId) throws URISyntaxException;
+    WorkflowItemMatrix getWorkflowItemMatrix(UUID plannedWorkflowId) throws URISyntaxException;
 
     WorkflowItem getTransitionWorkflowItem(UUID workFlowItemId, UUID previousItemId) throws URISyntaxException;
 

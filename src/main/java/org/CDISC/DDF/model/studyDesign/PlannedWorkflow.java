@@ -1,7 +1,5 @@
 package org.CDISC.DDF.model.studyDesign;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
 
@@ -22,8 +20,7 @@ public class PlannedWorkflow {
     private String description;
     private final PointInTime startPoint;
     private final PointInTime endPoint;
-    private List<List<WorkflowItem>> itemMatrix = new ArrayList<>();
-
+    private WorkflowItemMatrix workflowItemMatrix;
 
     public PlannedWorkflow(UUID id, String description, PointInTime startPoint, PointInTime endPoint){
 
@@ -31,6 +28,16 @@ public class PlannedWorkflow {
         this.description = description;
         this.startPoint = startPoint;
         this.endPoint = endPoint;
+    }
+
+
+    public PlannedWorkflow(UUID id, String description, PointInTime startPoint, PointInTime endPoint, WorkflowItemMatrix itemMatrix){
+
+        this.id = id;
+        this.description = description;
+        this.startPoint = startPoint;
+        this.endPoint = endPoint;
+        this.workflowItemMatrix = itemMatrix;
     }
 
     public UUID getId() {
@@ -54,27 +61,11 @@ public class PlannedWorkflow {
     }
 
 
-    public List<List<WorkflowItem>> getItemMatrix() {
-        return itemMatrix;
+    public WorkflowItemMatrix getWorkflowItemMatrix() {
+        return workflowItemMatrix;
     }
 
-    public void setItemMatrix(List<List<WorkflowItem>> itemMatrix) {
-        this.itemMatrix = itemMatrix;
-    }
-
-    public void addItemList(List<WorkflowItem> workflowItems) {
-        //TODO:  implement
-    }
-
-    public void removeItemList(List<WorkflowItem> workflowItems) {
-        //TODO: implement
-    }
-
-    public void addItem(WorkflowItem workflowItem) {
-        //TODO: implement
-    }
-
-    public void removeItem(WorkflowItem workflowItem) {
-        //TODO: implement
+    public void setItemMatrix(WorkflowItemMatrix itemMatrix) {
+        this.workflowItemMatrix = itemMatrix;
     }
 }

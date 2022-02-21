@@ -119,12 +119,10 @@ public class MockBroker  implements IStudyComponentBroker{
 
         // build and return the workflow
 
-        PlannedWorkflow wf = new PlannedWorkflow(plannedWorkflowId,StaticStudyDataProvider.PLANNED_WORKFLOW_DESC,
-                fromPointInTime,toPointInTime);
+        return new PlannedWorkflow(plannedWorkflowId,StaticStudyDataProvider.PLANNED_WORKFLOW_DESC,
+                fromPointInTime,toPointInTime, this.getWorkflowItemMatrix(plannedWorkflowId));
 
-        wf.setItemMatrix(this.getWorkflowItemMatrix(plannedWorkflowId));
 
-        return wf;
 
 
     }
@@ -139,10 +137,10 @@ public class MockBroker  implements IStudyComponentBroker{
     }
 
     @Override
-    public List<List<WorkflowItem>> getWorkflowItemMatrix(UUID plannedWorkflowId) throws URISyntaxException {
+    public WorkflowItemMatrix getWorkflowItemMatrix(UUID plannedWorkflowId) throws URISyntaxException {
 
-        List<List<WorkflowItem>> workflowItemMatrix = new ArrayList<>();
-        workflowItemMatrix.add(this.getWorkflowItems(plannedWorkflowId));
+        WorkflowItemMatrix workflowItemMatrix = new WorkflowItemMatrix(UUID.randomUUID());
+        workflowItemMatrix.addItemList(this.getWorkflowItems(plannedWorkflowId));
         return workflowItemMatrix;
 
     }
@@ -406,6 +404,8 @@ public class MockBroker  implements IStudyComponentBroker{
         studyDesign.addSection(SectionType.STUDY_CELLS, this.getStudyCellsSection(UUID.randomUUID()));
         studyDesign.addSection(SectionType.PLANNED_WORKFLOWS, this.getPlannedWorkflowsSection(UUID.randomUUID()));
         studyDesign.addSection(SectionType.STUDY_POPULATIONS, this.getStudyPopulationsSection(UUID.randomUUID()));
+        studyDesign.addSection(SectionType.INVESTIGATIONAL_INTERVENTIONS,
+                this.getInvestigationalInterventionsSection(UUID.randomUUID()));
         return studyDesign;
     }
 //

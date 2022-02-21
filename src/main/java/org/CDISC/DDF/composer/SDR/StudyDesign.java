@@ -21,7 +21,7 @@ public class StudyDesign implements IStudyDesign {
     private List<Section> studyCellHistory = new ArrayList<>();
     private List<Section> workflowHistory = new ArrayList<>();
     private List<Section> populationHistory = new ArrayList<>();
-    private final List<Section> interventionHistory = new ArrayList<>();
+    private List<Section> interventionHistory = new ArrayList<>();
 
 
     public StudyDesign(UUID id) {
