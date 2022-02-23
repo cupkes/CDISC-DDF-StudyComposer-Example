@@ -140,7 +140,7 @@ public class MockBroker  implements IStudyComponentBroker{
     public WorkflowItemMatrix getWorkflowItemMatrix(UUID plannedWorkflowId) throws URISyntaxException {
 
         WorkflowItemMatrix workflowItemMatrix = new WorkflowItemMatrix(UUID.randomUUID());
-        workflowItemMatrix.addItemList(this.getWorkflowItems(plannedWorkflowId));
+        workflowItemMatrix.addItemSequence(this.getItemSequence(plannedWorkflowId));
         return workflowItemMatrix;
 
     }
@@ -164,7 +164,9 @@ public class MockBroker  implements IStudyComponentBroker{
                 new Date());
 
 
-        Procedure procedure = new MedicalProcedure(UUID.randomUUID());
+        MedicalProcedure procedure = new MedicalProcedure(UUID.randomUUID());
+        procedure.setProcedureCode("testCode");
+
         List<Procedure> procedures = new ArrayList<>();
         procedures.add(procedure);
 
@@ -188,6 +190,11 @@ public class MockBroker  implements IStudyComponentBroker{
 
 
         workflowItem.setEncounter(this.getMockVisit());
+        if (previousItemId != null) {
+            List<UUID> previousItems = new ArrayList<>();
+            previousItems.add(previousItemId);
+            workflowItem.setPreviousItemsInSequence(previousItems);
+        }
         return workflowItem;
 
     }
@@ -203,10 +210,19 @@ public class MockBroker  implements IStudyComponentBroker{
     @Override
     public List<WorkflowItem> getWorkflowItems(UUID plannedWorkflowId) throws URISyntaxException {
 
-        List<WorkflowItem> deprecatedWorkflowItems = new ArrayList<>();
-        deprecatedWorkflowItems.add( this.getTransitionWorkflowItem(UUID.randomUUID(), null));
+        List<WorkflowItem> workflowItems = new ArrayList<>();
+        WorkflowItem firstItem = this.getTransitionWorkflowItem(UUID.randomUUID(), null);
+        WorkflowItem nextItem = this.getTransitionWorkflowItem(UUID.randomUUID(), firstItem.getId());
+        List<UUID> nextItemsInSequence = new ArrayList<>();
+        nextItemsInSequence.add(nextItem.getId());
+        firstItem.setNextItemsInSequence(nextItemsInSequence);
+
+        workflowItems.add(firstItem);
+        workflowItems.add(nextItem);
+
+
         // TODO: add an event and then another transition
-        return deprecatedWorkflowItems;
+        return workflowItems;
 
     }
 
@@ -216,6 +232,12 @@ public class MockBroker  implements IStudyComponentBroker{
         workflowItems.add( this.getTransitionWorkflowItem(UUID.randomUUID(), null));
         // TODO: add an event and then another transition
         return workflowItems;
+    }
+
+    @Override
+    public ItemSequence getItemSequence(UUID plannedWorkflowId) throws URISyntaxException {
+        return new ItemSequence(UUID.randomUUID(), this.getWorkflowItems(plannedWorkflowId));
+
     }
 
     @Override
@@ -443,6 +465,15 @@ public class MockBroker  implements IStudyComponentBroker{
     }
 
     @Override
+    public StudyEpoch getStudyEpoch(UUID studyDesignId) {
+        return new StudyEpoch(UUID.randomUUID(),
+                EpochType.SCREENING,
+                StaticStudyDataProvider.EPOCH_NAME,
+                StaticStudyDataProvider.EPOCH_DESC,
+                1);
+    }
+
+    @Override
     public DeprecatedStudyData getAssessment(UUID studyId) {
         return new DeprecatedAssessment(UUID.randomUUID(),
                 UUID.randomUUID(),
@@ -478,13 +509,15 @@ public class MockBroker  implements IStudyComponentBroker{
         Rule startRule = new Rule(UUID.randomUUID(), "start rule", coding);
         Rule endRule = new Rule(UUID.randomUUID(), "end rule", coding);
 
-        return new Visit(UUID.randomUUID(),
+        Visit visit = new  Visit(UUID.randomUUID(),
                 "test visit",
                 "visit description",
                 startRule,
                 endRule,
                 ContactMode.IN_PERSON,
                 EnvironmentalSetting.CLINIC);
+        visit.setEpoch(this.getStudyEpoch(UUID.randomUUID()));
+        return visit;
 
 
 

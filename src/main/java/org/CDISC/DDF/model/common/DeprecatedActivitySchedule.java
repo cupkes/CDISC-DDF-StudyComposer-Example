@@ -8,14 +8,14 @@ import java.util.List;
  * @author Chris Upkes
  */
 
-public class ActivitySchedule {
+public class DeprecatedActivitySchedule {
 
 
     private Activity firstActivity;
     private List<Activity> activityList;
 
 
-    public ActivitySchedule(Activity firstActivity) {
+    public DeprecatedActivitySchedule(Activity firstActivity) {
         this.firstActivity = firstActivity;
     }
 

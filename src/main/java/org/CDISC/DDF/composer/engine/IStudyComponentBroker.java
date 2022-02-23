@@ -51,6 +51,8 @@ public interface IStudyComponentBroker {
 
     List<WorkflowItem> getBranchedWorkflowItems(UUID plannedWorkflowId) throws URISyntaxException;
 
+    ItemSequence getItemSequence(UUID plannedWorkflowId) throws URISyntaxException;
+
     List<StudyElement> getStudyElements(UUID studyCellId);
 
     StudyElement getStudyElement(UUID studyElementId);
@@ -86,6 +88,8 @@ public interface IStudyComponentBroker {
     List<StudyIdentifier> getStudyIdentifiers(UUID studyId);
 
     StudyIdentifier getStudyIdentifier(UUID studyId);
+
+    StudyEpoch getStudyEpoch(UUID studyDesignId);
 
     DeprecatedStudyData getAssessment(UUID studyId);
 
