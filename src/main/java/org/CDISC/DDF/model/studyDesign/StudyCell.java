@@ -5,7 +5,9 @@ import java.util.List;
 import java.util.UUID;
 
 /**
- * org.CDISC.DDF.model.study.StudyCell is a class representing the design of a study in a clinical trial.
+ * org.CDISC.DDF.model.study.StudyCell is a partitioning of a study arm into individual pieces, which are
+ * associated with an epoch and represent an implementation of
+ * the purpose of its associated epoch.
  *
  * @author Nathan Smith
  */

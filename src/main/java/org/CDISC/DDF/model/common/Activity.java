@@ -12,27 +12,31 @@ import java.util.UUID;
 public class Activity {
 
     private final UUID id;
+    private final String description;
     private List<Procedure> definedProcedures;
     private List<StudyData> StudyDataCollection;
 
     // add procedure list
 
 
-    public Activity(UUID id, List<Procedure> definedProcedures, List<StudyData> StudyDataCollection) {
+    public Activity(UUID id, String description, List<Procedure> definedProcedures, List<StudyData> StudyDataCollection) {
         this.id = id;
+        this.description = description;
         this.definedProcedures = definedProcedures;
         this.StudyDataCollection = StudyDataCollection;
     }
 
 
-    public Activity(UUID id, List<Procedure> definedProcedures) {
+    public Activity(UUID id, String description, List<Procedure> definedProcedures) {
         this.id = id;
+        this.description = description;
         this.definedProcedures = definedProcedures;
 
     }
 
-    public Activity(UUID id) {
+    public Activity(UUID id, String description) {
         this.id = id;
+        this.description = description;
     }
 
     public UUID getId() {
@@ -74,5 +78,9 @@ public class Activity {
     public void removeStudyData(DeprecatedStudyData deprecatedStudyData){
 
         // TO_DO implement
+    }
+
+    public String getDescription() {
+        return description;
     }
 }

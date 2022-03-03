@@ -2,6 +2,9 @@ package org.CDISC.DDF.model.versioning;
 
 
 
+import org.CDISC.DDF.model.study.TrialType;
+import org.CDISC.DDF.model.studyDesign.TrialIntentType;
+
 import java.util.List;
 import java.util.UUID;
 
@@ -19,6 +22,10 @@ public interface IStudyDesign {
 //    String getStudyDesignVersion(); -- removing versioning for all but study
 //
 //    void setStudyDesignVersion(String version);
+
+    TrialType getTrialType();
+
+    TrialIntentType getTrialIntentType();
 
     List<Section> getCurrentSections();
 

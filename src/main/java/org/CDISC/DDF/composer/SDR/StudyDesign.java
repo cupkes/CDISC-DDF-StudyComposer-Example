@@ -1,5 +1,7 @@
 package org.CDISC.DDF.composer.SDR;
 
+import org.CDISC.DDF.model.study.TrialType;
+import org.CDISC.DDF.model.studyDesign.TrialIntentType;
 import org.CDISC.DDF.model.versioning.IStudyDesign;
 import org.CDISC.DDF.model.versioning.Section;
 import org.CDISC.DDF.model.versioning.SectionType;
@@ -16,6 +18,11 @@ import java.util.*;
 public class StudyDesign implements IStudyDesign {
 
     private final UUID id;
+
+
+
+    private TrialIntentType trialIntentType;
+    private TrialType trialType;
    // private String version;
     private Map<SectionType,List<Section>> designSections = new HashMap<>();
     private List<Section> studyCellHistory = new ArrayList<>();
@@ -32,6 +39,24 @@ public class StudyDesign implements IStudyDesign {
     @Override
     public UUID getStudyDesignId() {
         return this.id;
+    }
+
+    @Override
+    public TrialType getTrialType() {
+        return this.trialType;
+    }
+
+    @Override
+    public TrialIntentType getTrialIntentType() {
+        return this.trialIntentType;
+    }
+
+    public void setTrialIntentType(TrialIntentType trialIntentType) {
+        this.trialIntentType = trialIntentType;
+    }
+
+    public void setTrialType(TrialType trialType) {
+        this.trialType = trialType;
     }
 
 //    @Override

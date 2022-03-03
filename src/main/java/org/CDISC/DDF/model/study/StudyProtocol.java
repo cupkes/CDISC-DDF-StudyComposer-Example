@@ -30,9 +30,44 @@ public class StudyProtocol {
     private String protocolVersion;
     private Date approvalDate;
     private String protocolStatus;
+    private String documentType;
 
     private List<Amendment> amendments = new ArrayList<>();
     private List<String> sections = new ArrayList<>();
+
+    public String getProtocolVersion() {
+        return protocolVersion;
+    }
+
+    public void setProtocolVersion(String protocolVersion) {
+        this.protocolVersion = protocolVersion;
+    }
+
+    public Date getApprovalDate() {
+        return approvalDate;
+    }
+
+    public void setApprovalDate(Date approvalDate) {
+        this.approvalDate = approvalDate;
+    }
+
+    public String getProtocolStatus() {
+        return protocolStatus;
+    }
+
+    public void setProtocolStatus(String protocolStatus) {
+        this.protocolStatus = protocolStatus;
+    }
+
+    public String getDocumentType() {
+        return documentType;
+    }
+
+    public void setDocumentType(String documentType) {
+        this.documentType = documentType;
+    }
+
+
 
 
 

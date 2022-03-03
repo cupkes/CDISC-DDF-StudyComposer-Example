@@ -6,5 +6,5 @@ package org.CDISC.DDF.model.study;
  */
 
 public enum TrialType {
-    DIAGNOSIS
+    DIAGNOSIS,EFFICACY,SAFETY,TOLERABILITY
 }

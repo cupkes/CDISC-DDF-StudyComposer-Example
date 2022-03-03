@@ -7,6 +7,7 @@ import org.CDISC.DDF.composer.SDR.StudyDesign;
 import org.CDISC.DDF.composer.SDR.StudyDesignsSection;
 import org.CDISC.DDF.composer.util.StaticStudyDataProvider;
 import org.CDISC.DDF.model.study.*;
+import org.CDISC.DDF.model.studyDesign.TrialIntentType;
 import org.CDISC.DDF.model.versioning.IStudy;
 import org.CDISC.DDF.model.versioning.IStudyDesign;
 import org.CDISC.DDF.model.versioning.SectionType;
@@ -65,7 +66,11 @@ public class StudyComposer {
 
     public IStudyDesign getMockIStudyDesign() throws URISyntaxException {
 
-        this.studyDesign =  new StudyDesign(UUID.randomUUID());
+        StudyDesign sd = new StudyDesign(UUID.randomUUID());
+        sd.setTrialType(TrialType.EFFICACY);
+        TrialIntentType t = new TrialIntentType(UUID.randomUUID(), "this is a trial intent type");
+        sd.setTrialIntentType(t);
+
         IStudyComponentBroker mockBroker = new MockBroker();
         studyDesign.addSection(SectionType.STUDY_CELLS, mockBroker.getStudyCellsSection(UUID.randomUUID()));
         studyDesign.addSection(SectionType.PLANNED_WORKFLOWS, mockBroker.getPlannedWorkflowsSection(UUID.randomUUID()));

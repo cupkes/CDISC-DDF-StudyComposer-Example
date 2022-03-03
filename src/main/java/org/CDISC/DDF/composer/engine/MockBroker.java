@@ -176,9 +176,10 @@ public class MockBroker  implements IStudyComponentBroker{
                 new URI(StaticStudyDataProvider.ECRF_LINK));
         List<StudyData> studyDataList = new ArrayList<>();
         studyDataList.add(studyData);
+        String description = "Some common activity";
 
 
-        Activity activity = new Activity(UUID.randomUUID(), procedures, studyDataList);
+        Activity activity = new Activity(UUID.randomUUID(), description, procedures, studyDataList);
 
 
 
@@ -222,6 +223,7 @@ public class MockBroker  implements IStudyComponentBroker{
 
 
         // TODO: add an event and then another transition
+        // TODO:  prior to returning, write tuple / JSON to audit log.
         return workflowItems;
 
     }

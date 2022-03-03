@@ -12,8 +12,8 @@ import java.util.UUID;
 
 public abstract class Section {
 
-    private UUID id;
-    private SectionType sectionType;
+    private final UUID id;
+    private final SectionType sectionType;
 
 //    private String tag; - we are removing tagging for everything but the study
 

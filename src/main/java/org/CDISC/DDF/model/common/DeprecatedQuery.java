@@ -3,7 +3,8 @@ package org.CDISC.DDF.model.common;
 import java.util.UUID;
 
 /**
- * org.CDISC.DDF.model.common.Query is a class used to record a query to be used during a study.
+ * org.CDISC.DDF.model.common.Query is a class used to record questions
+ * concerning errors or inconsistency within data items to be used during a study.
  *
  * @author Chris Upkes
  */
