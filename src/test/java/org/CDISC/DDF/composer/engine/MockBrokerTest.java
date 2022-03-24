@@ -60,7 +60,7 @@ class MockBrokerTest {
         assertEquals(plannedWorkflow.getDescription(), StaticStudyDataProvider.PLANNED_WORKFLOW_DESC);
         PointInTime pointInTime = plannedWorkflow.getStartPoint();
         assertNotNull(pointInTime);
-        assertEquals(pointInTime.getSubjectStatusGrouping(),StaticStudyDataProvider.PIT_SUBJECT_STATUS_GROUPING);
+
 
     }
 
@@ -77,7 +77,7 @@ class MockBrokerTest {
         assertEquals(plannedWorkflow.getDescription(), StaticStudyDataProvider.PLANNED_WORKFLOW_DESC);
         PointInTime pointInTime = plannedWorkflow.getStartPoint();
         assertNotNull(pointInTime);
-        assertEquals(pointInTime.getSubjectStatusGrouping(),StaticStudyDataProvider.PIT_SUBJECT_STATUS_GROUPING);
+
     }
 
 

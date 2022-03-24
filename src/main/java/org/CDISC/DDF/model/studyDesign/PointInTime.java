@@ -23,14 +23,14 @@ public class PointInTime {
 
     private final UUID id;
     private final PointInTimeType type;
-    private final String subjectStatusGrouping;
+    //private final String subjectStatusGrouping;
     private final Date startDate;
     private final Date endDate;
 
-    public PointInTime(UUID id, PointInTimeType type, String subjectStatusGrouping, Date startDate, Date endDate) {
+    public PointInTime(UUID id, PointInTimeType type,Date startDate, Date endDate) {
         this.id = id;
         this.type = type;
-        this.subjectStatusGrouping = subjectStatusGrouping;
+
         this.startDate = startDate;
         this.endDate = endDate;
     }
@@ -44,9 +44,7 @@ public class PointInTime {
         return type;
     }
 
-    public String getSubjectStatusGrouping() {
-        return subjectStatusGrouping;
-    }
+
 
     public Date getStartDate() {
         return startDate;

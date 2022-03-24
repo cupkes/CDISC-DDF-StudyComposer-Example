@@ -107,13 +107,13 @@ public class MockBroker  implements IStudyComponentBroker{
 
         PointInTime fromPointInTime = new PointInTime(UUID.randomUUID(),
                 PointInTimeType.SCREENING,
-                StaticStudyDataProvider.PIT_SUBJECT_STATUS_GROUPING,
+
                 new Date(),
                 new Date());
 
         PointInTime toPointInTime = new PointInTime(UUID.randomUUID(),
                 PointInTimeType.SCREENING,
-                StaticStudyDataProvider.PIT_SUBJECT_STATUS_GROUPING,
+
                 new Date(),
                 new Date());
 
@@ -153,13 +153,13 @@ public class MockBroker  implements IStudyComponentBroker{
 
         PointInTime fromPointInTime = new PointInTime(UUID.randomUUID(),
                 PointInTimeType.SCREENING,
-                StaticStudyDataProvider.PIT_SUBJECT_STATUS_GROUPING,
+
                 new Date(),
                 new Date());
 
         PointInTime toPointInTime = new PointInTime(UUID.randomUUID(),
                 PointInTimeType.SCREENING,
-                StaticStudyDataProvider.PIT_SUBJECT_STATUS_GROUPING,
+
                 new Date(),
                 new Date());
 
