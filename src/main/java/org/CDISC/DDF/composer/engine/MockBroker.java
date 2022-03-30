@@ -345,12 +345,12 @@ public class MockBroker  implements IStudyComponentBroker{
     @Override
     public InvestigationalInterventionsSection getInvestigationalInterventionsSection(UUID studyId) {
         InvestigationalIntervention intervention = new InvestigationalIntervention(UUID.randomUUID(),
-                "Ibuprofen 200mg", InterventionModel.SEQUENTIAL);
+                "Donepezil", InterventionModel.SEQUENTIAL);
 
-        Code code = new Code("26929004",
-                "SNOMED-CT",
-                "4.0.6.4",
-                "Alzheimer's disease (disorder)");
+        Code code = new Code("013189 01 001",
+                "WHODrug Global",
+                "March 1, 2022",
+                "Donepezil");
         intervention.addCode(code);
         intervention.setStatus("A Status");
         InvestigationalInterventionsSection iiSection = new InvestigationalInterventionsSection(UUID.randomUUID());

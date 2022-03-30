@@ -22,50 +22,50 @@ import java.util.UUID;
 public class StudyProtocol {
 
     private final UUID protocolId;
-    private String briefTitle;
-    private String officialTitle;
-    private String publicTitle;
-    private String version;
-    private String scientificTitle;
-    private String protocolVersion;
-    private Date approvalDate;
-    private String protocolStatus;
-    private String documentType;
+//    private String briefTitle;
+//    private String officialTitle;
+//    private String publicTitle;
+//    private String version;
+//    private String scientificTitle;
+//    private String protocolVersion;
+//    private Date approvalDate;
+//    private String protocolStatus;
+//    private String documentType;
 
     private List<Amendment> amendments = new ArrayList<>();
-    private List<String> sections = new ArrayList<>();
+//    private List<String> sections = new ArrayList<>();
 
-    public String getProtocolVersion() {
-        return protocolVersion;
-    }
-
-    public void setProtocolVersion(String protocolVersion) {
-        this.protocolVersion = protocolVersion;
-    }
-
-    public Date getApprovalDate() {
-        return approvalDate;
-    }
-
-    public void setApprovalDate(Date approvalDate) {
-        this.approvalDate = approvalDate;
-    }
-
-    public String getProtocolStatus() {
-        return protocolStatus;
-    }
-
-    public void setProtocolStatus(String protocolStatus) {
-        this.protocolStatus = protocolStatus;
-    }
-
-    public String getDocumentType() {
-        return documentType;
-    }
-
-    public void setDocumentType(String documentType) {
-        this.documentType = documentType;
-    }
+//    public String getProtocolVersion() {
+//        return protocolVersion;
+//    }
+//
+//    public void setProtocolVersion(String protocolVersion) {
+//        this.protocolVersion = protocolVersion;
+//    }
+//
+//    public Date getApprovalDate() {
+//        return approvalDate;
+//    }
+//
+//    public void setApprovalDate(Date approvalDate) {
+//        this.approvalDate = approvalDate;
+//    }
+//
+//    public String getProtocolStatus() {
+//        return protocolStatus;
+//    }
+//
+//    public void setProtocolStatus(String protocolStatus) {
+//        this.protocolStatus = protocolStatus;
+//    }
+//
+//    public String getDocumentType() {
+//        return documentType;
+//    }
+//
+//    public void setDocumentType(String documentType) {
+//        this.documentType = documentType;
+//    }
 
 
 
@@ -79,38 +79,38 @@ public class StudyProtocol {
         return protocolId;
     }
 
-    public String getVersion() {
-        return version;
-    }
-
-    public void setVersion(String version) {
-        this.version = version;
-    }
-
-    public String getBriefTitle() {
-        return briefTitle;
-    }
-
-    public void setBriefTitle(String briefTitle) {
-        this.briefTitle = briefTitle;
-    }
-
-    public String getOfficialTitle() {
-        return officialTitle;
-    }
-
-    public void setOfficialTitle(String officialTitle) {
-        this.officialTitle = officialTitle;
-    }
-
-    public String getPublicTitle() {
-        return publicTitle;
-    }
-
-    public void setPublicTitle(String publicTitle) {
-        this.publicTitle = publicTitle;
-    }
-
+//    public String getVersion() {
+//        return version;
+//    }
+//
+//    public void setVersion(String version) {
+//        this.version = version;
+//    }
+//
+//    public String getBriefTitle() {
+//        return briefTitle;
+//    }
+//
+//    public void setBriefTitle(String briefTitle) {
+//        this.briefTitle = briefTitle;
+//    }
+//
+//    public String getOfficialTitle() {
+//        return officialTitle;
+//    }
+//
+//    public void setOfficialTitle(String officialTitle) {
+//        this.officialTitle = officialTitle;
+//    }
+//
+//    public String getPublicTitle() {
+//        return publicTitle;
+//    }
+//
+//    public void setPublicTitle(String publicTitle) {
+//        this.publicTitle = publicTitle;
+//    }
+//
     public List<Amendment> getAmendments() {
         return amendments;
     }
@@ -119,34 +119,34 @@ public class StudyProtocol {
         this.amendments = amendments;
     }
 
-    public List<String> getSections() {
-        return sections;
-    }
+//    public List<String> getSections() {
+//        return sections;
+//    }
 
-    public void setSections(List<String> sections) {
-        this.sections = sections;
-    }
-
-    public void addSection(String sectionName) {
-        this.sections.add(sectionName);
-    }
-
-    public void removeSection(String sectionName) {
-        this.sections.remove(sectionName);
-    }
-
+//    public void setSections(List<String> sections) {
+//        this.sections = sections;
+//    }
+//
+//    public void addSection(String sectionName) {
+//        this.sections.add(sectionName);
+//    }
+//
+//    public void removeSection(String sectionName) {
+//        this.sections.remove(sectionName);
+//    }
+//
     public void addAmendment(Amendment amendment) {
         this.amendments.add((amendment));
     }
 
 
-    public String getScientificTitle() {
-        return scientificTitle;
-    }
-
-    public void setScientificTitle(String scientificTitle) {
-        this.scientificTitle = scientificTitle;
-    }
+//    public String getScientificTitle() {
+//        return scientificTitle;
+//    }
+//
+//    public void setScientificTitle(String scientificTitle) {
+//        this.scientificTitle = scientificTitle;
+//    }
 
 
 }

@@ -16,6 +16,9 @@ public class StaticOpenStudyBuilderAdapter {
     /*
     example:
     public JSON getStudyCells(UUID studyID) {
+        put some comments in here describing the actual endpoint and the nature of the JSON object
+        it might even help to include a commented "entire study".
+
      return '{someJSON:here}'
      }
      */
