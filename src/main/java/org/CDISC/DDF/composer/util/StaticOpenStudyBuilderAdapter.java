@@ -32,56 +32,57 @@ public class StaticOpenStudyBuilderAdapter {
     // If I can build a study from the OpenStudyBuilder API, then we should know how
     // OpenStudyBuilder can post a study to the SDR via adaptor logic.
 
-    public JSON getStudy(UUID studyID) {
+    public JSON getStudies() {
         // This fetches all studies, our test DB has only one study "Study_000001".
         // GET http://localhost:8000/studies/?sortBy=%7B%7D&pageNumber=1&pageSize=0&operator=and&totalCount=false
 
         // We are unsure of how to enter multiline strings full off "difficult"
         // symbols, so this may not be valid.
-        return """{
-    "items": [
-        {
-            "uid": "Study_000001",
-            "studyNumber": "0",
-            "studyId": "CDISC DEV-0",
-            "studyAcronym": null,
-            "projectNumber": "CDISC DEV",
-            "studyStatus": "DRAFT",
-            "currentMetadata": {
-                "identificationMetadata": {
+        return """
+            {
+            "items": [
+                {
+                    "uid": "Study_000001",
                     "studyNumber": "0",
+                    "studyId": "CDISC DEV-0",
                     "studyAcronym": null,
                     "projectNumber": "CDISC DEV",
-                    "projectName": "CDISC Dev",
-                    "brandName": null,
-                    "clinicalProgrammeName": "CDISC Development programme",
-                    "studyId": "CDISC DEV-0",
-                    "registryIdentifiers": {
-                        "ctGovId": null,
-                        "ctGovIdNullValueCode": null,
-                        "eudractId": null,
-                        "eudractIdNullValueCode": null,
-                        "universalTrialNumberUTN": null,
-                        "universalTrialNumberUTNNullValueCode": null,
-                        "japaneseTrialRegistryIdJAPIC": null,
-                        "japaneseTrialRegistryIdJAPICNullValueCode": null,
-                        "investigationalNewDrugApplicationNumberIND": null,
-                        "investigationalNewDrugApplicationNumberINDNullValueCode": null
-                    }
-                },
-                "versionMetadata": {
                     "studyStatus": "DRAFT",
-                    "lockedVersionNumber": null,
-                    "versionTimestamp": "2022-03-15T07:33:49.011304",
-                    "lockedVersionAuthor": null,
-                    "lockedVersionInfo": null
+                    "currentMetadata": {
+                        "identificationMetadata": {
+                            "studyNumber": "0",
+                            "studyAcronym": null,
+                            "projectNumber": "CDISC DEV",
+                            "projectName": "CDISC Dev",
+                            "brandName": null,
+                            "clinicalProgrammeName": "CDISC Development programme",
+                            "studyId": "CDISC DEV-0",
+                            "registryIdentifiers": {
+                                "ctGovId": null,
+                                "ctGovIdNullValueCode": null,
+                                "eudractId": null,
+                                "eudractIdNullValueCode": null,
+                                "universalTrialNumberUTN": null,
+                                "universalTrialNumberUTNNullValueCode": null,
+                                "japaneseTrialRegistryIdJAPIC": null,
+                                "japaneseTrialRegistryIdJAPICNullValueCode": null,
+                                "investigationalNewDrugApplicationNumberIND": null,
+                                "investigationalNewDrugApplicationNumberINDNullValueCode": null
+                            }
+                        },
+                        "versionMetadata": {
+                            "studyStatus": "DRAFT",
+                            "lockedVersionNumber": null,
+                            "versionTimestamp": "2022-03-15T07:33:49.011304",
+                            "lockedVersionAuthor": null,
+                            "lockedVersionInfo": null
+                        }
+                    }
                 }
-            }
-        }
-    ],
-    "total": 0,
-    "page": 1,
-    "size": 0
-}""";
+            ],
+            "total": 0,
+            "page": 1,
+            "size": 0
+        }""";
      }
 }
