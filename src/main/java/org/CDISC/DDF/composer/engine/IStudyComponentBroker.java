@@ -1,6 +1,7 @@
 package org.CDISC.DDF.composer.engine;
 
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.CDISC.DDF.composer.SDR.*;
 import org.CDISC.DDF.composer.SDR.StudyDesign;
 import org.CDISC.DDF.model.common.DeprecatedAssessmentGroup;
@@ -90,6 +91,8 @@ public interface IStudyComponentBroker {
     StudyIdentifier getStudyIdentifier(UUID studyId);
 
     StudyEpoch getStudyEpoch(UUID studyDesignId);
+
+    Study getStudy(String studyId) throws JsonProcessingException;
 
     DeprecatedStudyData getAssessment(UUID studyId);
 

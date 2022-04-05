@@ -1,6 +1,7 @@
 package org.CDISC.DDF.composer.engine;
 
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.CDISC.DDF.composer.SDR.ObjectivesSection;
 import org.CDISC.DDF.composer.SDR.Study;
 import org.CDISC.DDF.composer.SDR.StudyDesign;
@@ -124,6 +125,18 @@ public class StudyComposer {
     public IStudy getStudy(UUID studyId) {
 
         return null;
+    }
+
+    public IStudy getStudy(UUID studyId, IStudyComponentBroker studyComponentBroker)  {
+
+        try {
+           study = studyComponentBroker.getStudy(studyId.toString());
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+
+
+        return study;
     }
 
 

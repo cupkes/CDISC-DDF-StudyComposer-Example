@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import org.CDISC.DDF.composer.SDR.StudyDesign;
 import org.CDISC.DDF.composer.engine.IStudyComponentBroker;
 import org.CDISC.DDF.composer.engine.MockBroker;
+import org.CDISC.DDF.composer.engine.OpenStudyBuilderBroker;
 import org.CDISC.DDF.composer.engine.StudyComposer;
 import org.CDISC.DDF.model.study.Objective;
 import org.CDISC.DDF.model.versioning.IStudy;
@@ -73,6 +74,8 @@ class StudyComponentTranslatorTest {
         }
 
 
+
+
     }
 
     @Test
@@ -82,6 +85,25 @@ class StudyComponentTranslatorTest {
         String studyObjectivesJSON = this.studyComponentTranslator.translateStudyObjectivesToJSON(studyObjectives);
         assertNotNull(studyObjectivesJSON);
         System.out.println(studyObjectivesJSON);
+
+
+    }
+
+    @Test
+    void translateOpenIStudyToJSON() throws JsonProcessingException{
+
+        IStudy study;
+        try {
+            IStudyComponentBroker openStudyBuilderBroker = new OpenStudyBuilderBroker();
+            study = this.studyComposer.getStudy(UUID.randomUUID(), openStudyBuilderBroker);
+            String studyJSON = this.studyComponentTranslator.translateIStudyToJSON(study);
+            assertNotNull(studyJSON);
+            System.out.println(studyJSON);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
 
 
     }

@@ -476,6 +476,11 @@ public class MockBroker  implements IStudyComponentBroker{
     }
 
     @Override
+    public Study getStudy(String studyId) {
+        return null;
+    }
+
+    @Override
     public DeprecatedStudyData getAssessment(UUID studyId) {
         return new DeprecatedAssessment(UUID.randomUUID(),
                 UUID.randomUUID(),

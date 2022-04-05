@@ -138,6 +138,11 @@ public class RelationalDatabaseBroker implements IStudyComponentBroker{
     }
 
     @Override
+    public Study getStudy(String studyId) {
+        return null;
+    }
+
+    @Override
     public DeprecatedStudyData getAssessment(UUID studyId) {
         return null;
     }

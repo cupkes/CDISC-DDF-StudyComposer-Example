@@ -1,15 +1,15 @@
 package org.CDISC.DDF.composer.engine;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.CDISC.DDF.composer.SDR.*;
 import org.CDISC.DDF.model.common.DeprecatedAssessmentGroup;
 import org.CDISC.DDF.model.common.DeprecatedStudyData;
-import org.CDISC.DDF.model.study.Objective;
-import org.CDISC.DDF.model.study.StudyIdentifier;
+import org.CDISC.DDF.model.study.*;
 import org.CDISC.DDF.model.studyDesign.*;
 
 import java.net.URISyntaxException;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class OpenStudyBuilderBroker implements IStudyComponentBroker {
     @Override
@@ -135,6 +135,61 @@ public class OpenStudyBuilderBroker implements IStudyComponentBroker {
     @Override
     public StudyEpoch getStudyEpoch(UUID studyDesignId) {
         return null;
+    }
+
+    @Override
+    public Study getStudy(String studyId) throws JsonProcessingException {
+
+        OpenStudy openStudy = OpenStudyParser.getOpenStudyList().get(0);
+        CurrentMetadata currentMetadata = openStudy.getCurrentMetadata();
+        IdentificationMetadata identificationMetadata = currentMetadata.getIdentificationMetadata();
+        VersionMetadata versionMetadata = currentMetadata.getVersionMetadata();
+        Map<String, String> registryIdentifiers = identificationMetadata.getRegistryIdentifiers();
+        List<StudyIdentifier> studyIdentifiers = new ArrayList<>();
+        // just grab the values from the map and add them to a list
+        List<String> names = new ArrayList<>();
+        List<String> codes = new ArrayList<>();
+        AtomicReference<Integer> count = new AtomicReference<>(0);
+        registryIdentifiers.forEach( (key, value)->{
+
+           if ((count.get() % 2) == 0) {
+               names.add(value);
+           } else {
+               codes.add(value);
+
+           }
+           count.getAndSet(count.get() + 1);
+
+        });
+
+        for (int c = 0; c < names.size() -1; c ++) {
+
+            StudyIdentifier studyIdentifier = new StudyIdentifier(UUID.randomUUID()
+            ,codes.get(c)
+            ,names.get(c)
+            , IdentifierType.SPONSOR_ID);
+            studyIdentifiers.add(studyIdentifier);
+
+
+        }
+
+        return new Study(UUID.randomUUID()
+                ,openStudy.getStudyId()
+                , StudyType.INTERVENTIONAL
+                , Phase.PHASE_1_TRIAL
+                ,versionMetadata.getLockedVersionNumber()
+                ,studyIdentifiers
+                );
+
+
+
+
+
+
+
+
+
+
     }
 
     @Override
