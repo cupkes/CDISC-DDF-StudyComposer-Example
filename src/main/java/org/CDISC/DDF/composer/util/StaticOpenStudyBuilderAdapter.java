@@ -5,6 +5,9 @@ import com.fasterxml.jackson.databind.*;
 
 import java.util.List;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 public class StaticOpenStudyBuilderAdapter {
 
      /* STUDY CELL
@@ -36,6 +39,12 @@ public class StaticOpenStudyBuilderAdapter {
 
     // If I can build a study from the OpenStudyBuilder API, then we should know how
     // OpenStudyBuilder can post a study to the SDR via adaptor logic.
+
+    public static String getStudyEpochs(String studyUid) throws Exception {
+        // Fetch epochs for a study
+        // GET /study/Study_000001/study-epochs
+        return new String(Files.readAllBytes(Paths.get("./study_00001/epochs.json")));
+    }
 
     public static String getStudies() {
         // This fetches all studies, our test DB has only one study "Study_000001".
