@@ -1,0 +1,138 @@
+[
+    {
+        "studyUid": "Study_000001",
+        "order": 1,
+        "elementUid": "StudyElement_000227",
+        "name": "Screening",
+        "shortName": "Scr",
+        "code": "CTTerm_000114",
+        "description": "The screening element",
+        "elementSubType": {
+            "termUid": "CTTerm_000117",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "CTCodelist_000026",
+            "sponsorPreferredName": "Screening",
+            "sponsorPreferredNameSentenceCase": "screening",
+            "order": 1,
+            "libraryName": "Sponsor",
+            "startDate": "2022-03-30T17:28:05.259532",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        "startDate": "2022-04-08T10:03:13.255014",
+        "userInitials": "unknown-user",
+        "endDate": null,
+        "status": null,
+        "changeType": null,
+        "acceptedVersion": false
+    },
+    {
+        "studyUid": "Study_000001",
+        "order": 2,
+        "elementUid": "StudyElement_000231",
+        "name": "Human insulin",
+        "shortName": "NPH",
+        "code": "CTTerm_000113",
+        "description": "Human insulin treatment element",
+        "elementSubType": {
+            "termUid": "CTTerm_000116",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "CTCodelist_000026",
+            "sponsorPreferredName": "Treatment",
+            "sponsorPreferredNameSentenceCase": "treatment",
+            "order": 3,
+            "libraryName": "Sponsor",
+            "startDate": "2022-03-30T17:28:05.222374",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        "startDate": "2022-04-08T10:05:06.398401",
+        "userInitials": "unknown-user",
+        "endDate": null,
+        "status": null,
+        "changeType": null,
+        "acceptedVersion": false
+    },
+    {
+        "studyUid": "Study_000001",
+        "order": 3,
+        "elementUid": "StudyElement_000235",
+        "name": "Metformin",
+        "shortName": "Metformin",
+        "code": "CTTerm_000113",
+        "description": "Metformin treatment element",
+        "elementSubType": {
+            "termUid": "CTTerm_000116",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "CTCodelist_000026",
+            "sponsorPreferredName": "Treatment",
+            "sponsorPreferredNameSentenceCase": "treatment",
+            "order": 3,
+            "libraryName": "Sponsor",
+            "startDate": "2022-03-30T17:28:05.222374",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        "startDate": "2022-04-08T10:05:39.931097",
+        "userInitials": "unknown-user",
+        "endDate": null,
+        "status": null,
+        "changeType": null,
+        "acceptedVersion": false
+    },
+    {
+        "studyUid": "Study_000001",
+        "order": 4,
+        "elementUid": "StudyElement_000237",
+        "name": "Follow-up",
+        "shortName": "FU",
+        "code": "CTTerm_000114",
+        "description": "The follow-up element",
+        "elementSubType": {
+            "termUid": "CTTerm_000119",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "CTCodelist_000026",
+            "sponsorPreferredName": "Follow-up",
+            "sponsorPreferredNameSentenceCase": "follow-up",
+            "order": 5,
+            "libraryName": "Sponsor",
+            "startDate": "2022-03-30T17:28:05.690559",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        "startDate": "2022-04-08T10:06:08.345026",
+        "userInitials": "unknown-user",
+        "endDate": null,
+        "status": null,
+        "changeType": null,
+        "acceptedVersion": false
+    }
+]

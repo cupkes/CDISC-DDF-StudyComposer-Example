@@ -1,0 +1,387 @@
+{
+    "items": [
+        {
+            "termUid": "C48262_SCREENING",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "C99079",
+            "sponsorPreferredName": "Screening",
+            "sponsorPreferredNameSentenceCase": "screening",
+            "order": 1,
+            "libraryName": "CDISC",
+            "startDate": "2022-03-30T17:29:36.705213",
+            "endDate": null,
+            "status": "Final",
+            "version": "3.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "C98779_RUN-IN",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "C99079",
+            "sponsorPreferredName": "Run-in",
+            "sponsorPreferredNameSentenceCase": "run-in",
+            "order": 2,
+            "libraryName": "CDISC",
+            "startDate": "2022-03-30T17:29:37.846876",
+            "endDate": null,
+            "status": "Final",
+            "version": "3.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "C101526_TREATMENT",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "C99079",
+            "sponsorPreferredName": "Treatment",
+            "sponsorPreferredNameSentenceCase": "treatment",
+            "order": 4,
+            "libraryName": "CDISC",
+            "startDate": "2022-03-30T17:29:38.904987",
+            "endDate": null,
+            "status": "Final",
+            "version": "3.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "C165873_OBSERVATION",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "C99079",
+            "sponsorPreferredName": "Observation",
+            "sponsorPreferredNameSentenceCase": "observation",
+            "order": 5,
+            "libraryName": "CDISC",
+            "startDate": "2022-03-30T17:29:40.007927",
+            "endDate": null,
+            "status": "Final",
+            "version": "3.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "C123453_INDUCTION TREATMENT",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "C99079",
+            "sponsorPreferredName": "Induction Therapy",
+            "sponsorPreferredNameSentenceCase": "induction therapy",
+            "order": 6,
+            "libraryName": "CDISC",
+            "startDate": "2022-03-30T17:29:41.146585",
+            "endDate": null,
+            "status": "Final",
+            "version": "2.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "C102256_OPEN LABEL TREATMENT",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "C99079",
+            "sponsorPreferredName": "Open Label Treatment",
+            "sponsorPreferredNameSentenceCase": "open label treatment",
+            "order": 7,
+            "libraryName": "CDISC",
+            "startDate": "2022-03-30T17:29:42.456714",
+            "endDate": null,
+            "status": "Final",
+            "version": "2.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "C102255_BLINDED TREATMENT",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "C99079",
+            "sponsorPreferredName": "Blinded Treatment",
+            "sponsorPreferredNameSentenceCase": "blinded treatment",
+            "order": 8,
+            "libraryName": "CDISC",
+            "startDate": "2022-03-30T17:29:43.709183",
+            "endDate": null,
+            "status": "Final",
+            "version": "2.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "C123452_CONTINUATION TREATMENT",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "C99079",
+            "sponsorPreferredName": "Continuation Treatment",
+            "sponsorPreferredNameSentenceCase": "continuation treatment",
+            "order": 9,
+            "libraryName": "CDISC",
+            "startDate": "2022-03-30T17:29:44.836327",
+            "endDate": null,
+            "status": "Final",
+            "version": "2.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "C42872_WASHOUT",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "C99079",
+            "sponsorPreferredName": "Wash-out",
+            "sponsorPreferredNameSentenceCase": "wash-out",
+            "order": 10,
+            "libraryName": "CDISC",
+            "startDate": "2022-03-30T17:29:45.967527",
+            "endDate": null,
+            "status": "Final",
+            "version": "3.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "C99158_FOLLOW-UP",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "C99079",
+            "sponsorPreferredName": "Follow-up",
+            "sponsorPreferredNameSentenceCase": "follow-up",
+            "order": 11,
+            "libraryName": "CDISC",
+            "startDate": "2022-03-30T17:29:47.232341",
+            "endDate": null,
+            "status": "Final",
+            "version": "3.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "C16032_LONG-TERM FOLLOW-UP",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "C99079",
+            "sponsorPreferredName": "Long-term Follow-up",
+            "sponsorPreferredNameSentenceCase": "long-term follow-up",
+            "order": 12,
+            "libraryName": "CDISC",
+            "startDate": "2022-03-30T17:29:48.488990",
+            "endDate": null,
+            "status": "Final",
+            "version": "2.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "CTTerm_000191",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "C99079",
+            "sponsorPreferredName": "Dose Escalation",
+            "sponsorPreferredNameSentenceCase": "dose escalation",
+            "order": 999999,
+            "libraryName": "Sponsor",
+            "startDate": "2022-03-30T17:29:29.133409",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "CTTerm_000192",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "C99079",
+            "sponsorPreferredName": "Maintenance",
+            "sponsorPreferredNameSentenceCase": "maintenance",
+            "order": 999999,
+            "libraryName": "Sponsor",
+            "startDate": "2022-03-30T17:29:30.727166",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "C125938_BASELINE",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "C99079",
+            "sponsorPreferredName": "Baseline Epoch",
+            "sponsorPreferredNameSentenceCase": "baseline epoch",
+            "order": null,
+            "libraryName": "CDISC",
+            "startDate": "2022-03-30T12:31:43.177000",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Initial import from CDISC",
+            "userInitials": "TESTUSER",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "CTTerm_000200",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "C99079",
+            "sponsorPreferredName": "Run-in 1",
+            "sponsorPreferredNameSentenceCase": "run-in 1",
+            "order": null,
+            "libraryName": "Sponsor",
+            "startDate": "2022-04-05T13:40:47.175636",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "CTTerm_000199",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "C99079",
+            "sponsorPreferredName": "Run-in 2",
+            "sponsorPreferredNameSentenceCase": "run-in 2",
+            "order": null,
+            "libraryName": "Sponsor",
+            "startDate": "2022-04-05T13:40:46.896481",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "CTTerm_000196",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "C99079",
+            "sponsorPreferredName": "Screening 1",
+            "sponsorPreferredNameSentenceCase": "screening 1",
+            "order": null,
+            "libraryName": "Sponsor",
+            "startDate": "2022-04-01T12:51:08.202369",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "CTTerm_000195",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "C99079",
+            "sponsorPreferredName": "Screening 2",
+            "sponsorPreferredNameSentenceCase": "screening 2",
+            "order": null,
+            "libraryName": "Sponsor",
+            "startDate": "2022-04-01T12:51:07.946300",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "CTTerm_000198",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "C99079",
+            "sponsorPreferredName": "Treatment 1",
+            "sponsorPreferredNameSentenceCase": "treatment 1",
+            "order": null,
+            "libraryName": "Sponsor",
+            "startDate": "2022-04-05T12:22:04.614920",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "CTTerm_000197",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "C99079",
+            "sponsorPreferredName": "Treatment 2",
+            "sponsorPreferredNameSentenceCase": "treatment 2",
+            "order": null,
+            "libraryName": "Sponsor",
+            "startDate": "2022-04-05T12:22:04.260520",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        }
+    ],
+    "total": 0,
+    "page": 1,
+    "size": 0
+}

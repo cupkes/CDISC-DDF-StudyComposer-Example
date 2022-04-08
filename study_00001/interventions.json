@@ -1,0 +1,84 @@
+{
+    "uid": "Study_000001",
+    "studyNumber": "0",
+    "studyId": "CDISC DEV-0",
+    "studyAcronym": "Tested",
+    "projectNumber": "CDISC DEV",
+    "studyStatus": "DRAFT",
+    "currentMetadata": {
+        "identificationMetadata": {
+            "studyNumber": "0",
+            "studyAcronym": "Tested",
+            "projectNumber": "CDISC DEV",
+            "projectName": "CDISC Dev",
+            "brandName": null,
+            "clinicalProgrammeName": "CDISC Development programme",
+            "studyId": "CDISC DEV-0",
+            "registryIdentifiers": {
+                "ctGovId": "NCT12345678",
+                "ctGovIdNullValueCode": null,
+                "eudractId": "2019-123456-42",
+                "eudractIdNullValueCode": null,
+                "universalTrialNumberUTN": "UTN123",
+                "universalTrialNumberUTNNullValueCode": null,
+                "japaneseTrialRegistryIdJAPIC": "JAPIC456",
+                "japaneseTrialRegistryIdJAPICNullValueCode": null,
+                "investigationalNewDrugApplicationNumberIND": "IND789",
+                "investigationalNewDrugApplicationNumberINDNullValueCode": null
+            }
+        },
+        "versionMetadata": {
+            "studyStatus": "DRAFT",
+            "lockedVersionNumber": null,
+            "versionTimestamp": "2022-04-08T10:02:16.982459",
+            "lockedVersionAuthor": null,
+            "lockedVersionInfo": null
+        },
+        "studyIntervention": {
+            "interventionTypeCode": {
+                "termUid": "C1909_DRUG",
+                "name": "Pharmacologic Substance"
+            },
+            "interventionTypeNullValueCode": null,
+            "addOnToExistingTreatments": null,
+            "addOnToExistingTreatmentsNullValueCode": null,
+            "controlTypeCode": {
+                "termUid": "C49649_ACTIVE",
+                "name": "Active Control"
+            },
+            "controlTypeNullValueCode": null,
+            "interventionModelCode": {
+                "termUid": "C82637_CROSS-OVER",
+                "name": "Crossover Study"
+            },
+            "interventionModelNullValueCode": null,
+            "isTrialRandomised": true,
+            "isTrialRandomisedNullValueCode": null,
+            "stratificationFactor": null,
+            "stratificationFactorNullValueCode": {
+                "termUid": "C48660_Not Applicable",
+                "name": "Not Applicable"
+            },
+            "trialBlindingSchemaCode": {
+                "termUid": "C15228_DOUBLE BLIND",
+                "name": "Double Blind Study"
+            },
+            "trialBlindingSchemaNullValueCode": null,
+            "plannedStudyLength": {
+                "durationValue": 12,
+                "durationUnitCode": {
+                    "termUid": "C29844_WEEKS",
+                    "name": "WEEKS"
+                }
+            },
+            "plannedStudyLengthNullValueCode": null,
+            "trialIntentTypesCodes": [
+                {
+                    "termUid": "C49656_TREATMENT",
+                    "name": "Treatment Study"
+                }
+            ],
+            "trialIntentTypesNullValueCode": null
+        }
+    }
+}

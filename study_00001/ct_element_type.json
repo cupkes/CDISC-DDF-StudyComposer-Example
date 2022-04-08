@@ -1,0 +1,45 @@
+{
+    "items": [
+        {
+            "termUid": "CTTerm_000113",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "CTCodelist_000025",
+            "sponsorPreferredName": "Treatment",
+            "sponsorPreferredNameSentenceCase": "treatment",
+            "order": 1,
+            "libraryName": "Sponsor",
+            "startDate": "2022-03-30T17:28:04.107223",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "CTTerm_000114",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "CTCodelist_000025",
+            "sponsorPreferredName": "No Treatment",
+            "sponsorPreferredNameSentenceCase": "no treatment",
+            "order": 2,
+            "libraryName": "Sponsor",
+            "startDate": "2022-03-30T17:28:04.241515",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        }
+    ],
+    "total": 0,
+    "page": 1,
+    "size": 0
+}

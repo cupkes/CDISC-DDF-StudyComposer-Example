@@ -1,0 +1,83 @@
+{
+    "items": [
+        {
+            "termUid": "CTTerm_000167",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "CTCodelist_000008",
+            "sponsorPreferredName": "Pre Treatment",
+            "sponsorPreferredNameSentenceCase": "pre treatment",
+            "order": 1,
+            "libraryName": "Sponsor",
+            "startDate": "2022-03-30T17:29:13.440393",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "C101526_TREATMENT",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "CTCodelist_000008",
+            "sponsorPreferredName": "Treatment",
+            "sponsorPreferredNameSentenceCase": "treatment",
+            "order": 2,
+            "libraryName": "CDISC",
+            "startDate": "2022-03-30T17:29:38.904987",
+            "endDate": null,
+            "status": "Final",
+            "version": "3.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "CTTerm_000168",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "CTCodelist_000008",
+            "sponsorPreferredName": "No Treatment",
+            "sponsorPreferredNameSentenceCase": "no treatment",
+            "order": 3,
+            "libraryName": "Sponsor",
+            "startDate": "2022-03-30T17:29:13.528583",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        {
+            "termUid": "CTTerm_000166",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "CTCodelist_000008",
+            "sponsorPreferredName": "Post Treatment",
+            "sponsorPreferredNameSentenceCase": "post treatment",
+            "order": 4,
+            "libraryName": "Sponsor",
+            "startDate": "2022-03-30T17:29:13.322341",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        }
+    ],
+    "total": 0,
+    "page": 1,
+    "size": 0
+}

@@ -1,0 +1,153 @@
+[
+    {
+        "studyUid": "Study_000001",
+        "order": 1,
+        "projectNumber": "CDISC DEV",
+        "projectName": "CDISC Dev",
+        "brandName": null,
+        "studyObjectiveUid": "StudyObjective_000001",
+        "objectiveLevel": {
+            "termUid": "C85826_OBJPRIM",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "CTCodelist_000001",
+            "sponsorPreferredName": "Primary Objective",
+            "sponsorPreferredNameSentenceCase": "primary objective",
+            "order": 1,
+            "libraryName": "CDISC",
+            "startDate": "2022-03-30T17:29:51.551966",
+            "endDate": null,
+            "status": "Final",
+            "version": "2.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        "objective": {
+            "uid": "Objective_000005",
+            "name": "<p>To compare the effect of [Human soluble insulin] versus [METFORMIN] in subjects with [Type 2 diabetes mellitus]</p>",
+            "startDate": "2022-03-31T15:27:55.819993",
+            "endDate": "2022-04-07T12:31:09.546063",
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate"
+            ],
+            "objectiveTemplate": {
+                "name": "<p>To compare the effect of [Compound] versus [Comparator] in subjects with [DiseaseDisorder]</p>",
+                "uid": "ObjectiveTemplate_000004"
+            },
+            "parameterValues": [
+                {
+                    "position": 1,
+                    "conjunction": "",
+                    "values": [
+                        {
+                            "uid": "Compound_000049",
+                            "name": "Human soluble insulin",
+                            "type": "Comparator",
+                            "index": 1
+                        }
+                    ]
+                },
+                {
+                    "position": 2,
+                    "conjunction": "",
+                    "values": [
+                        {
+                            "uid": "Compound_000007",
+                            "name": "METFORMIN",
+                            "type": "Comparator",
+                            "index": 1
+                        }
+                    ]
+                },
+                {
+                    "position": 3,
+                    "conjunction": "",
+                    "values": [
+                        {
+                            "uid": "DictionaryTerm_000007",
+                            "name": "Type 2 diabetes mellitus",
+                            "type": "DiseaseDisorder",
+                            "index": 1
+                        }
+                    ]
+                }
+            ],
+            "library": {
+                "name": "Sponsor",
+                "isEditable": true
+            },
+            "studyCount": null
+        },
+        "startDate": "2022-03-31T15:27:55.919061",
+        "userInitials": "unknown-user",
+        "endpointCount": 1,
+        "latestObjective": {
+            "uid": "Objective_000005",
+            "name": "<p>To compare the effect of [Human soluble insulin] versus [METFORMIN] in subjects with [Type 2 diabetes mellitus] with more information</p>",
+            "startDate": "2022-04-07T12:31:09.546063",
+            "endDate": null,
+            "status": "Final",
+            "version": "2.0",
+            "changeDescription": "Cascading update triggered by template update uid: 'ObjectiveTemplate_000004'",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate"
+            ],
+            "objectiveTemplate": {
+                "name": "<p>To compare the effect of [Compound] versus [Comparator] in subjects with [DiseaseDisorder] with more information</p>",
+                "uid": "ObjectiveTemplate_000004"
+            },
+            "parameterValues": [
+                {
+                    "position": 1,
+                    "conjunction": "",
+                    "values": [
+                        {
+                            "uid": "Compound_000049",
+                            "name": "Human soluble insulin",
+                            "type": "Comparator",
+                            "index": 1
+                        }
+                    ]
+                },
+                {
+                    "position": 2,
+                    "conjunction": "",
+                    "values": [
+                        {
+                            "uid": "Compound_000007",
+                            "name": "METFORMIN",
+                            "type": "Comparator",
+                            "index": 1
+                        }
+                    ]
+                },
+                {
+                    "position": 3,
+                    "conjunction": "",
+                    "values": [
+                        {
+                            "uid": "DictionaryTerm_000007",
+                            "name": "Type 2 diabetes mellitus",
+                            "type": "DiseaseDisorder",
+                            "index": 1
+                        }
+                    ]
+                }
+            ],
+            "library": {
+                "name": "Sponsor",
+                "isEditable": true
+            },
+            "studyCount": null
+        },
+        "acceptedVersion": false
+    }
+]
