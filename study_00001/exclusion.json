@@ -1,0 +1,69 @@
+[
+    {
+        "studyUid": "Study_000001",
+        "order": 1,
+        "projectNumber": "CDISC DEV",
+        "projectName": "CDISC Dev",
+        "brandName": null,
+        "studyCriteriaUid": "StudyCriteria_000002",
+        "criteriaType": {
+            "termUid": "C25370_exclusion criteria",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "CTCodelist_000012",
+            "sponsorPreferredName": "Exclusion Criteria",
+            "sponsorPreferredNameSentenceCase": "exclusion criteria",
+            "order": 2,
+            "libraryName": "CDISC",
+            "startDate": "2022-03-30T14:01:47.647000",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Initial import from CDISC",
+            "userInitials": "TESTUSER",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        "criteria": {
+            "uid": "Criteria_000002",
+            "name": "<p>Subject is [65] years or younger when entering the trial</p>",
+            "startDate": "2022-04-01T17:01:48.261105",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate"
+            ],
+            "criteriaTemplate": {
+                "name": "<p>Subject is [NumericValue] years or younger when entering the trial</p>",
+                "uid": "CriteriaTemplate_000004"
+            },
+            "parameterValues": [
+                {
+                    "position": 1,
+                    "conjunction": "",
+                    "values": [
+                        {
+                            "uid": "NumericValue_000052",
+                            "name": "65",
+                            "type": "NumericValue",
+                            "index": 1
+                        }
+                    ]
+                }
+            ],
+            "library": {
+                "name": "Sponsor",
+                "isEditable": true
+            },
+            "studyCount": null
+        },
+        "startDate": "2022-04-01T17:01:35.764805",
+        "userInitials": "unknown-user",
+        "latestCriteria": null,
+        "acceptedVersion": false
+    }
+]

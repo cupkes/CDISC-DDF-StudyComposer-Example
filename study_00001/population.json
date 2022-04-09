@@ -1,0 +1,99 @@
+{
+    "uid": "Study_000001",
+    "studyNumber": "0",
+    "studyId": "CDISC DEV-0",
+    "studyAcronym": "Tested",
+    "projectNumber": "CDISC DEV",
+    "studyStatus": "DRAFT",
+    "currentMetadata": {
+        "identificationMetadata": {
+            "studyNumber": "0",
+            "studyAcronym": "Tested",
+            "projectNumber": "CDISC DEV",
+            "projectName": "CDISC Dev",
+            "brandName": null,
+            "clinicalProgrammeName": "CDISC Development programme",
+            "studyId": "CDISC DEV-0",
+            "registryIdentifiers": {
+                "ctGovId": "NCT12345678",
+                "ctGovIdNullValueCode": null,
+                "eudractId": "2019-123456-42",
+                "eudractIdNullValueCode": null,
+                "universalTrialNumberUTN": "UTN123",
+                "universalTrialNumberUTNNullValueCode": null,
+                "japaneseTrialRegistryIdJAPIC": "JAPIC456",
+                "japaneseTrialRegistryIdJAPICNullValueCode": null,
+                "investigationalNewDrugApplicationNumberIND": "IND789",
+                "investigationalNewDrugApplicationNumberINDNullValueCode": null
+            }
+        },
+        "versionMetadata": {
+            "studyStatus": "DRAFT",
+            "lockedVersionNumber": null,
+            "versionTimestamp": "2022-04-08T10:02:16.982459",
+            "lockedVersionAuthor": null,
+            "lockedVersionInfo": null
+        },
+        "studyPopulation": {
+            "therapeuticAreasCodes": [
+                {
+                    "termUid": "DictionaryTerm_000013",
+                    "name": "Diabetes mellitus"
+                }
+            ],
+            "therapeuticAreasNullValueCode": null,
+            "diseaseConditionsOrIndicationsCodes": [
+                {
+                    "termUid": "DictionaryTerm_000007",
+                    "name": "Type 2 diabetes mellitus"
+                }
+            ],
+            "diseaseConditionsOrIndicationsNullValueCode": null,
+            "diagnosisGroupsCodes": [
+                {
+                    "termUid": "DictionaryTerm_000007",
+                    "name": "Type 2 diabetes mellitus"
+                }
+            ],
+            "diagnosisGroupsNullValueCode": null,
+            "sexOfParticipantsCode": {
+                "termUid": "C49636_BOTH",
+                "name": "Both"
+            },
+            "sexOfParticipantsNullValueCode": null,
+            "rareDiseaseIndicator": false,
+            "rareDiseaseIndicatorNullValueCode": null,
+            "healthySubjectIndicator": false,
+            "healthySubjectIndicatorNullValueCode": null,
+            "plannedMinimumAgeOfSubjects": {
+                "durationValue": 18,
+                "durationUnitCode": {
+                    "termUid": "C29848_YEARS",
+                    "name": "YEARS"
+                }
+            },
+            "plannedMinimumAgeOfSubjectsNullValueCode": null,
+            "plannedMaximumAgeOfSubjects": null,
+            "plannedMaximumAgeOfSubjectsNullValueCode": {
+                "termUid": "CTTerm_000082",
+                "name": "Positive infinity"
+            },
+            "stableDiseaseMinimumDuration": null,
+            "stableDiseaseMinimumDurationNullValueCode": {
+                "termUid": "C48660_Not Applicable",
+                "name": "Not Applicable"
+            },
+            "pediatricStudyIndicator": false,
+            "pediatricStudyIndicatorNullValueCode": null,
+            "pediatricPostmarketStudyIndicator": false,
+            "pediatricPostmarketStudyIndicatorNullValueCode": null,
+            "pediatricInvestigationPlanIndicator": false,
+            "pediatricInvestigationPlanIndicatorNullValueCode": null,
+            "relapseCriteria": null,
+            "relapseCriteriaNullValueCode": {
+                "termUid": "C48660_Not Applicable",
+                "name": "Not Applicable"
+            }
+        }
+    }
+}

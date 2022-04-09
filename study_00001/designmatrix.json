@@ -1,0 +1,62 @@
+[
+    {
+        "studyUid": "Study_000001",
+        "designCellUid": "StudyDesignCell_000103",
+        "studyArmUid": "StudyArm_000005",
+        "studyEpochUid": "StudyEpoch_000005",
+        "studyElementUid": "StudyElement_000227",
+        "transitionRule": null,
+        "startDate": "2022-04-08T10:06:17.616611",
+        "userInitials": "unknown-user"
+    },
+    {
+        "studyUid": "Study_000001",
+        "designCellUid": "StudyDesignCell_000108",
+        "studyArmUid": "StudyArm_000007",
+        "studyEpochUid": "StudyEpoch_000007",
+        "studyElementUid": "StudyElement_000237",
+        "transitionRule": null,
+        "startDate": "2022-04-08T10:06:32.007069",
+        "userInitials": "unknown-user"
+    },
+    {
+        "studyUid": "Study_000001",
+        "designCellUid": "StudyDesignCell_000107",
+        "studyArmUid": "StudyArm_000005",
+        "studyEpochUid": "StudyEpoch_000007",
+        "studyElementUid": "StudyElement_000237",
+        "transitionRule": null,
+        "startDate": "2022-04-08T10:06:29.920642",
+        "userInitials": "unknown-user"
+    },
+    {
+        "studyUid": "Study_000001",
+        "designCellUid": "StudyDesignCell_000106",
+        "studyArmUid": "StudyArm_000007",
+        "studyEpochUid": "StudyEpoch_000006",
+        "studyElementUid": "StudyElement_000235",
+        "transitionRule": null,
+        "startDate": "2022-04-08T10:06:26.857648",
+        "userInitials": "unknown-user"
+    },
+    {
+        "studyUid": "Study_000001",
+        "designCellUid": "StudyDesignCell_000105",
+        "studyArmUid": "StudyArm_000005",
+        "studyEpochUid": "StudyEpoch_000006",
+        "studyElementUid": "StudyElement_000231",
+        "transitionRule": null,
+        "startDate": "2022-04-08T10:06:23.476816",
+        "userInitials": "unknown-user"
+    },
+    {
+        "studyUid": "Study_000001",
+        "designCellUid": "StudyDesignCell_000104",
+        "studyArmUid": "StudyArm_000007",
+        "studyEpochUid": "StudyEpoch_000005",
+        "studyElementUid": "StudyElement_000227",
+        "transitionRule": null,
+        "startDate": "2022-04-08T10:06:20.278559",
+        "userInitials": "unknown-user"
+    }
+]

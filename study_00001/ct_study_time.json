@@ -1,0 +1,442 @@
+{
+    "items": [
+        {
+            "startDate": "2022-03-30T17:28:53.730898",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "userInitials": "unknown-user",
+            "changeDescription": "Approved version",
+            "uid": "UnitDefinition_000148",
+            "name": "day",
+            "libraryName": "Sponsor",
+            "convertibleUnit": true,
+            "displayUnit": true,
+            "masterUnit": false,
+            "siUnit": false,
+            "usConventionalUnit": true,
+            "ctUnits": [
+                {
+                    "termUid": "C25301_DAYS",
+                    "name": "DAYS"
+                },
+                {
+                    "termUid": "C25301_day",
+                    "name": "Day"
+                }
+            ],
+            "unitSubsets": [
+                {
+                    "termUid": "C50400_AGEU",
+                    "name": "Age Unit"
+                },
+                {
+                    "termUid": "CTTerm_000073",
+                    "name": "Study Time"
+                }
+            ],
+            "ucum": {
+                "termUid": "DictionaryTerm_000174",
+                "name": "d"
+            },
+            "unitDimension": {
+                "termUid": "C25330_TIME",
+                "name": "Duration"
+            },
+            "legacyCode": "day",
+            "molecularWeightConvExpon": null,
+            "conversionFactorToMaster": 86400.0,
+            "comment": "0",
+            "order": 1950,
+            "definition": "CDISC code: C25301_x005F_x000D_\nCDISC submission value: DAYS_x005F_x000D_\nCDISC synonym: Day_x005F_x000D_\nCDISC Description: The time for Earth to make a complete rotation on its axis; ordinarily divided into twenty-four hours. This also refers to a specific day. _x005F_x000D_\nNCI preferred term: Day",
+            "templateParameter": false
+        },
+        {
+            "startDate": "2022-03-30T17:28:54.052434",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "userInitials": "unknown-user",
+            "changeDescription": "Approved version",
+            "uid": "UnitDefinition_000149",
+            "name": "days",
+            "libraryName": "Sponsor",
+            "convertibleUnit": true,
+            "displayUnit": true,
+            "masterUnit": false,
+            "siUnit": false,
+            "usConventionalUnit": true,
+            "ctUnits": [
+                {
+                    "termUid": "C25301_DAYS",
+                    "name": "DAYS"
+                },
+                {
+                    "termUid": "C25301_day",
+                    "name": "Day"
+                }
+            ],
+            "unitSubsets": [
+                {
+                    "termUid": "C50400_AGEU",
+                    "name": "Age Unit"
+                },
+                {
+                    "termUid": "CTTerm_000073",
+                    "name": "Study Time"
+                }
+            ],
+            "ucum": {
+                "termUid": "DictionaryTerm_000174",
+                "name": "d"
+            },
+            "unitDimension": {
+                "termUid": "C25330_TIME",
+                "name": "Duration"
+            },
+            "legacyCode": "days",
+            "molecularWeightConvExpon": null,
+            "conversionFactorToMaster": 86400.0,
+            "comment": "0",
+            "order": 1950,
+            "definition": "<CodeLists>_x005F_x000D_\n<CodeList Value=\"UNIT\"></CodeList>_x005F_x000D_\n<CodeList Value=\"AGEU\"></CodeList>_x005F_x000D_\n</CodeLists>_x005F_x000D_\nCDISC code: C25301_x005F_x000D_\nCDISC submission value: DAYS_x005F_x000D_\nCDISC synonym: Day_x005F_x000D_\nCDISC Description: The time for Earth to make a complete rotation on its axis; ordinarily divided into twenty-four hours. This also refers to a specific day. (_x005F_x000D_\nNCI preferred term: Day_x005F_x000D_\n",
+            "templateParameter": false
+        },
+        {
+            "startDate": "2022-03-30T17:28:54.429256",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "userInitials": "unknown-user",
+            "changeDescription": "Approved version",
+            "uid": "UnitDefinition_000150",
+            "name": "d",
+            "libraryName": "Sponsor",
+            "convertibleUnit": true,
+            "displayUnit": true,
+            "masterUnit": false,
+            "siUnit": false,
+            "usConventionalUnit": true,
+            "ctUnits": [
+                {
+                    "termUid": "C25301_DAYS",
+                    "name": "DAYS"
+                },
+                {
+                    "termUid": "C25301_day",
+                    "name": "Day"
+                }
+            ],
+            "unitSubsets": [
+                {
+                    "termUid": "C50400_AGEU",
+                    "name": "Age Unit"
+                },
+                {
+                    "termUid": "CTTerm_000073",
+                    "name": "Study Time"
+                }
+            ],
+            "ucum": {
+                "termUid": "DictionaryTerm_000174",
+                "name": "d"
+            },
+            "unitDimension": {
+                "termUid": "C25330_TIME",
+                "name": "Duration"
+            },
+            "legacyCode": "d",
+            "molecularWeightConvExpon": null,
+            "conversionFactorToMaster": 86400.0,
+            "comment": "0",
+            "order": 1950,
+            "definition": "<CodeLists>_x005F_x000D_\n<CodeList Value=\"UNIT\"></CodeList>_x005F_x000D_\n<CodeList Value=\"AGEU\"></CodeList>_x005F_x000D_\n</CodeLists>_x005F_x000D_\nCDISC code: C25301_x005F_x000D_\nCDISC submission value: DAYS_x005F_x000D_\nCDISC synonym: Day_x005F_x000D_\nCDISC Description: The time for Earth to make a complete rotation on its axis; ordinarily divided into twenty-four hours. This also refers to a specific day. (_x005F_x000D_\nNCI preferred term: Day_x005F_x000D_\n",
+            "templateParameter": false
+        },
+        {
+            "startDate": "2022-03-30T17:28:58.663426",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "userInitials": "unknown-user",
+            "changeDescription": "Approved version",
+            "uid": "UnitDefinition_000165",
+            "name": "week",
+            "libraryName": "Sponsor",
+            "convertibleUnit": true,
+            "displayUnit": true,
+            "masterUnit": false,
+            "siUnit": false,
+            "usConventionalUnit": true,
+            "ctUnits": [
+                {
+                    "termUid": "C29844_WEEKS",
+                    "name": "WEEKS"
+                }
+            ],
+            "unitSubsets": [
+                {
+                    "termUid": "C50400_AGEU",
+                    "name": "Age Unit"
+                },
+                {
+                    "termUid": "CTTerm_000073",
+                    "name": "Study Time"
+                }
+            ],
+            "ucum": {
+                "termUid": "DictionaryTerm_000956",
+                "name": "wk"
+            },
+            "unitDimension": {
+                "termUid": "C25330_TIME",
+                "name": "Duration"
+            },
+            "legacyCode": "week",
+            "molecularWeightConvExpon": null,
+            "conversionFactorToMaster": 604800.0,
+            "comment": "0",
+            "order": 1950,
+            "definition": "<CodeLists>_x005F_x000D_\n<CodeList Value=\"UNIT\"></CodeList>_x005F_x000D_\n<CodeList Value=\"AGEU\"></CodeList>_x005F_x000D_\n</CodeLists>_x005F_x000D_\nCDISC code: C29844_x005F_x000D_\nCDISC submission value: WEEKS_x005F_x000D_\nCDISC synonym: Week_x005F_x000D_\nCDISC Description: Any period of seven consecutive days. (NCI)_x005F_x000D_\nNCI preferred term: Week",
+            "templateParameter": false
+        },
+        {
+            "startDate": "2022-03-30T17:28:58.901497",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "userInitials": "unknown-user",
+            "changeDescription": "Approved version",
+            "uid": "UnitDefinition_000166",
+            "name": "wk",
+            "libraryName": "Sponsor",
+            "convertibleUnit": true,
+            "displayUnit": true,
+            "masterUnit": false,
+            "siUnit": false,
+            "usConventionalUnit": true,
+            "ctUnits": [
+                {
+                    "termUid": "C29844_WEEKS",
+                    "name": "WEEKS"
+                }
+            ],
+            "unitSubsets": [
+                {
+                    "termUid": "C50400_AGEU",
+                    "name": "Age Unit"
+                },
+                {
+                    "termUid": "CTTerm_000073",
+                    "name": "Study Time"
+                }
+            ],
+            "ucum": {
+                "termUid": "DictionaryTerm_000956",
+                "name": "wk"
+            },
+            "unitDimension": {
+                "termUid": "C25330_TIME",
+                "name": "Duration"
+            },
+            "legacyCode": "wk",
+            "molecularWeightConvExpon": null,
+            "conversionFactorToMaster": 604800.0,
+            "comment": "0",
+            "order": 1950,
+            "definition": "<CodeLists>_x005F_x000D_\n<CodeList Value=\"UNIT\"></CodeList>_x005F_x000D_\n<CodeList Value=\"AGEU\"></CodeList>_x005F_x000D_\n</CodeLists>_x005F_x000D_\nCDISC code: C29844_x005F_x000D_\nCDISC submission value: WEEKS_x005F_x000D_\nCDISC synonym: Week_x005F_x000D_\nCDISC Description: Any period of seven consecutive days. (NCI)_x005F_x000D_\nNCI preferred term: Week",
+            "templateParameter": false
+        },
+        {
+            "startDate": "2022-03-30T17:28:59.232590",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "userInitials": "unknown-user",
+            "changeDescription": "Approved version",
+            "uid": "UnitDefinition_000167",
+            "name": "year",
+            "libraryName": "Sponsor",
+            "convertibleUnit": true,
+            "displayUnit": true,
+            "masterUnit": false,
+            "siUnit": false,
+            "usConventionalUnit": true,
+            "ctUnits": [
+                {
+                    "termUid": "C29848_YEARS",
+                    "name": "YEARS"
+                }
+            ],
+            "unitSubsets": [
+                {
+                    "termUid": "C50400_AGEU",
+                    "name": "Age Unit"
+                },
+                {
+                    "termUid": "CTTerm_000073",
+                    "name": "Study Time"
+                }
+            ],
+            "ucum": {
+                "termUid": "DictionaryTerm_000959",
+                "name": "a"
+            },
+            "unitDimension": {
+                "termUid": "C25330_TIME",
+                "name": "Duration"
+            },
+            "legacyCode": "year",
+            "molecularWeightConvExpon": null,
+            "conversionFactorToMaster": 31557600.0,
+            "comment": "0",
+            "order": 1950,
+            "definition": "<CodeLists>_x005F_x000D_\n<CodeList Value=\"UNIT\"></CodeList>_x005F_x000D_\n<CodeList Value=\"AGEU\"></CodeList>_x005F_x000D_\n</CodeLists>_x005F_x000D_\nCDISC code: C29848_x005F_x000D_\nCDISC submission value: YEARS_x005F_x000D_\nCDISC synonym: Year_x005F_x000D_\nCDISC Description: The period of time that it takes for Earth to make a complete revolution around the sun, approximately 365 days; a specific one year period. (NCI)_x005F_x000D_\nNCI preferred term: Year_x005F_x000D_\n",
+            "templateParameter": false
+        },
+        {
+            "startDate": "2022-03-30T17:28:59.543220",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "userInitials": "unknown-user",
+            "changeDescription": "Approved version",
+            "uid": "UnitDefinition_000168",
+            "name": "weeks",
+            "libraryName": "Sponsor",
+            "convertibleUnit": true,
+            "displayUnit": true,
+            "masterUnit": false,
+            "siUnit": false,
+            "usConventionalUnit": true,
+            "ctUnits": [
+                {
+                    "termUid": "C29844_WEEKS",
+                    "name": "WEEKS"
+                }
+            ],
+            "unitSubsets": [
+                {
+                    "termUid": "C50400_AGEU",
+                    "name": "Age Unit"
+                },
+                {
+                    "termUid": "CTTerm_000073",
+                    "name": "Study Time"
+                }
+            ],
+            "ucum": {
+                "termUid": "DictionaryTerm_000956",
+                "name": "wk"
+            },
+            "unitDimension": {
+                "termUid": "C25330_TIME",
+                "name": "Duration"
+            },
+            "legacyCode": "weeks",
+            "molecularWeightConvExpon": null,
+            "conversionFactorToMaster": 604800.0,
+            "comment": "0",
+            "order": 1950,
+            "definition": "<CodeLists>_x005F_x000D_\n<CodeList Value=\"UNIT\"></CodeList>_x005F_x000D_\n<CodeList Value=\"AGEU\"></CodeList>_x005F_x000D_\n</CodeLists>_x005F_x000D_\nCDISC code: C29844_x005F_x000D_\nCDISC submission value: WEEKS_x005F_x000D_\nCDISC synonym: Week_x005F_x000D_\nCDISC Description: Any period of seven consecutive days. (NCI)_x005F_x000D_\nNCI preferred term: Week",
+            "templateParameter": false
+        },
+        {
+            "startDate": "2022-03-30T17:28:59.816227",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "userInitials": "unknown-user",
+            "changeDescription": "Approved version",
+            "uid": "UnitDefinition_000169",
+            "name": "years",
+            "libraryName": "Sponsor",
+            "convertibleUnit": true,
+            "displayUnit": true,
+            "masterUnit": false,
+            "siUnit": false,
+            "usConventionalUnit": true,
+            "ctUnits": [
+                {
+                    "termUid": "C29848_YEARS",
+                    "name": "YEARS"
+                }
+            ],
+            "unitSubsets": [
+                {
+                    "termUid": "C50400_AGEU",
+                    "name": "Age Unit"
+                },
+                {
+                    "termUid": "CTTerm_000073",
+                    "name": "Study Time"
+                }
+            ],
+            "ucum": {
+                "termUid": "DictionaryTerm_000959",
+                "name": "a"
+            },
+            "unitDimension": {
+                "termUid": "C25330_TIME",
+                "name": "Duration"
+            },
+            "legacyCode": "years",
+            "molecularWeightConvExpon": null,
+            "conversionFactorToMaster": 31557600.0,
+            "comment": "0",
+            "order": 1950,
+            "definition": "<CodeLists>_x005F_x000D_\n<CodeList Value=\"UNIT\"></CodeList>_x005F_x000D_\n<CodeList Value=\"AGEU\"></CodeList>_x005F_x000D_\n</CodeLists>_x005F_x000D_\nCDISC code: C29848_x005F_x000D_\nCDISC submission value: YEARS_x005F_x000D_\nCDISC synonym: Year_x005F_x000D_\nCDISC Description: The period of time that it takes for Earth to make a complete revolution around the sun, approximately 365 days; a specific one year period. (NCI)_x005F_x000D_\nNCI preferred term: Year_x005F_x000D_\n",
+            "templateParameter": false
+        },
+        {
+            "startDate": "2022-03-30T17:29:00.006319",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "userInitials": "unknown-user",
+            "changeDescription": "Approved version",
+            "uid": "UnitDefinition_000170",
+            "name": "yr",
+            "libraryName": "Sponsor",
+            "convertibleUnit": true,
+            "displayUnit": true,
+            "masterUnit": false,
+            "siUnit": false,
+            "usConventionalUnit": true,
+            "ctUnits": [
+                {
+                    "termUid": "C29848_YEARS",
+                    "name": "YEARS"
+                }
+            ],
+            "unitSubsets": [
+                {
+                    "termUid": "C50400_AGEU",
+                    "name": "Age Unit"
+                },
+                {
+                    "termUid": "CTTerm_000073",
+                    "name": "Study Time"
+                }
+            ],
+            "ucum": {
+                "termUid": "DictionaryTerm_000959",
+                "name": "a"
+            },
+            "unitDimension": {
+                "termUid": "C25330_TIME",
+                "name": "Duration"
+            },
+            "legacyCode": "yr",
+            "molecularWeightConvExpon": null,
+            "conversionFactorToMaster": 31557600.0,
+            "comment": "0",
+            "order": 1950,
+            "definition": "<CodeLists>_x005F_x000D_\n<CodeList Value=\"UNIT\"></CodeList>_x005F_x000D_\n<CodeList Value=\"AGEU\"></CodeList>_x005F_x000D_\n</CodeLists>_x005F_x000D_\nCDISC code: C29848_x005F_x000D_\nCDISC submission value: YEARS_x005F_x000D_\nCDISC synonym: Year_x005F_x000D_\nCDISC Description: The period of time that it takes for Earth to make a complete revolution around the sun, approximately 365 days; a specific one year period. (NCI)_x005F_x000D_\nNCI preferred term: Year_x005F_x000D_\n",
+            "templateParameter": false
+        }
+    ],
+    "total": 0,
+    "page": 1,
+    "size": 0
+}

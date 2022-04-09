@@ -1,0 +1,74 @@
+[
+    {
+        "studyUid": "Study_000001",
+        "order": 1,
+        "armUid": "StudyArm_000005",
+        "name": "Human Insulin",
+        "shortName": "NPH",
+        "code": "A",
+        "description": null,
+        "randomizationGroup": "A",
+        "numberOfSubjects": 50,
+        "armType": {
+            "termUid": "CTTerm_000069",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "CTCodelist_000024",
+            "sponsorPreferredName": "Investigational Arm",
+            "sponsorPreferredNameSentenceCase": "investigational arm",
+            "order": 1,
+            "libraryName": "Sponsor",
+            "startDate": "2022-03-30T17:27:56.179312",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        "startDate": "2022-03-31T15:01:02.263043",
+        "userInitials": "unknown-user",
+        "endDate": null,
+        "status": null,
+        "changeType": null,
+        "acceptedVersion": false
+    },
+    {
+        "studyUid": "Study_000001",
+        "order": 2,
+        "armUid": "StudyArm_000007",
+        "name": "Metformin",
+        "shortName": "Metformin",
+        "code": "B",
+        "description": null,
+        "randomizationGroup": "B",
+        "numberOfSubjects": 50,
+        "armType": {
+            "termUid": "CTTerm_000070",
+            "catalogueName": "SDTM CT",
+            "codelistUid": "CTCodelist_000024",
+            "sponsorPreferredName": "Comparator Arm",
+            "sponsorPreferredNameSentenceCase": "comparator arm",
+            "order": 2,
+            "libraryName": "Sponsor",
+            "startDate": "2022-03-30T17:27:56.273236",
+            "endDate": null,
+            "status": "Final",
+            "version": "1.0",
+            "changeDescription": "Approved version",
+            "userInitials": "unknown-user",
+            "possibleActions": [
+                "inactivate",
+                "newVersion"
+            ]
+        },
+        "startDate": "2022-03-31T15:01:30.010946",
+        "userInitials": "unknown-user",
+        "endDate": null,
+        "status": null,
+        "changeType": null,
+        "acceptedVersion": false
+    }
+]
