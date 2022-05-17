@@ -1,4 +1,4 @@
-package org.CDISC.DDF.composer.engine;
+package org.CDISC.DDF.composer.translator.openstudybuilder;
 
 public class VersionMetadata{
 

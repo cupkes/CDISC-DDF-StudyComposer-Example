@@ -2,6 +2,8 @@ package org.CDISC.DDF.composer.engine;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import junit.framework.Assert;
+import org.CDISC.DDF.composer.translator.openstudybuilder.OpenStudy;
+import org.CDISC.DDF.composer.translator.openstudybuilder.VersionMetadata;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

@@ -2,6 +2,8 @@ package org.CDISC.DDF.composer.engine;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.CDISC.DDF.composer.SDR.*;
+import org.CDISC.DDF.composer.translator.openstudybuilder.OpenStudy;
+import org.CDISC.DDF.composer.translator.openstudybuilder.VersionMetadata;
 import org.CDISC.DDF.model.common.DeprecatedAssessmentGroup;
 import org.CDISC.DDF.model.common.DeprecatedStudyData;
 import org.CDISC.DDF.model.study.*;

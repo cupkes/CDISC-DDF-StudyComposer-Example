@@ -1,4 +1,6 @@
-package org.CDISC.DDF.composer.engine;
+package org.CDISC.DDF.composer.translator.openstudybuilder;
+
+import org.CDISC.DDF.composer.engine.CurrentMetadata;
 
 public class OpenStudy {
 

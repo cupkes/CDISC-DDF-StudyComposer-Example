@@ -1,5 +1,7 @@
 package org.CDISC.DDF.composer.engine;
 
+import org.CDISC.DDF.composer.translator.openstudybuilder.VersionMetadata;
+
 public class CurrentMetadata {
 
     private IdentificationMetadata identificationMetadata;
